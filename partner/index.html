@@ -28,6 +28,8 @@
   .w { max-width: 620px; margin: 0 auto; padding: 0 20px; }
   .num { font-family: "Barlow", sans-serif; letter-spacing: 0; }
   .kj { white-space: nowrap; }
+  ::selection { background: #cdeff3; color: var(--nv); }
+  a:focus-visible, button:focus-visible, summary:focus-visible { outline: 3px solid var(--cy); outline-offset: 2px; }
 
   header { position: relative; z-index: 2; background: #fff; border-bottom: 1px solid var(--line); }
   header .w { display: flex; align-items: center; justify-content: space-between; height: 56px; }
@@ -48,7 +50,7 @@
   .hero h1 { margin: 0; font-size: clamp(27px, 7.4vw, 36px); line-height: 1.5; font-weight: 900; letter-spacing: .02em; }
   .hero h1 em { font-style: normal; color: var(--cy); }
   .hero .lead { margin: 16px 0 0; font-size: 16px; color: #fff; }
-  .gift { margin: 26px 0 0; padding: 16px 18px; border-radius: 12px; background: rgba(8,22,44,.72); border: 1px solid rgba(255,255,255,.25); -webkit-backdrop-filter: blur(6px); backdrop-filter: blur(6px); }
+  .gift { margin: 26px 0 0; padding: 16px 18px; border-radius: 12px; background: #0d2140; border: 1px solid rgba(255,255,255,.28); box-shadow: 0 8px 24px rgba(0,0,0,.3); }
   .gift .k { display: block; font-size: 14px; color: #d6dee9; }
   .gift .v { display: block; margin: 2px 0 0; font-size: 26px; font-weight: 900; line-height: 1.4; }
   .gift .v .num { font-size: 34px; color: var(--cy); }
