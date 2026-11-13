@@ -1022,7 +1022,7 @@
     </div>
     <div class="ref-fee rv">
       <div class="h"><span class="lb">ご紹介の<wbr>お礼</span><div class="yen">1<small>か<wbr>月分</small></div></div>
-      <p>お知り合いの<wbr>会社さまを<wbr>ご紹介いただ<span class="kj">き、</span><wbr>ご契約が<wbr>決まった<span class="kj">ら、</span><wbr>ご紹介くださった方に<wbr>月額1か<wbr>月分を<wbr>お礼と<wbr>してお渡ししま<span class="kj">す。</span><wbr>ご紹介の<wbr>会社さま<span class="kj">は、</span><wbr>最初の<wbr>1か<wbr>月が<wbr>無料で<span class="kj">す。</span> <a href="shokai/" style="color:inherit;font-weight:700;text-decoration:underline">紹介制度の<wbr>くわしい<wbr>説明</a></p>
+      <p>お知り合いの<wbr>会社さまを<wbr>ご紹介いただ<span class="kj">き、</span><wbr>ご契約が<wbr>決まった<span class="kj">ら、</span><wbr>ご紹介くださった方に<wbr>月額1か<wbr>月分を<wbr>お礼と<wbr>してお渡ししま<span class="kj">す。</span> <a href="shokai/" style="color:inherit;font-weight:700;text-decoration:underline">紹介制度の<wbr>くわしい<wbr>説明</a></p>
     </div>
     <div class="more rv">
       <a class="btn btn-cy" href="price.pdf" target="_blank" rel="noopener">詳しい<wbr>料金表<wbr>（PDF）を<wbr>見る</a>
@@ -1550,7 +1550,7 @@
         if (CO_URL) { bot(CO_NAME + "さま用のホームページデザインは、もうできています！\n下のボタンから、スマホでもそのまま動く見本をご覧いただけます。\n雰囲気は4つから選べます。", function () {
           opts([{ t: "見本サイトを開く", href: CO_URL + "craft.html", c: "main" }, { t: "地域密着のデザインで見る", href: CO_URL + "chiiki" }, { t: "誠実のデザインで見る", href: CO_URL + "seijitsu" }, { t: "ポップのデザインで見る", href: CO_URL + "pop" }, { t: "このページで4つを見比べる", jump: "works", say: "4つのデザインを並べたところに移動しますね。画面を押すと、実際のサイトが開きます。" }, { t: "LINEで相談する", href: LINE, c: "ln" }, back]); }); return; }
         bot("ありがとうございます！\n会社名と地域を教えていただければ、御社用のホームページの見本を無料でお作りします。\n作ったあとに、無理に契約をおすすめすることはありません。", function () { opts(talk.concat([{ t: "先に見本サイトを見てみる", jump: "works" }, back])); }); },
-      price: function () { bot("ホームページの制作費は0円です。毎月の運用プラン（月19,800円〜・税別・最低3か月）で、作ったあとの更新や報告まで行います。サーバー代と独自ドメイン代も含みます。\nGoogleマップの運用は月9,800円からです。お知り合いの会社さまをご紹介いただき契約が決まったら、ご紹介くださった方に月額1か月分をお礼としてお渡しします（ご紹介の会社さまは最初の1か月が無料）。", function () { opts([{ t: "料金の詳しい説明を見る", jump: "charge" }, { t: "料金表（PDF）を開く", href: "price.pdf" }].concat([back])); }); },
+      price: function () { bot("ホームページの制作費は0円です。毎月の運用プラン（月19,800円〜・税別・最低3か月）で、作ったあとの更新や報告まで行います。サーバー代と独自ドメイン代も含みます。\nGoogleマップの運用は月9,800円からです。お知り合いの会社さまをご紹介いただき契約が決まったら、ご紹介くださった方に月額1か月分をお礼としてお渡しします。", function () { opts([{ t: "料金の詳しい説明を見る", jump: "charge" }, { t: "料金表（PDF）を開く", href: "price.pdf" }].concat([back])); }); },
       what: function () { bot("ホームページづくりに加えて、作ったあとのHP運用（事例・記事・検索で上に出やすくする対策）、SNS・LINEの運用、Googleマップの対策、事務作業を短くするAI支援やシステム開発まで、まとめて引き受けます。今のホームページの運用だけでもOKです。\n写真はLINEで送っていただくだけで大丈夫です。", function () { opts([{ t: "できることを見る", jump: "reason" }, { t: "見本サイトを見る", jump: "works" }, back]); }); },
       run: function () { bot("運用は大きく2つです。\n・保守運用：サーバーやドメインの管理、不具合の対応、文章や写真の小さな修正\n・HP運用：事例やお役立ち記事の追加、トップページの改修、検索で上に出やすくする対策\n写真はLINEで送っていただくだけで、更新はこちらで行います。月19,800円からで、おすすめは月29,800円のプランです。", function () { opts([{ t: "運用プランの料金を見る", jump: "charge", say: "運用プランの料金に移動しますね。3つのプランと、それぞれの中身を並べています。" }].concat(talk, [back])); }); },
       fix: function () { bot("はい、できます。ほかの会社で作ったホームページでも、改修や毎月の運用だけをお引き受けします。\nまずは今のサイトを拝見して、直したほうがいい所をお伝えします（無料）。作り直したほうがいい場合は、理由と費用をご説明します。", function () { opts(talk.concat([back])); }); },

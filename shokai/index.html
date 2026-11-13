@@ -6,11 +6,11 @@
 <meta name="robots" content="noindex, nofollow">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>BUNKAIの紹介制度</title>
-<meta name="description" content="ホームページで困っている会社をご紹介ください。ご契約が決まったら、月額1か月分をお礼としてお渡しします。ご紹介の会社さまは最初の1か月が無料です。">
+<meta name="description" content="ホームページで困っている会社をご紹介ください。ご契約が決まったら、月額1か月分をお礼としてお渡しします。">
 <meta property="og:type" content="website">
 <meta property="og:title" content="BUNKAIの紹介制度｜ご契約で月額1か月分のお礼">
 <meta property="og:url" content="https://bunkai-official.github.io/shokai/">
-<meta property="og:description" content="LINEで会社名と電話番号を送るだけ。ご紹介の会社さまは最初の1か月が無料です。">
+<meta property="og:description" content="LINEで会社名と電話番号を送るだけ。ご契約が決まったら、月額1か月分をお礼としてお渡しします。">
 <meta property="og:image" content="https://bunkai-official.github.io/img/og.jpg">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="../img/logo.jpg">
@@ -38,7 +38,7 @@
   .hero h1 { margin: 0; font-size: clamp(25px, 6.6vw, 34px); line-height: 1.5; font-weight: 900; letter-spacing: .02em; }
   .hero h1 em { font-style: normal; color: var(--cy); }
   .hero .lead { margin: 18px 0 0; font-size: 16px; color: #e3e9f1; }
-  .gift { margin: 28px 0 0; display: grid; grid-template-columns: 1fr 1fr; border-top: 1px solid rgba(255,255,255,.25); }
+  .gift { margin: 28px 0 0; display: grid; grid-template-columns: 1fr; border-top: 1px solid rgba(255,255,255,.25); }
   .gift div { padding: 18px 0 4px; }
   .gift div + div { padding-left: 18px; border-left: 1px solid rgba(255,255,255,.25); }
   .gift dt { font-size: 14px; color: #c5d0de; }
@@ -77,6 +77,12 @@
 
   /* 紹介された会社さまへ */
   .for-co { background: var(--bg); }
+  .site { display: block; margin: 24px 0 0; padding: 18px 20px 16px; background: #fff; border-radius: 10px; color: var(--nv); text-decoration: none; box-shadow: 0 6px 18px rgba(8,22,44,.18); }
+  .site .t { display: block; font-size: 14px; color: var(--sub); line-height: 1.6; }
+  .site .u { display: block; margin: 4px 0 12px; font-family: "Barlow", sans-serif; font-weight: 700; font-size: clamp(19px, 5.6vw, 24px); letter-spacing: .01em; color: var(--nv); overflow-wrap: anywhere; }
+  .site .go { display: flex; align-items: center; justify-content: center; gap: 8px; min-height: 50px; border-radius: 40px; background: var(--or); color: #fff; font-weight: 900; font-size: 16px; }
+  .site .go::after { content: ""; width: 8px; height: 8px; border-top: 2.5px solid #fff; border-right: 2.5px solid #fff; transform: rotate(45deg); }
+  .site-l { margin-top: 26px; border: 2px solid var(--nv); box-shadow: none; }
   .for-co dl { margin: 0; }
   .for-co dl div { display: grid; grid-template-columns: 7.5em 1fr; gap: 12px; padding: 12px 0; border-bottom: 1px solid var(--line); }
   .for-co dt { font-weight: 700; color: var(--nv); }
@@ -127,7 +133,7 @@
 <body>
 
 <header><div class="w">
-  <a class="logo" href="../"><img src="../img/logo-b.jpg" alt="" width="26" height="28">BUNKAI</a>
+  <a class="logo" href="https://bunkai-official.github.io/"><img src="../img/logo-b.jpg" alt="" width="26" height="28">BUNKAI</a>
   <a class="tel" href="tel:08057148516">080-5714-8516</a>
 </div></header>
 
@@ -136,8 +142,8 @@
   <p class="lead">BUNKAIは、<wbr>会社や<wbr>お店の<wbr>ホームページを<wbr>先に<wbr>無料で<wbr>作ってお見せし、<wbr>気に入っていただけたら<wbr>毎月の<wbr>運用を<wbr>お引き<wbr>受けしています。<wbr>ご紹介の<wbr>会社さまが<wbr>ご契約されたら、<wbr>お礼を<wbr>お渡しします。</p>
   <dl class="gift">
     <div><dt>ご紹介くださった方に</dt><dd>月額<span class="num">1</span>か<wbr>月分<small>例：月29,800円の<wbr>プランなら<wbr>29,800円</small></dd></div>
-    <div><dt>ご紹介の<wbr>会社さまは</dt><dd>最初の<wbr><span style="white-space:nowrap"><span class="num">1</span>か月が</span><wbr>無料<small>ホームページの<wbr>制作費も<wbr>0円です</small></dd></div>
   </dl>
+  <a class="site" href="https://bunkai-official.github.io/" target="_blank" rel="noopener"><span class="t">BUNKAIの<wbr>ことや<wbr>料金は、<wbr>こちらに<wbr>まとめています</span><span class="u">bunkai-official.github.io</span><span class="go">BUNKAIの<wbr>紹介ページを<wbr>見る</span></a>
 </div></div>
 
 <section><div class="w">
@@ -166,7 +172,7 @@
     <tr><th>スタンダード＋Googleマップ</th><td><span class="num">39,600</span>円</td></tr>
   </table>
   <p class="muted">何社ご紹介いただいても、<wbr>1社ごとに<wbr>お渡しします。<wbr>上限は<wbr>ありません。</p>
-  <div class="when"><b>お渡しする<wbr>時期：</b>ご紹介の<wbr>会社さまから<wbr>最初の<wbr>お支払い<wbr>（最初の<wbr>1か月は<wbr>無料の<wbr>ため、<wbr>2か<wbr>月目の<wbr>分）を<wbr>確かめた<wbr>月の、<wbr>翌月末までに<wbr>お振り込みします。<wbr>振込手数料は<wbr>BUNKAIが<wbr>負担します。</div>
+  <div class="when"><b>お渡しする<wbr>時期：</b>ご紹介の<wbr>会社さまから<wbr>最初の<wbr>お支払いを<wbr>確かめた<wbr>月の、<wbr>翌月末までに<wbr>お振り込みします。<wbr>振込手数料は<wbr>BUNKAIが<wbr>負担します。</div>
 </div></section>
 
 <section><div class="w">
@@ -188,7 +194,6 @@
     <div><dt>ご契約</dt><dd>完成した<wbr>ものを<wbr>見てから<wbr>決めて<wbr>いただけます</dd></div>
     <div><dt>制作費</dt><dd>0円</dd></div>
     <div><dt>毎月</dt><dd>月19,800円から<wbr>（税別・最低3か<wbr>月）。<wbr>更新と<wbr>毎月の<wbr>報告まで<wbr>入っています</dd></div>
-    <div><dt>ご紹介の<wbr>特典</dt><dd>最初の<wbr>1か月の<wbr>月額が<wbr>無料</dd></div>
   </dl>
   <p class="muted" style="margin-top:22px">見本の<wbr>例<wbr>（スマホで<wbr>そのまま<wbr>見られます。<wbr>今は<wbr>塗装店の<wbr>例です）</p>
   <div class="samples">
@@ -197,7 +202,7 @@
     <a href="https://konan-paint.shiga-web.workers.dev/seijitsu" target="_blank" rel="noopener">誠実<span>写真で<wbr>落ち着いて<wbr>見せる</span></a>
     <a href="https://konan-paint.shiga-web.workers.dev/pop" target="_blank" rel="noopener">ポップ<span>気軽に<wbr>相談して<wbr>もらう</span></a>
   </div>
-  <p class="links">料金やできる<wbr>ことは、<a href="../">BUNKAIの<wbr>紹介ページ</a>に<wbr>まとめています。</p>
+  <a class="site site-l" href="https://bunkai-official.github.io/" target="_blank" rel="noopener"><span class="t">料金やできる<wbr>ことは、<wbr>BUNKAIの<wbr>紹介ページに</span><span class="u">bunkai-official.github.io</span><span class="go">BUNKAIの<wbr>紹介ページを<wbr>見る</span></a>
 </div></section>
 
 <section class="promise"><div class="w">
