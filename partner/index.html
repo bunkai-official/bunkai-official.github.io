@@ -1,0 +1,290 @@
+<!doctype html>
+<html lang="ja" translate="no">
+<head>
+<meta charset="utf-8">
+<meta name="google" content="notranslate">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>BUNKAIの紹介制度</title>
+<meta name="description" content="ホームページで困っている会社をご紹介ください。ご契約が決まったら、月額1か月分をお礼としてお渡しします。">
+<meta property="og:type" content="website">
+<meta property="og:title" content="BUNKAIの紹介制度｜ご契約で月額1か月分のお礼">
+<meta property="og:url" content="https://bunkai-official.github.io/partner/">
+<meta property="og:description" content="LINEで会社名と電話番号などを送るだけ。ご契約が決まったら、月額1か月分をお礼としてお渡しします。">
+<meta property="og:image" content="https://bunkai-official.github.io/img/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="../img/logo.jpg">
+<link rel="apple-touch-icon" href="../img/logo.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@700&family=Zen+Kaku+Gothic+New:wght@500;700;900&display=swap" rel="stylesheet">
+<style>
+  :root { --nv: #12294a; --nv2: #1d3b66; --cy: #3cc8d8; --cy2: #0e8a99; --or: #e8741a; --ink: #1c2633; --sub: #45505e; --bg: #f2f5f8; --line: #d7dde5; --ln: #06c755; }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body { margin: 0; background: #fff; color: var(--ink); font-family: "Zen Kaku Gothic New", "Hiragino Kaku Gothic ProN", sans-serif; font-weight: 500; font-size: 16px; line-height: 1.9; letter-spacing: .02em; word-break: keep-all; overflow-wrap: anywhere; -webkit-font-smoothing: antialiased; }
+  p, li, dd { text-wrap: pretty; }
+  a { color: inherit; }
+  .w { max-width: 620px; margin: 0 auto; padding: 0 20px; }
+  .num { font-family: "Barlow", sans-serif; letter-spacing: 0; }
+  .kj { white-space: nowrap; }
+
+  header { position: relative; z-index: 2; background: #fff; border-bottom: 1px solid var(--line); }
+  header .w { display: flex; align-items: center; justify-content: space-between; height: 56px; }
+  .logo { display: flex; align-items: center; gap: 6px; text-decoration: none; color: var(--nv); font-weight: 900; font-size: 18px; letter-spacing: .06em; }
+  .logo img { width: 26px; height: 28px; }
+  header a.tel { font-size: 14px; font-weight: 700; color: var(--nv); text-decoration: none; }
+
+  /* FV：うしろに見本のホームページが流れる */
+  .hero { position: relative; overflow: hidden; background: var(--nv); color: #fff; padding: 48px 0 40px; isolation: isolate; }
+  .flow { position: absolute; inset: -40px -120px; z-index: -2; display: flex; flex-direction: column; justify-content: center; gap: 18px; transform: rotate(-8deg); pointer-events: none; }
+  .flow .row { display: flex; gap: 16px; width: max-content; animation: flow 60s linear infinite; }
+  .flow .row.r2 { animation-direction: reverse; animation-duration: 70s; }
+  .flow img { display: block; width: 132px; height: 286px; object-fit: cover; object-position: top; border-radius: 14px; border: 3px solid rgba(255,255,255,.5); box-shadow: 0 8px 24px rgba(0,0,0,.35); }
+  @keyframes flow { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+  @media (prefers-reduced-motion: reduce) { .flow .row { animation: none; } }
+  .hero::before { content: ""; position: absolute; inset: 0; z-index: -1; background: linear-gradient(180deg, rgba(18,41,74,.9) 0%, rgba(18,41,74,.74) 40%, rgba(18,41,74,.42) 62%, rgba(18,41,74,.5) 100%); }
+  .hero h1, .hero .lead { text-shadow: 0 2px 12px rgba(8,22,44,.6); }
+  .hero h1 { margin: 0; font-size: clamp(27px, 7.4vw, 36px); line-height: 1.5; font-weight: 900; letter-spacing: .02em; }
+  .hero h1 em { font-style: normal; color: var(--cy); }
+  .hero .lead { margin: 16px 0 0; font-size: 16px; color: #fff; }
+  .gift { margin: 26px 0 0; padding: 16px 18px; border-radius: 12px; background: rgba(8,22,44,.72); border: 1px solid rgba(255,255,255,.25); -webkit-backdrop-filter: blur(6px); backdrop-filter: blur(6px); }
+  .gift .k { display: block; font-size: 14px; color: #d6dee9; }
+  .gift .v { display: block; margin: 2px 0 0; font-size: 26px; font-weight: 900; line-height: 1.4; }
+  .gift .v .num { font-size: 34px; color: var(--cy); }
+  .gift .e { display: block; margin: 4px 0 0; font-size: 14px; color: #d6dee9; }
+  .hero .site { margin-top: 16px; }
+
+  section { padding: 52px 0; }
+  section.alt { background: var(--bg); }
+  h2 { margin: 0 0 24px; font-size: clamp(22px, 6vw, 27px); line-height: 1.5; color: var(--nv); font-weight: 900; }
+  h2::before { content: ""; display: block; width: 32px; height: 4px; margin: 0 0 14px; border-radius: 2px; background: var(--cy); }
+  .muted { color: var(--sub); font-size: 15px; }
+
+  /* 紹介方法 */
+  .steps { list-style: none; margin: 0; padding: 0; counter-reset: s; display: grid; gap: 14px; }
+  .steps > li { position: relative; padding: 20px 18px 20px; background: #fff; border-radius: 12px; box-shadow: 0 1px 0 var(--line), 0 6px 18px rgba(18,41,74,.07); }
+  .steps .hd { position: relative; min-height: 34px; padding: 3px 0 0 46px; font-size: 18px; font-weight: 900; color: var(--nv); line-height: 1.55; }
+  .steps .hd::before { counter-increment: s; content: counter(s); position: absolute; left: 0; top: 0; width: 34px; height: 34px; border-radius: 50%; background: var(--nv); color: #fff; font-family: "Barlow", sans-serif; font-weight: 700; font-size: 17px; display: grid; place-items: center; }
+  .steps p { margin: 10px 0 0; }
+  .sendbox { margin: 14px 0 0; padding: 14px 16px; background: var(--bg); border-radius: 8px; font-size: 15px; line-height: 1.9; }
+  .sendbox b { display: inline-block; min-width: 5.5em; color: var(--nv); font-weight: 700; }
+  .btn-copy { display: flex; align-items: center; justify-content: center; width: 100%; min-height: 48px; margin: 12px 0 0; padding: 8px 16px; border: 2px solid var(--nv); border-radius: 30px; background: #fff; color: var(--nv); font: inherit; font-size: 15px; font-weight: 900; cursor: pointer; }
+  .btn-copy.done { border-color: var(--cy2); color: var(--cy2); }
+
+  /* お礼の金額 */
+  table.yen { width: 100%; border-collapse: collapse; margin: 18px 0 14px; font-size: 16px; background: #fff; border-radius: 12px; overflow: hidden; box-shadow: 0 1px 0 var(--line); }
+  table.yen th, table.yen td { padding: 14px 14px; border-bottom: 1px solid var(--line); text-align: left; vertical-align: middle; }
+  table.yen tr:last-child th, table.yen tr:last-child td { border-bottom: 0; }
+  table.yen th { font-weight: 700; line-height: 1.5; }
+  table.yen th small { display: block; color: var(--or); font-size: 13px; font-weight: 700; }
+  table.yen td { text-align: right; font-weight: 900; color: var(--nv); white-space: nowrap; }
+  table.yen td .num { font-size: 22px; }
+  .when { margin: 16px 0 0; padding: 16px 18px; background: #fff; border-radius: 12px; border-left: 4px solid var(--cy); }
+  .when b { display: block; color: var(--nv); font-weight: 900; }
+
+  /* こんな会社 */
+  ul.dots { margin: 0; padding: 0; list-style: none; }
+  ul.dots li { position: relative; padding: 12px 0 12px 26px; border-bottom: 1px solid var(--line); font-weight: 700; line-height: 1.7; }
+  ul.dots li::before { content: ""; position: absolute; left: 4px; top: 1.3em; width: 10px; height: 10px; border-radius: 50%; background: var(--cy); }
+
+  /* ご紹介の会社さまへ */
+  .for-co dl { margin: 0; display: grid; gap: 10px; }
+  .for-co dl div { padding: 14px 16px; background: #fff; border-radius: 10px; }
+  .for-co dt { font-size: 14px; font-weight: 700; color: var(--cy2); line-height: 1.6; }
+  .for-co dd { margin: 2px 0 0; font-size: 17px; font-weight: 700; color: var(--nv); line-height: 1.65; }
+  .samples { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin: 14px 0 0; }
+  .samples a { display: block; background: #fff; border: 1px solid var(--line); border-radius: 10px; overflow: hidden; text-decoration: none; color: var(--nv); }
+  .samples img { display: block; width: 100%; height: auto; aspect-ratio: 560 / 640; object-fit: cover; object-position: top; border-bottom: 1px solid var(--line); }
+  .samples b { display: block; padding: 10px 12px 2px; font-size: 15px; line-height: 1.5; }
+  .samples span { display: block; padding: 0 12px 12px; font-size: 13px; color: var(--sub); line-height: 1.6; }
+  .site { display: block; margin: 22px 0 0; padding: 18px 20px 16px; background: #fff; border-radius: 12px; color: var(--nv); text-decoration: none; box-shadow: 0 6px 18px rgba(8,22,44,.18); }
+  .site .t { display: block; font-size: 14px; color: var(--sub); line-height: 1.6; }
+  .site .u { display: block; margin: 4px 0 12px; font-family: "Barlow", sans-serif; font-weight: 700; font-size: clamp(19px, 5.6vw, 24px); letter-spacing: .01em; color: var(--nv); overflow-wrap: anywhere; }
+  .site .go { display: flex; align-items: center; justify-content: center; gap: 8px; min-height: 50px; border-radius: 40px; background: var(--or); color: #fff; font-weight: 900; font-size: 16px; }
+  .site .go::after { content: ""; width: 8px; height: 8px; border-top: 2.5px solid #fff; border-right: 2.5px solid #fff; transform: rotate(45deg); }
+  .site-l { border: 2px solid var(--nv); box-shadow: none; }
+
+  /* 約束 */
+  ul.check { margin: 0; padding: 0; list-style: none; display: grid; gap: 10px; }
+  ul.check li { position: relative; padding: 14px 16px 14px 50px; background: var(--bg); border-radius: 10px; font-weight: 700; line-height: 1.7; }
+  ul.check li::before { content: ""; position: absolute; left: 16px; top: 17px; width: 22px; height: 22px; border-radius: 50%; background: var(--cy2); }
+  ul.check li::after { content: ""; position: absolute; left: 23px; top: 21px; width: 6px; height: 11px; border-right: 2.5px solid #fff; border-bottom: 2.5px solid #fff; transform: rotate(45deg); }
+
+  /* 条件 */
+  details { background: #fff; border-radius: 10px; margin: 0 0 10px; }
+  summary { cursor: pointer; list-style: none; padding: 15px 44px 15px 16px; position: relative; font-weight: 700; color: var(--nv); line-height: 1.6; }
+  summary::-webkit-details-marker { display: none; }
+  summary::after { content: ""; position: absolute; right: 18px; top: 50%; width: 9px; height: 9px; border-right: 2px solid var(--nv); border-bottom: 2px solid var(--nv); transform: translateY(-70%) rotate(45deg); transition: transform .2s; }
+  details[open] summary::after { transform: translateY(-30%) rotate(-135deg); }
+  details p { margin: 0; padding: 0 16px 16px; }
+
+  /* 連絡 */
+  .contact { background: var(--nv); color: #fff; }
+  .contact h2 { color: #fff; }
+  .btn { display: flex; align-items: center; justify-content: center; gap: 10px; width: 100%; min-height: 58px; padding: 12px 18px; border-radius: 40px; font-size: 17px; font-weight: 900; text-decoration: none; border: 0; cursor: pointer; font-family: inherit; letter-spacing: .04em; }
+  .btn + .btn { margin-top: 12px; }
+  .btn-ln { background: var(--ln); color: #fff; }
+  .btn-ln img { width: 26px; height: 25px; }
+  .btn-tel { background: #fff; color: var(--nv); }
+  .btn-share { background: transparent; color: #fff; border: 2px solid rgba(255,255,255,.7); }
+  .contact .muted { color: #d0d9e4; margin: 16px 0 0; }
+  #copied { display: none; margin: 10px 0 0; text-align: center; font-size: 14px; color: var(--cy); }
+  footer { background: var(--nv); color: #a9b8cb; font-size: 12px; text-align: center; padding: 0 0 104px; }
+
+  /* スマホ下のLINE */
+  .float { position: fixed; left: 0; right: 0; bottom: 0; z-index: 20; padding: 10px 14px calc(10px + env(safe-area-inset-bottom)); background: rgba(255,255,255,.96); border-top: 1px solid var(--line); transform: translateY(110%); transition: transform .25s; }
+  .float.on { transform: none; }
+  .float .btn { min-height: 50px; font-size: 16px; max-width: 620px; margin: 0 auto; }
+  @media (min-width: 700px) {
+    .hero { padding: 72px 0 60px; }
+    .flow img { width: 170px; height: 368px; }
+    section { padding: 72px 0; }
+  }
+</style>
+<script src="https://bunkai-stats.shiga-web.workers.dev/t.js" async></script>
+</head>
+<body>
+
+<header><div class="w">
+  <a class="logo" href="https://bunkai-official.github.io/"><img src="../img/logo-b.jpg" alt="" width="26" height="28">BUNKAI</a>
+  <a class="tel" href="tel:08057148516">080-5714-8516</a>
+</div></header>
+
+<div class="hero">
+  <div class="flow" aria-hidden="true">
+    <div class="row"><img src="../img/sp-craft.jpg" alt="" width="560" height="1212" decoding="async"><img src="../img/sp-chiiki.jpg" alt="" width="560" height="1212" decoding="async"><img src="../img/sp-shokunin.jpg" alt="" width="560" height="1212" decoding="async"><img src="../img/sp-pop.jpg" alt="" width="560" height="1212" decoding="async"><img src="../img/sp-clean.jpg" alt="" width="560" height="1212" decoding="async"><img src="../img/sp-flyer.jpg" alt="" width="560" height="1212" decoding="async"><img src="../img/sp-craft.jpg" alt="" width="560" height="1212" decoding="async"><img src="../img/sp-chiiki.jpg" alt="" width="560" height="1212" decoding="async"><img src="../img/sp-shokunin.jpg" alt="" width="560" height="1212" decoding="async"><img src="../img/sp-pop.jpg" alt="" width="560" height="1212" decoding="async"><img src="../img/sp-clean.jpg" alt="" width="560" height="1212" decoding="async"><img src="../img/sp-flyer.jpg" alt="" width="560" height="1212" decoding="async"></div>
+    <div class="row r2"><img src="../img/sp-pop.jpg" alt="" width="560" height="1212" decoding="async"><img src="../img/sp-clean.jpg" alt="" width="560" height="1212" decoding="async"><img src="../img/sp-flyer.jpg" alt="" width="560" height="1212" decoding="async"><img src="../img/sp-craft.jpg" alt="" width="560" height="1212" decoding="async"><img src="../img/sp-chiiki.jpg" alt="" width="560" height="1212" decoding="async"><img src="../img/sp-shokunin.jpg" alt="" width="560" height="1212" decoding="async"><img src="../img/sp-pop.jpg" alt="" width="560" height="1212" decoding="async"><img src="../img/sp-clean.jpg" alt="" width="560" height="1212" decoding="async"><img src="../img/sp-flyer.jpg" alt="" width="560" height="1212" decoding="async"><img src="../img/sp-craft.jpg" alt="" width="560" height="1212" decoding="async"><img src="../img/sp-chiiki.jpg" alt="" width="560" height="1212" decoding="async"><img src="../img/sp-shokunin.jpg" alt="" width="560" height="1212" decoding="async"></div>
+  </div>
+  <div class="w">
+    <h1>ホームページで<wbr>困っている<wbr>会社を<br><em>ご紹介ください</em></h1>
+    <p class="lead">BUNKAI<span class="kj">は、</span><wbr>ホームページを<wbr>先に<wbr>無料で<wbr>作ってお見せ<span class="kj">し、</span><wbr>毎月の<wbr>運用まで<wbr>引き受けていま<span class="kj">す。</span></p>
+    <div class="gift"><span class="k">ご紹介の<wbr>会社さまが<wbr>ご契約されたら</span><span class="v">月額<span class="num">1</span>か月分を<wbr>お礼に</span><span class="e">例：月<span class="kj">29,800</span>円の<wbr>プランなら<wbr><span class="kj">29,800</span>円</span></div>
+    <a class="site" href="https://bunkai-official.github.io/" target="_blank" rel="noopener"><span class="t">BUNKAIの<wbr>ことや<wbr>料金<span class="kj">は、</span><wbr>こちらに<wbr>まとめています</span><span class="u">bunkai-official.github.io</span><span class="go">BUNKAIの<wbr>紹介ページを<wbr>見る</span></a>
+  </div>
+</div>
+
+<section class="alt"><div class="w">
+  <h2>紹介方<wbr>法</h2>
+  <ol class="steps">
+    <li><div class="hd">LINE<span class="kj">で、</span><wbr>次の<wbr>形式で<wbr>送る</div>
+      <p>BUNKAIの<wbr>公式LINEに<wbr>送ってくださ<span class="kj">い。</span><wbr>わかる<wbr>範囲で<wbr>大丈夫で<span class="kj">す。</span></p>
+      <div class="sendbox"><b>会社名：</b>株式会社〇〇<br><b>業種：</b>製造業<br><b>会社URL：</b>なし<br><b>お名前：</b>〇〇 〇〇<br><b>役職：</b>代表取締役<br><b>電話<wbr>番号：</b>090-0000-0000<br><b>課題：</b>ホームページを新しく作りたい</div>
+      <button class="btn-copy" type="button" id="copyfmt">この<wbr>形式を<wbr>コピーする</button>
+    </li>
+    <li><div class="hd">相手の<wbr>方に<span class="kj">も、</span><wbr>お知らせください</div>
+      <p><span class="kj">「B</span>UNKAIの<wbr>森から<wbr>連絡が<wbr>ありま<span class="kj">す」</span><span class="kj">と、</span><wbr>ひと<wbr>言お伝えくださ<span class="kj">い。</span></p>
+      <p>伝えにくいとき<span class="kj">は、</span><wbr>この<wbr>ページを<wbr>送るだけでも<wbr>大丈夫で<span class="kj">す。</span><wbr>その<wbr>場合<span class="kj">も、</span><wbr>送った<wbr>ことを<wbr>LINEで<wbr>教えてください<wbr><span class="kj">（ど</span>なたからの<wbr>ご紹介か<wbr>分かるよう<span class="kj">に）。</span></p>
+    </li>
+    <li><div class="hd">あとは<wbr>BUNKAIが<wbr>進めます</div>
+      <p>BUNKAIから<wbr>ご連絡<span class="kj">し、</span><wbr>その<wbr>会社さま専用の<wbr>ホームページの<wbr>見本<span class="kj">を、</span><wbr>無料で<wbr>お作りしま<span class="kj">す。</span></p>
+      <p>完成品を<wbr>ご覧いただいてか<span class="kj">ら、</span><wbr>ご契約を<wbr>ご判断いただけま<span class="kj">す。</span></p>
+    </li>
+  </ol>
+</div></section>
+
+<section><div class="w">
+  <h2>お礼の<wbr>金額<span class="kj">と、</span><wbr>お渡しする<wbr>時期</h2>
+  <p>お礼<span class="kj">は、</span><wbr>ご紹介の<wbr>会社さまが<wbr>お申し込みに<wbr>なった<wbr>月額<wbr><span class="kj">（税</span><span class="kj">別）</span>の<wbr>1か<wbr>月分で<span class="kj">す。</span><wbr>下の<wbr>金額は<wbr>消費税込み<span class="kj">で、</span><wbr>これに<wbr>消費税は<wbr>加えませ<span class="kj">ん。</span></p>
+  <table class="yen">
+    <tr><th>ライト</th><td><span class="num">19,800</span>円</td></tr>
+    <tr><th>スタンダード<small>いちばん多いプラン</small></th><td><span class="num">29,800</span>円</td></tr>
+    <tr><th>プレミアム</th><td><span class="num">49,800</span>円</td></tr>
+    <tr><th>スタンダード<br>＋Googleマップ</th><td><span class="num">39,600</span>円</td></tr>
+  </table>
+  <p class="muted">何社ご紹介いただいて<span class="kj">も、</span><wbr>1社ごとに<wbr>お渡ししま<span class="kj">す。</span><wbr>上限は<wbr>ありませ<span class="kj">ん。</span></p>
+  <div class="when"><b>お渡しする<wbr>時期</b>ご紹介の<wbr>会社さまの<wbr>最初の<wbr>お支払いを<wbr>確認した<wbr>月<span class="kj">の、</span><wbr>翌月末までに<wbr>お振り込みしま<span class="kj">す。</span><wbr>振込手数料は<wbr>BUNKAIが<wbr>負担しま<span class="kj">す。</span></div>
+</div></section>
+
+<section class="alt"><div class="w">
+  <h2>こんな<wbr>会社<span class="kj">が、</span><wbr>お身近に<wbr>ありませんか</h2>
+  <ul class="dots">
+    <li>ホームページが<wbr>ない</li>
+    <li>ホームページは<wbr>ある<span class="kj">が、</span><wbr>何年も<wbr>更新していない</li>
+    <li>名前で<wbr>調べて<span class="kj">も、</span><wbr>Googleマップや<wbr>検索に<wbr>出てこない</li>
+    <li>Instagramや<wbr>LINEを<wbr>やりたい<span class="kj">が、</span><wbr>手が<wbr>回らない</li>
+    <li>仕事が<wbr>紹介頼み<span class="kj">で、</span><wbr>月に<wbr>よって<wbr>波が<wbr>ある</li>
+  </ul>
+  <p class="muted" style="margin-top:16px">業種は<wbr>問いませ<span class="kj">ん。</span><wbr>滋賀県の<wbr>外の<wbr>会社さま<span class="kj">も、</span><wbr>電話・LINE・ビデオ通話で<wbr>進められま<span class="kj">す。</span></p>
+</div></section>
+
+<section class="for-co"><div class="w">
+  <h2>ご紹介の<wbr>会社さまへ</h2>
+  <dl>
+    <div><dt>見本</dt><dd>御社用の<wbr>ホームページ<span class="kj">を、</span><wbr>先に<wbr>無料で<wbr>作ってお見せします</dd></div>
+    <div><dt>ご契約</dt><dd>完成品を<wbr>見てから<wbr>決めて<wbr>いただけます</dd></div>
+    <div><dt>制作費</dt><dd>0円</dd></div>
+    <div><dt>毎月</dt><dd>月<span class="kj">19,800</span>円から<wbr><span class="kj">（税</span>別・最低3か<wbr><span class="kj">月）</span></dd></div>
+    <div><dt>運用の<wbr>内容</dt><dd>ホームページの<wbr>更新と<wbr>管<span class="kj">理、</span><wbr>SEO<wbr><span class="kj">（検</span>索対<span class="kj">策）、</span><wbr>AIO・GEO対策<wbr><span class="kj">（C</span>hatGPTなどの<wbr>AI検索に<wbr>出やすく<wbr>す<span class="kj">る）、</span><wbr>毎月の<wbr>報告な<span class="kj">ど。</span><wbr>プランに<wbr>合わせて<wbr>行います</dd></div>
+    <div><dt>Googleマップ</dt><dd>MEO対策<wbr><span class="kj">（地</span>図での<wbr>検索対<span class="kj">策）</span><span class="kj">は、</span><wbr>月<span class="kj">9,800</span>円からの<wbr>追加プランです</dd></div>
+  </dl>
+  <p class="muted" style="margin-top:24px">見本の<wbr>例<wbr><span class="kj">（押</span>す<span class="kj">と、</span><wbr>実際の<wbr>サイトが<wbr>開きま<span class="kj">す。</span><wbr>今は<wbr>塗装店の<wbr>例で<span class="kj">す）</span></p>
+  <div class="samples">
+    <a href="https://konan-paint.shiga-web.workers.dev/craft.html" target="_blank" rel="noopener"><img src="../img/sp-craft.jpg" alt="" loading="lazy" width="560" height="640"><b>職人の<wbr>技術</b><span>工程ごとの<wbr>こだわりを<wbr>見せる</span></a>
+    <a href="https://konan-paint.shiga-web.workers.dev/chiiki" target="_blank" rel="noopener"><img src="../img/sp-chiiki.jpg" alt="" loading="lazy" width="560" height="640"><b>地域密着</b><span>近くの<wbr>職人だと<wbr>伝える</span></a>
+    <a href="https://konan-paint.shiga-web.workers.dev/seijitsu" target="_blank" rel="noopener"><img src="../img/sp-shokunin.jpg" alt="" loading="lazy" width="560" height="640"><b>誠実</b><span>写真で<wbr>落ち着いて<wbr>見せる</span></a>
+    <a href="https://konan-paint.shiga-web.workers.dev/pop" target="_blank" rel="noopener"><img src="../img/sp-pop.jpg" alt="" loading="lazy" width="560" height="640"><b>ポップ</b><span>気軽に<wbr>相談して<wbr>もらう</span></a>
+  </div>
+  <a class="site site-l" href="https://bunkai-official.github.io/" target="_blank" rel="noopener"><span class="t">料金やできる<wbr>こと<span class="kj">は、</span><wbr>BUNKAIの<wbr>紹介ページに</span><span class="u">bunkai-official.github.io</span><span class="go">BUNKAIの<wbr>紹介ページを<wbr>見る</span></a>
+</div></section>
+
+<section><div class="w">
+  <h2>ご紹介くださる<wbr>方<wbr>への<wbr>お約束</h2>
+  <ul class="check">
+    <li>しつこい<wbr>営業は<wbr>しませ<span class="kj">ん。</span><wbr>お断りが<wbr>あれ<span class="kj">ば、</span><wbr>それ以上は<wbr>ご連絡しません</li>
+    <li>ご紹介くださった方の<wbr>お名前を<wbr>相手の<wbr>方に<wbr>伝えて<wbr>よいか<span class="kj">は、</span><wbr>先に<wbr>確認します</li>
+    <li>話の<wbr>進み具合<span class="kj">は、</span><wbr>LINEで<wbr>ご報告します</li>
+  </ul>
+</div></section>
+
+<section class="alt"><div class="w">
+  <h2>詳しい<wbr>条件</h2>
+  <details><summary>お礼の<wbr>対象に<wbr>なるの<span class="kj">は？</span></summary><p>ご紹介の<wbr>会社さまが<wbr>運用プランに<wbr>お申し込みに<wbr>な<span class="kj">り、</span><wbr>最初の<wbr>お支払いが<wbr>済んだ<wbr>ときで<span class="kj">す。</span><wbr>ご紹介から<wbr>ご契約まで<wbr>6か<wbr>月以内の<wbr>ものが<wbr>対象で<span class="kj">す。</span></p></details>
+  <details><summary>対象に<wbr>ならない<wbr>会社<span class="kj">は？</span></summary><p>ご紹介の<wbr>前か<span class="kj">ら、</span><wbr>BUNKAIと<wbr>ご相談や<wbr>お見積もりの<wbr>やり取りを<wbr>している<wbr>会社さまは<wbr>対象外で<span class="kj">す。</span><wbr>BUNKAIから<wbr>ご案内を<wbr>一度<wbr>送っただけ<span class="kj">で、</span><wbr>お返事が<wbr>なかった<wbr>会社さまは<wbr>対象に<wbr>なりま<span class="kj">す。</span><wbr>ご自身の<wbr>会社の<wbr>お申し込みも<wbr>対象外で<span class="kj">す。</span></p></details>
+  <details><summary>同じ<wbr>会社を<wbr>2人から<wbr>紹介された<span class="kj">ら？</span></summary><p>先に<wbr>LINEで<wbr>ご連絡くださった方<span class="kj">を、</span><wbr>ご紹介者としま<span class="kj">す。</span></p></details>
+  <details><summary>ご紹介の<wbr>会社さま<span class="kj">が、</span><wbr>途中で<wbr>解約した<span class="kj">ら？</span></summary><p>お渡しした<wbr>お礼<span class="kj">を、</span><wbr>返していただく<wbr>必要は<wbr>ありませ<span class="kj">ん。</span></p></details>
+  <details><summary>BUNKAIと<wbr>契約中の<wbr>会社です<span class="kj">が、</span><wbr>紹介できます<span class="kj">か？</span></summary><p>は<span class="kj">い、</span><wbr>できま<span class="kj">す。</span><wbr>お礼<span class="kj">は、</span><wbr>お振り込み<span class="kj">か、</span><wbr>次回の<wbr>月額からの<wbr>差し<wbr>引き<span class="kj">か、</span><wbr>どちらかを<wbr>選べま<span class="kj">す。</span></p></details>
+  <details><summary>お礼に<wbr>税金は<wbr>かかります<span class="kj">か？</span></summary><p>お礼<span class="kj">は、</span><wbr>受け取った方の<wbr>収入に<wbr>なりま<span class="kj">す。</span><wbr>確定申告が<wbr>必要か<wbr>どうか<span class="kj">は、</span><wbr>税務署や<wbr>税理士に<wbr>ご確認くださ<span class="kj">い。</span></p></details>
+</div></section>
+
+<section class="contact"><div class="w">
+  <h2>ご紹介・ご質問<span class="kj">は、</span><wbr>LINEか<wbr>電話で</h2>
+  <a class="btn btn-ln" href="https://lin.ee/uWffMn8" target="_blank" rel="noopener"><img src="../img/line-bubble-w.png" alt="" width="26" height="25">LINEで紹介する</a>
+  <a class="btn btn-tel" href="tel:08057148516">電話する（080-5714-8516）</a>
+  <button class="btn btn-share" type="button" id="share">この<wbr>ページを<wbr>相手に<wbr>送る</button>
+  <p id="copied">ページの<wbr>アドレスを<wbr>コピーしました</p>
+  <p class="muted">BUNKAI 森<br>bunkai.work@gmail.com</p>
+</div></section>
+<footer>© 2026 BUNKAI</footer>
+
+<div class="float" id="float"><a class="btn btn-ln" href="https://lin.ee/uWffMn8" target="_blank" rel="noopener"><img src="../img/line-bubble-w.png" alt="" width="26" height="25">LINEで紹介する</a></div>
+
+<script>
+(function () {
+  // 下のLINEボタン：最初の画面を過ぎたら出し、最後の連絡の欄では消す
+  var f = document.getElementById("float"), hero = document.querySelector(".hero"), ct = document.querySelector(".contact");
+  function chk() {
+    var past = hero.getBoundingClientRect().bottom < 0, atEnd = ct.getBoundingClientRect().top < innerHeight;
+    f.classList.toggle("on", past && !atEnd);
+  }
+  addEventListener("scroll", chk, { passive: true }); chk();
+  // 紹介方法の形式をコピー
+  var cf = document.getElementById("copyfmt");
+  if (cf) cf.addEventListener("click", function () {
+    var t = "会社名：\n業種：\n会社URL：\nお名前：\n役職：\n電話番号：\n課題：";
+    var ok = function () { cf.textContent = "コピーしました。LINEに貼りつけてください"; cf.classList.add("done"); };
+    if (navigator.clipboard) navigator.clipboard.writeText(t).then(ok, function () { prompt("この形式をコピーしてください", t); });
+    else prompt("この形式をコピーしてください", t);
+  });
+  // このページを相手に送る：スマホは共有メニュー、ないときはアドレスをコピー
+  var url = "https://bunkai-official.github.io/partner/";
+  document.getElementById("share").addEventListener("click", function () {
+    if (navigator.share) { navigator.share({ title: "BUNKAIの紹介制度", url: url }).catch(function () {}); return; }
+    var done = function () { document.getElementById("copied").style.display = "block"; };
+    if (navigator.clipboard) navigator.clipboard.writeText(url).then(done, function () { prompt("このアドレスをコピーしてください", url); });
+    else prompt("このアドレスをコピーしてください", url);
+  });
+})();
+</script>
+</body>
+</html>
