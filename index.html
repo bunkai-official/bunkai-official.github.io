@@ -1,0 +1,1695 @@
+<!doctype html>
+<html lang="ja" translate="no">
+<head>
+<meta charset="utf-8">
+<meta name="google" content="notranslate">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>BUNKAI｜ホームページ制作・運用とSNS・LINEの集客</title>
+<meta name="description" content="会社・お店のホームページ制作と集客。御社用のホームページを先に無料で作ってお見せします。制作から運用、Googleマップ、SNS、LINEまでまとめて引き受けます。全国対応（打ち合わせは電話・LINE・ビデオ通話）。">
+<meta property="og:type" content="website">
+<meta property="og:title" content="BUNKAI｜ホームページ制作・運用とSNS・LINEの集客">
+<meta property="og:url" content="https://bunkai-official.github.io/">
+<meta property="og:description" content="御社用のホームページを、先に作ってお見せします。制作から運用・集客まで、まとめて引き受けます。今のホームページの改修・運用だけでもOKです。">
+<meta property="og:image" content="https://bunkai-official.github.io/img/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<!-- ▼ アクセス解析：下の3か所に番号を入れるだけで動きます<wbr>（空のままなら何もしません） -->
+<meta name="google-site-verification" content="">
+<script>
+  var GA_ID = "G-6P83L0SP8P";       // GA4 の「測定ID」 例）G-ABC123XYZ
+  var CLARITY_ID = "z4u37wrti3";  // Clarity の「プロジェクトID」 例）abcd1234ef
+  window.track = function () {};
+  if (GA_ID) {
+    var g = document.createElement("script"); g.async = true; g.src = "https://www.googletagmanager.com/gtag/js?id=" + GA_ID; document.head.appendChild(g);
+    window.dataLayer = window.dataLayer || []; window.gtag = function () { dataLayer.push(arguments); };
+    gtag("js", new Date()); gtag("config", GA_ID);
+    window.track = function (name, where) { gtag("event", name, { place: where || "" }); };
+  }
+  if (CLARITY_ID) {
+    (function (c, l, a, r, i, t, y) { c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments); }; t = l.createElement(r); t.async = 1; t.src = "https://www.clarity.ms/tag/" + i; y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y); })(window, document, "clarity", "script", CLARITY_ID);
+  }
+</script>
+<!-- ▲ アクセス解析ここまで -->
+<link rel="icon" href="img/logo.jpg">
+<link rel="apple-touch-icon" href="img/logo.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@600;700&family=Nanum+Gothic+Coding:wght@400;700&family=Zen+Kaku+Gothic+New:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --nv: #12294a; --nv-d: #0b1a31; --cy: #3cc8d8; --cy-d: #1fa8b9;
+    --or1: #f07d22; --or2: #f7a733; --or: #f08a24;
+    --ink: #1c2b3f; --mu: #5c6b7d; --line: #dfe7ef; --sky: #eaf4fb; --bg: #f4f7fa;
+    --code: "Nanum Gothic Coding", "Zen Kaku Gothic New", monospace;
+    --num: "Barlow", "Zen Kaku Gothic New", sans-serif; /* 数字用<wbr>（0の中に点がない） */
+    --green: #06c755;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; scroll-padding-top: 76px; overflow-x: clip; }
+  body { margin: 0; font-family: "Zen Kaku Gothic New", "Hiragino Kaku Gothic ProN", sans-serif; color: var(--ink); line-height: 1.85; letter-spacing: .03em; -webkit-font-smoothing: antialiased; overflow-x: hidden; overflow-x: clip; background: #fff; }
+  img { display: block; max-width: 100%; height: auto; }
+  a { color: inherit; }
+  .wrap { max-width: 1120px; margin: 0 auto; padding: 0 24px; }
+  .code { font-family: var(--code); }
+  section { padding: 96px 0; position: relative; }
+
+  /* 英字の大見出し<wbr>（タイピング風のカーソル付き） */
+  .ttl { text-align: center; margin-bottom: 46px; }
+  .ttl .en { display: block; font-family: var(--code); font-weight: 700; font-size: clamp(30px, 5vw, 52px); letter-spacing: .02em; color: var(--nv); line-height: 1.1; }
+  .ttl .en::after { content: ""; display: block; width: 64px; height: 4px; border-radius: 2px; margin: 14px auto 0; background: linear-gradient(90deg, var(--cy), #2b8fd8); transform: scaleX(0); transform-origin: left; transition: transform .9s cubic-bezier(.2,.8,.2,1) .35s; }
+  .ttl.in .en::after { transform: scaleX(1); }
+  .ttl h2 { margin: 12px 0 0; font-size: 15px; font-weight: 700; color: var(--nv); letter-spacing: .12em; }
+  .band { display: inline-flex; align-items: center; gap: 10px; background: var(--nv); color: #fff; font-weight: 700; padding: 10px 34px; margin-top: 20px; font-size: 15px; clip-path: polygon(14px 0, 100% 0, calc(100% - 14px) 100%, 0 100%); position: relative; }
+  .band::before { content: "<"; color: var(--cy); font-family: var(--code); font-weight: 700; }
+  .band::after { content: ">"; color: var(--cy); font-family: var(--code); font-weight: 700; }
+  @keyframes blink { 50% { opacity: 0; } }
+
+  /* ボタン */
+  .btn { display: inline-flex; align-items: center; justify-content: center; gap: 10px; text-decoration: none; font-weight: 700; border-radius: 999px; transition: transform .2s, box-shadow .2s, filter .2s; }
+  .btn:hover { transform: translateY(-2px); filter: brightness(1.05); }
+  .btn-or { background: linear-gradient(90deg, var(--or1), var(--or2)); color: #fff; box-shadow: 0 8px 20px rgba(240,125,34,.35); }
+  .btn-cy { background: linear-gradient(90deg, #7fdbe6, #4cc2dc); color: #fff; padding: 14px 34px; position: relative; }
+  .btn-cy::after { content: ""; position: absolute; right: -26px; top: 50%; width: 40px; height: 1px; background: var(--nv); }
+  .btn-big { flex-direction: column; gap: 0; padding: 15px 22px; flex: 1 1 240px; line-height: 1.4; }
+  .btn-big b { display: flex; align-items: center; gap: 8px; font-size: 19px; }
+  .btn-big small { font-size: 12.5px; font-weight: 500; opacity: .95; }
+  .ico { width: 22px; height: 22px; flex: none; }
+
+  /* ヘッダー */
+  .topline { background: var(--nv-d); color: rgba(255,255,255,.7); font-size: 11.5px; padding: 4px 0; }
+  header { position: sticky; top: 0; z-index: 30; background: rgba(255,255,255,.97); box-shadow: 0 2px 14px rgba(18,41,74,.06); }
+  header .wrap { display: flex; align-items: center; gap: 22px; height: 70px; max-width: 1240px; }
+  .logo { display: flex; align-items: center; text-decoration: none; flex: none; }
+  .logo img { width: 30px; height: 32px; margin-right: 1px; }
+  .logo span { font-size: 27px; font-weight: 900; color: #1d3a63; letter-spacing: .04em; line-height: 1; }
+  .logo small { display: block; font-family: var(--code); font-size: 10px; color: var(--cy-d); letter-spacing: .06em; margin-top: 3px; }
+  nav.gn { display: flex; gap: 20px; margin-left: auto; font-size: 13.5px; font-weight: 700; }
+  nav.gn a { text-decoration: none; color: var(--nv); }
+  nav.gn a:hover { color: var(--cy-d); }
+  .hb { display: flex; gap: 8px; }
+  .rnd { width: 44px; height: 44px; border-radius: 50%; display: grid; place-items: center; color: #fff; text-decoration: none; }
+  .rnd.tel { background: linear-gradient(135deg, #5b6cf0, #7b5cf0); }
+  .rnd.line { background: var(--green); font-size: 11px; font-weight: 900; }
+  .slant { display: grid; place-items: center; width: 56px; height: 44px; background: linear-gradient(90deg, var(--or1), var(--or2)); color: #fff; clip-path: polygon(12px 0, 100% 0, calc(100% - 12px) 100%, 0 100%); text-decoration: none; }
+
+  /* ファーストビュー */
+  .fv { background: radial-gradient(1200px 600px at 75% 40%, rgba(60,200,216,.18), transparent 60%), radial-gradient(800px 500px at 10% 90%, rgba(91,108,240,.18), transparent 60%), linear-gradient(160deg, #0b1a31 0%, #12294a 55%, #0d2140 100%); color: #fff; padding: 46px 0 70px; position: relative; overflow: hidden; }
+  .fv::before { content: ""; position: absolute; inset: 0; background-image: radial-gradient(rgba(255,255,255,.35) 1px, transparent 1.5px); background-size: 46px 46px; opacity: .25; }
+  .fv::after { content: ""; position: absolute; right: 8%; top: -20%; width: 3px; height: 70%; background: linear-gradient(transparent, rgba(255,60,90,.7), transparent); transform: rotate(8deg); filter: blur(1px); }
+  .fv .wrap { position: relative; z-index: 1; display: grid; grid-template-columns: 1.05fr .95fr; gap: 30px; align-items: center; max-width: 1240px; }
+  .nw { display: inline-block; }
+  .fv .for-co { display: inline-flex; align-items: center; gap: 8px; margin: 0 0 16px; padding: 7px 18px; border-radius: 999px; background: #fff; color: var(--nv); font-weight: 900; font-size: 15px; box-shadow: 0 8px 20px rgba(0,0,0,.2); }
+  .fv .for-co[hidden] { display: none; }
+  a.for-co { text-decoration: none; transition: transform .2s; } a.for-co:hover { transform: translateY(-2px); }
+  .fv .for-co span { margin-left: 6px; padding: 3px 12px; border-radius: 999px; background: var(--or1); color: #fff; font-size: 13px; }
+  .fv .for-co::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--or1); }
+  .fv h1 { margin: 0; font-size: clamp(24px, 3vw, 34px); font-weight: 900; line-height: 1.5; }
+  .fv .type { display: block; font-size: clamp(36px, 5.4vw, 64px); color: var(--cy); line-height: 1.3; margin-top: 4px; min-height: 1.3em; white-space: nowrap; }
+  .fv .type .c { display: inline-block; opacity: 0; transform: translateY(.5em); animation: rise .6s cubic-bezier(.2,.8,.2,1) forwards; }
+  @keyframes rise { to { opacity: 1; transform: none; } }
+  .fv .type .brand { position: relative; display: inline-block; }
+  .fv .type .brand svg { position: absolute; left: -2%; bottom: -.18em; width: 104%; height: .32em; overflow: visible; }
+  .fv .type .brand path { fill: none; stroke: var(--or1); stroke-width: 5; stroke-linecap: round; stroke-dasharray: 400; stroke-dashoffset: 400; animation: draw 1s ease-out 1.3s forwards; }
+  @keyframes draw { to { stroke-dashoffset: 0; } }
+  .fv h1 > .nw { opacity: 0; animation: rise .8s cubic-bezier(.2,.8,.2,1) forwards; transform: translateY(14px); }
+  .fv h1 > .nw + .nw { animation-delay: .15s; }
+  .tags span { opacity: 0; animation: rise .5s ease-out forwards; }
+  .stat { opacity: 0; transform: translateY(16px); animation: rise .7s cubic-bezier(.2,.8,.2,1) forwards; }
+  .stat:nth-child(1) { animation-delay: 1.2s; } .stat:nth-child(2) { animation-delay: 1.32s; } .stat:nth-child(3) { animation-delay: 1.44s; }
+  .tags { display: flex; flex-wrap: wrap; gap: 8px; margin: 22px 0 26px; max-width: 560px; }
+  .tags span { border: 1.5px solid rgba(255,255,255,.8); border-radius: 999px; padding: 3px 14px; font-size: 13px; font-weight: 700; }
+  .tags span.etc { border: 0; padding: 3px 4px; opacity: .8; }
+  .stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; max-width: 600px; }
+  .stat { background: #fff; color: var(--nv); border-radius: 10px; text-align: center; padding: 12px 8px 14px; position: relative; overflow: hidden; }
+  .stat::after { content: ""; position: absolute; right: 0; bottom: 0; border: 12px solid transparent; border-right-color: var(--or1); border-bottom-color: var(--or1); }
+  .stat svg { width: 30px; height: 30px; color: var(--nv); margin: 0 auto 2px; display: block; }
+  .stat small { display: block; font-size: 12px; font-weight: 700; }
+  .stat b { display: block; font-family: var(--code); font-size: 30px; color: var(--or); line-height: 1.25; }
+  .stat i { font-style: normal; font-size: 11.5px; }
+  .stat b.sm { font-size: 24px; white-space: nowrap; }
+  .fv .ctas { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 28px; max-width: 600px; }
+  .devices { position: relative; height: 430px; }
+  .pc { position: absolute; left: 0; top: 70px; width: 70%; background: #1d2b40; border-radius: 12px; padding: 22px 8px 8px; box-shadow: 0 30px 60px rgba(0,0,0,.4), 0 0 0 1px rgba(60,200,216,.25); animation: float 6s ease-in-out infinite; }
+  .pc::before { content: ""; position: absolute; left: 12px; top: 8px; width: 8px; height: 8px; border-radius: 50%; background: #ff6058; box-shadow: 14px 0 #ffc130, 28px 0 #27ca40; }
+  .pc .scr { aspect-ratio: 16/10; overflow: hidden; border-radius: 4px; background: #fff; }
+  .sp .scr { aspect-ratio: 9/19; overflow: hidden; background: #fff; }
+  .scr img { width: 100%; animation: scr 26s ease-in-out infinite alternate; }
+  .sp .scr img { animation-duration: 22s; animation-delay: -6s; }
+  @keyframes scr { 0%, 8% { transform: translateY(0); } 92%, 100% { transform: translateY(var(--d, -70%)); } }
+  .devices { perspective: 1200px; }
+  .devices .tilt { position: absolute; inset: 0; transition: transform .25s ease-out; transform-style: preserve-3d; }
+  .sp { position: absolute; right: 0; bottom: 10px; width: 26%; border: 7px solid #0b1424; border-radius: 26px; overflow: hidden; background: #0b1424; box-shadow: 0 24px 50px rgba(0,0,0,.45); animation: float 6s ease-in-out infinite -3s; }
+  @keyframes float { 50% { transform: translateY(-10px); } }
+  .fv .badge { position: absolute; left: 0; top: 0; background: rgba(255,255,255,.95); color: var(--nv); border-radius: 10px; padding: 8px 12px; font-size: 11.5px; font-weight: 700; line-height: 1.4; text-align: center; box-shadow: 0 10px 24px rgba(0,0,0,.25); z-index: 2; }
+  .fv .badge b { display: block; font-size: 15px; color: var(--or); }
+
+  /* 読み進みバー・ボタンの光・カードのホバー */
+  .progress { position: fixed; left: 0; top: 0; height: 3px; width: 100%; z-index: 50; background: linear-gradient(90deg, var(--cy), #2b8fd8, var(--or1)); transform: scaleX(0); transform-origin: left; }
+  .btn-or { position: relative; overflow: hidden; }
+  .btn-or::after { content: ""; position: absolute; top: 0; left: -60%; width: 40%; height: 100%; background: linear-gradient(110deg, transparent, rgba(255,255,255,.45), transparent); transform: skewX(-20deg); transition: left .7s; }
+  .btn-or:hover::after { left: 130%; }
+  .sample .ph, .mcard { transform-style: preserve-3d; will-change: transform; }
+  .rs .ci { transition: transform .4s, box-shadow .4s; }
+  .rs:hover .ci { transform: translateY(-6px); box-shadow: 0 0 0 14px rgba(60,200,216,.14), 0 0 0 15px rgba(60,200,216,.45), 0 20px 36px rgba(18,41,74,.16); }
+  .stat:hover, .pcard:hover { transform: translateY(-3px); transition: transform .25s; }
+
+  /* 左の縦ラベル<wbr>（今見ているセクション） */
+  .side { position: fixed; left: 14px; top: 50%; transform: translateY(-50%); z-index: 20; display: flex; flex-direction: column; align-items: center; gap: 12px; pointer-events: none; opacity: 0; transition: opacity .4s; }
+  .side.on { opacity: 1; }
+  .side span { writing-mode: vertical-rl; font-family: var(--code); font-size: 12px; color: var(--nv); letter-spacing: .08em; }
+  .side span::before { content: "< "; } .side span::after { content: " >"; }
+  .side i { width: 30px; height: 30px; border-radius: 50%; border: 1.5px solid var(--nv); position: relative; }
+  .side i::after { content: ""; position: absolute; inset: 11px; border-radius: 50%; background: var(--nv); }
+
+  /* 右下の丸い相談ボタン */
+  .float-ct { position: fixed; right: 20px; bottom: 20px; z-index: 40; width: 104px; height: 104px; border-radius: 50%; background: linear-gradient(135deg, var(--or2), var(--or1)); color: #fff; text-decoration: none; display: grid; place-items: center; text-align: center; font-weight: 900; font-size: 14px; line-height: 1.3; box-shadow: 0 10px 26px rgba(240,125,34,.45); transition: transform .2s; }
+  .float-ct:hover { transform: scale(1.06); }
+  .float-ct.hide { opacity: 0; pointer-events: none; transform: scale(.7); }
+  .float-ct { transition: opacity .3s, transform .3s; }
+  .float-ct svg { width: 22px; height: 22px; margin: 0; display: block; }
+  .float-ct { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px; }
+
+  /* お悩み<wbr>（円の周りに並べる） */
+  .concern { background: linear-gradient(180deg, #fff, var(--bg)); overflow: hidden; }
+  .cc { position: relative; margin-top: 40px; display: grid; grid-template-columns: 1fr 420px 1fr; gap: 26px; align-items: center; }
+  .cc::before { content: ""; position: absolute; left: 50%; top: 50%; width: 600px; height: 600px; transform: translate(-50%, -50%); border-radius: 50%; border: 1px solid #e3ebf2; box-shadow: 0 0 0 60px rgba(234,244,251,.5), 0 0 0 61px #e3ebf2; z-index: 0; }
+  .cc > * { position: relative; z-index: 1; }
+  .cc ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 22px; }
+  .cc li { display: flex; align-items: center; gap: 14px; font-weight: 700; font-size: 15.5px; line-height: 1.55; }
+  .cc .l li { flex-direction: row-reverse; text-align: right; }
+  .cc li i { flex: none; width: 50px; height: 50px; border-radius: 50%; background: #fff; box-shadow: 0 6px 16px rgba(18,41,74,.1); display: grid; place-items: center; color: var(--or1); font-style: normal; font-size: 20px; }
+  .cc .mid { width: 420px; height: 420px; border-radius: 50%; background: #fff; box-shadow: 0 20px 50px rgba(18,41,74,.12); display: grid; place-items: center; }
+  .cc .mid img { width: 178px; border-radius: 22px; border: 6px solid var(--nv); box-shadow: 0 14px 30px rgba(18,41,74,.2); }
+  .answer { text-align: center; margin-top: 130px; position: relative; z-index: 2; }
+  .answer p { margin: 14px 0 0; font-size: 18px; font-weight: 900; color: var(--nv); }
+  .answer p em { font-style: normal; color: var(--or1); }
+
+  /* 見本 */
+  .works { background: var(--nv); color: #fff; overflow: hidden; }
+  .works .ttl .en { color: #fff; }
+  .works .ttl h2 { color: rgba(255,255,255,.8); }
+  .works .lead { text-align: center; color: rgba(255,255,255,.8); margin: -20px 0 40px; }
+  .samples { display: grid; grid-template-columns: repeat(4, 1fr); gap: 22px; }
+  .sample { text-decoration: none; text-align: center; }
+  .sample .ph { border-radius: 22px; border: 6px solid #0b1424; overflow: hidden; background: #0b1424; box-shadow: 0 0 0 1px rgba(60,200,216,.3), 0 18px 34px rgba(0,0,0,.35); transition: transform .25s; }
+  .sample:hover .ph { transform: translateY(-6px); }
+  .sample b { display: block; margin-top: 14px; font-size: 16px; }
+  .sample b::before { content: "#"; color: var(--cy); font-family: var(--code); margin-right: 4px; }
+  .sample span { font-size: 13px; color: rgba(255,255,255,.7); }
+  .premade { display: grid; grid-template-columns: 1.1fr 1fr; gap: 34px; align-items: center; background: #fff; color: var(--ink); border-radius: 20px; padding: 40px 44px; margin: 0 auto 48px; max-width: 1080px; box-shadow: 0 24px 60px rgba(0,0,0,.3); position: relative; overflow: hidden; }
+  .premade[hidden] { display: none; }
+  .premade .nw { display: inline-block; }
+  .pm-row li { word-break: keep-all; }
+  .premade::before { content: ""; position: absolute; left: 0; top: 0; bottom: 0; width: 8px; background: linear-gradient(180deg, var(--or1), var(--or2)); }
+  .pm-tag { display: inline-block; background: var(--or1); color: #fff; font-weight: 900; font-size: 14px; padding: 6px 16px; border-radius: 999px; }
+  .premade h3 { margin: 14px 0 12px; font-size: clamp(24px, 2.6vw, 34px); line-height: 1.45; color: var(--nv); font-weight: 900; }
+  .premade h3 b { color: var(--or); background: linear-gradient(transparent 65%, #ffe9cf 65%); }
+  .premade p { margin: 0 0 22px; font-size: 15px; line-height: 1.9; color: var(--mu); }
+  .premade p b { color: var(--nv); }
+  .pm-btn { display: inline-flex; align-items: center; gap: 12px; padding: 18px 30px; border-radius: 999px; background: linear-gradient(90deg, var(--or1), var(--or2)); color: #fff; font-weight: 900; font-size: 17px; text-decoration: none; box-shadow: 0 10px 24px rgba(240,125,34,.35); transition: transform .2s; }
+  .pm-btn:hover { transform: translateY(-2px); }
+  .pm-btn span { font-size: 20px; }
+  .pm-url { display: block; margin-top: 10px; font-size: 12px; color: var(--mu); word-break: break-all; }
+  .pm-r { display: grid; gap: 14px; }
+  .pm-row { border-radius: 14px; padding: 16px 18px; }
+  .pm-row b { display: block; font-size: 14px; margin-bottom: 10px; }
+  .pm-row ol { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(4, 1fr); gap: 6px; counter-reset: pm; }
+  .pm-row li { counter-increment: pm; position: relative; font-size: 12.5px; font-weight: 700; line-height: 1.45; text-align: center; padding: 30px 4px 8px; border-radius: 10px; background: #fff; }
+  .pm-row li::before { content: counter(pm); position: absolute; top: 6px; left: 50%; transform: translateX(-50%); width: 20px; height: 20px; border-radius: 50%; font-family: var(--num); font-size: 12px; line-height: 20px; color: #fff; }
+  .pm-row.ng { background: #f1f3f6; color: #8a96a3; }
+  .pm-row.ng li::before { background: #b5bec8; }
+  .pm-row.ng li:last-child { color: var(--ink); }
+  .pm-row.ok { background: #fff3e6; color: var(--nv); box-shadow: inset 0 0 0 2px var(--or1); }
+  .pm-row.ok b { color: var(--or); }
+  .pm-row.ok li::before { background: var(--or1); }
+  .pm-row.ok li:first-child { background: var(--or1); color: #fff; }
+  .pm-row.ok li:first-child::before { background: #fff; color: var(--or1); }
+  @media (max-width: 900px) { .premade { grid-template-columns: 1fr; padding: 28px 22px 26px 28px; gap: 22px; } .pm-btn { width: 100%; justify-content: center; padding: 16px 14px; font-size: 14.5px; } }
+  @media (max-width: 560px) { .pm-row ol { grid-template-columns: repeat(2, 1fr); } }
+  .works .note { text-align: center; font-size: 12.5px; color: rgba(255,255,255,.55); margin-top: 22px; }
+
+  /* 運営メディア */
+  .media { background: linear-gradient(180deg, #fff, var(--sky)); }
+  .mlead { text-align: center; color: var(--mu); margin: -18px 0 36px; }
+  .medias { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; }
+  .mcard { display: block; text-decoration: none; background: #fff; border-radius: 16px; overflow: hidden; box-shadow: 0 16px 36px rgba(18,41,74,.1); transition: transform .25s; position: relative; }
+  .mcard:hover { transform: translateY(-4px); }
+  .mcard::after { content: ""; position: absolute; right: 0; bottom: 0; border: 18px solid transparent; border-right-color: var(--or1); border-bottom-color: var(--or1); }
+  .brw { background: #1d2b40; padding: 20px 6px 6px; position: relative; }
+  .brw::before { content: ""; position: absolute; left: 12px; top: 7px; width: 7px; height: 7px; border-radius: 50%; background: #ff6058; box-shadow: 12px 0 #ffc130, 24px 0 #27ca40; }
+  .brw img { border-radius: 3px; aspect-ratio: 16/10; object-fit: cover; object-position: top; width: 100%; }
+  .mb { padding: 20px 24px 26px; }
+  .mtag { font-size: 12px; font-weight: 700; color: var(--cy-d); }
+  .mtag::before { content: "# "; font-family: var(--code); }
+  .mb h3 { margin: 2px 0 6px; font-size: 22px; color: var(--nv); }
+  .mb p { margin: 0 0 14px; font-size: 14.5px; color: var(--mu); }
+  .mnum { list-style: none; margin: 0 0 14px; padding: 0; display: flex; gap: 10px; flex-wrap: wrap; }
+  .mnum li { background: var(--bg); border-radius: 10px; padding: 8px 14px; font-size: 13px; color: var(--nv); font-weight: 700; line-height: 1.3; }
+  .mnum b { font-family: var(--code); font-size: 22px; color: var(--or); margin-right: 2px; }
+  .mnum small { display: block; font-size: 11px; color: var(--mu); font-weight: 500; }
+  .mlink { font-weight: 700; color: var(--cy-d); font-size: 14px; }
+
+  /* できること<wbr>（白い丸のアイコン） */
+  .reason { background: linear-gradient(160deg, var(--bg), #fff 60%); }
+  .reasons { display: flex; flex-wrap: wrap; justify-content: center; gap: 46px 30px; }
+  @media (max-width: 1100px) { .reasons > .rs { flex-basis: calc((100% - 60px) / 3); } .cc { grid-template-columns: 1fr 330px 1fr; } .cc .mid { width: 330px; height: 330px; } .cc .mid img { width: 140px; } }
+  .reasons > .rs { flex: 0 1 calc((100% - 60px) / 3); }
+  .rs { text-align: center; }
+  .rs .ci { width: 170px; height: 170px; margin: 0 auto 18px; border-radius: 50%; background: #fff; box-shadow: 0 0 0 14px rgba(60,200,216,.08), 0 0 0 15px rgba(60,200,216,.25), 0 14px 30px rgba(18,41,74,.1); display: grid; place-items: center; position: relative; }
+  .rs .ci svg { width: 64px; height: 64px; color: var(--cy-d); }
+  .rs .ci em { position: absolute; left: -2px; top: 4px; width: 40px; height: 40px; border-radius: 50%; background: linear-gradient(135deg, var(--or2), var(--or1)); color: #fff; font-style: normal; font-family: var(--code); font-weight: 700; display: grid; place-items: center; font-size: 15px; }
+  .rs h3 { margin: 0 0 8px; font-size: 17px; color: var(--nv); line-height: 1.55; }
+  .rs p { margin: 0; font-size: 14px; color: var(--mu); text-align: left; }
+
+  /* プロフィール */
+  .staff { display: grid; grid-template-columns: 320px 1fr; gap: 50px; align-items: start; }
+  .card-me { background: #fff; border-radius: 16px; overflow: hidden; box-shadow: 0 16px 40px rgba(18,41,74,.12); position: relative; }
+  .card-me::after { content: ""; position: absolute; right: 0; bottom: 0; border: 18px solid transparent; border-right-color: var(--or1); border-bottom-color: var(--or1); }
+  .card-me img { width: 100%; aspect-ratio: 1; object-fit: cover; }
+  .card-me div { padding: 18px 22px 24px; }
+  .card-me .role { font-family: var(--code); color: var(--cy-d); font-size: 12px; }
+  .card-me b { display: block; font-size: 22px; color: var(--nv); }
+  .card-me ul { list-style: none; margin: 8px 0 0; padding: 0; font-size: 14px; color: var(--mu); }
+  .card-me li::before { content: "> "; color: var(--cy-d); font-family: var(--code); font-weight: 700; }
+  .msg { font-size: 16px; margin: 0 0 16px; }
+  .msg b { background: linear-gradient(transparent 62%, rgba(60,200,216,.3) 62%); }
+  .chips { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 24px; }
+  .chips span { background: var(--sky); color: var(--nv); border-radius: 999px; padding: 3px 14px; font-size: 13px; font-weight: 700; }
+  .career { list-style: none; margin: 0; padding: 0; display: grid; gap: 12px; }
+  .career li { background: #fff; border: 1px solid var(--line); border-radius: 12px; padding: 14px 18px; }
+  .career b { color: var(--nv); }
+  .career b::before { content: "// "; color: var(--cy-d); font-family: var(--code); }
+  .career p { margin: 4px 0 0; font-size: 14.5px; color: var(--mu); }
+  .career em { font-style: normal; font-weight: 900; color: var(--or1); }
+
+  /* 料金 */
+  .charge { background: linear-gradient(170deg, #dff0fb 0%, #eef7fd 50%, #fff 100%); }
+  .prices { display: grid; grid-template-columns: 1fr 1fr; gap: 26px; max-width: 900px; margin: 0 auto; }
+  .pcard { background: #fff; border-radius: 16px; padding: 26px 26px 30px; text-align: center; box-shadow: 0 14px 34px rgba(18,41,74,.1); position: relative; overflow: hidden; }
+  .pcard::after { content: ""; position: absolute; right: 0; bottom: 0; border: 22px solid transparent; border-right-color: var(--or1); border-bottom-color: var(--or1); }
+  .pcard .lb { display: inline-block; background: #eef1f5; border-radius: 999px; padding: 4px 36px; font-weight: 900; color: var(--nv); }
+  .pcard .yen { font-family: var(--code); font-weight: 700; font-size: 48px; color: var(--or); line-height: 1.3; margin-top: 10px; }
+  .pcard .yen small { font-family: "Zen Kaku Gothic New", sans-serif; font-size: 18px; color: var(--nv); }
+  .pcard p { margin: 4px 0 0; font-size: 13.5px; color: var(--mu); }
+  .runs { max-width: 1080px; margin: 34px auto 0; }
+  .runs h3 { margin: 0; color: var(--nv); font-size: 20px; text-align: center; }
+  .runs h3 small { font-size: 13px; font-weight: 500; color: var(--mu); }
+  @media (max-width: 760px) { .runs h3 small.blk { display: block; margin-top: 4px; } }
+  .runs-lead { text-align: center; margin: 6px 0 22px; font-size: 14px; color: var(--mu); }
+  .plans { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; align-items: stretch; }
+  .plan { position: relative; background: #fff; border-radius: 16px; padding: 26px 22px 24px; box-shadow: 0 14px 34px rgba(18,41,74,.08); border: 2px solid transparent; transition: transform .25s; }
+  .plan:hover { transform: translateY(-3px); }
+  .plan.rec { border-color: var(--or1); box-shadow: 0 18px 40px rgba(240,125,34,.18); }
+  .plan .badge-rec { position: absolute; top: -14px; left: 50%; transform: translateX(-50%); background: linear-gradient(90deg, var(--or1), var(--or2)); color: #fff; font-size: 12.5px; font-weight: 700; padding: 4px 18px; border-radius: 999px; white-space: nowrap; }
+  .plan .pn { display: block; text-align: center; font-family: var(--code); font-size: 12px; letter-spacing: .14em; color: var(--cy-d); }
+  .plan .pt { display: block; text-align: center; font-size: 19px; color: var(--nv); }
+  .plan .pt i { font-style: normal; font-size: 12px; margin-left: 8px; padding: 2px 10px; border-radius: 999px; background: var(--sky); color: var(--nv); vertical-align: 2px; }
+  .plan .pp { text-align: center; font-family: var(--code); font-weight: 700; font-size: 38px; color: var(--or); line-height: 1.3; margin: 6px 0 2px; }
+  .plan .pp small { font-family: "Zen Kaku Gothic New", sans-serif; font-size: 15px; color: var(--nv); }
+  .plan .for { margin: 0 0 14px; padding: 10px; background: var(--bg); border-radius: 10px; text-align: center; font-size: 13px; font-weight: 700; color: var(--nv); line-height: 1.6; }
+  .plan ul { list-style: none; margin: 0; padding: 0; font-size: 13.5px; }
+  .plan li { position: relative; padding: 6px 0 6px 24px; border-bottom: 1px dashed var(--line); line-height: 1.55; }
+  .plan li:last-child { border-bottom: 0; }
+  .plan li::before { content: ""; position: absolute; left: 3px; top: 12px; width: 11px; height: 6px; border-left: 2px solid var(--cy-d); border-bottom: 2px solid var(--cy-d); transform: rotate(-45deg); }
+  .plan li.inh { font-weight: 700; color: var(--nv); }
+  .plan li.inh::before { border-color: var(--or1); }
+  .opts { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 10px; margin-top: 20px; font-size: 13.5px; }
+  .opts b { color: var(--nv); }
+  .opts span { background: #fff; border: 1px solid var(--line); border-radius: 999px; padding: 6px 16px; }
+  .opts em { font-style: normal; font-weight: 700; color: var(--or); margin-left: 8px; }
+  .more { display: flex; flex-direction: column; align-items: center; gap: 14px; margin-top: 34px; }
+
+  /* 流れ */
+  .flow { display: grid; grid-template-columns: repeat(6, 1fr); gap: 12px; counter-reset: s; }
+  .fl { background: #fff; border-radius: 14px; padding: 22px 14px; text-align: center; box-shadow: 0 10px 24px rgba(18,41,74,.08); position: relative; }
+  .fl:not(:last-child)::after { content: ">"; position: absolute; right: -13px; top: 50%; transform: translateY(-50%); font-family: var(--code); font-weight: 700; color: var(--cy-d); font-size: 18px; }
+  .fl::before { counter-increment: s; content: "STEP 0" counter(s); display: block; font-family: var(--code); font-weight: 700; color: var(--or1); font-size: 13px; }
+  .fl b { display: block; color: var(--nv); margin: 4px 0; font-size: 15.5px; }
+  .fl p { margin: 0; font-size: 13px; color: var(--mu); line-height: 1.6; }
+
+  /* FAQ */
+  .faq { max-width: 860px; margin: 0 auto; }
+  .faq details { background: #fff; border-radius: 12px; margin-bottom: 12px; box-shadow: 0 6px 18px rgba(18,41,74,.06); }
+  .faq summary { cursor: pointer; padding: 18px 50px 18px 64px; font-weight: 700; color: var(--nv); list-style: none; position: relative; }
+  .faq summary::-webkit-details-marker { display: none; }
+  .faq summary::before { content: "Q"; position: absolute; left: 20px; top: 14px; width: 30px; height: 30px; border-radius: 50%; background: var(--nv); color: #fff; display: grid; place-items: center; font-family: var(--code); font-weight: 700; }
+  .faq summary::after { content: "+"; position: absolute; right: 22px; top: 50%; transform: translateY(-50%); font-family: var(--code); font-size: 22px; color: var(--cy-d); }
+  .faq details[open] summary::after { content: "−"; }
+  .faq p { margin: 0; padding: 0 24px 20px 64px; color: var(--mu); }
+
+  /* 連絡先 */
+  .contact { background: radial-gradient(900px 500px at 80% 20%, rgba(60,200,216,.2), transparent 60%), linear-gradient(160deg, #0b1a31, #12294a); color: #fff; overflow: hidden; }
+  .contact .ttl .en { color: #fff; }
+  .contact .ttl h2 { color: rgba(255,255,255,.8); }
+  .ct { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; max-width: 820px; margin: 0 auto; }
+  .ct a { display: flex; align-items: center; justify-content: center; gap: 10px; padding: 20px; border-radius: 14px; text-decoration: none; font-weight: 700; transition: transform .2s; }
+  .ct a:hover { transform: translateY(-2px); }
+  .ct .t { background: #fff; color: var(--nv); font-family: var(--code); font-size: 26px; }
+  .ct .l { background: var(--green); color: #fff; }
+  .ct .f { background: linear-gradient(90deg, var(--or1), var(--or2)); color: #fff; }
+  .ct .m { border: 1.5px solid rgba(255,255,255,.4); color: #fff; font-size: 14px; }
+  .cform { max-width: 820px; margin: 30px auto 0; background: #fff; color: var(--ink); border-radius: 18px; padding: 32px 34px 28px; box-shadow: 0 20px 50px rgba(0,0,0,.25); scroll-margin-top: 90px; }
+  .cform h3 { margin: 0 0 18px; text-align: center; color: var(--nv); font-size: 21px; }
+  .cform h3 small { display: block; font-size: 13px; font-weight: 500; color: var(--mu); margin-top: 4px; }
+  .cf-row { display: grid; grid-template-columns: 1fr 1fr; gap: 0 16px; }
+  .cform label, .cform legend { display: block; font-weight: 700; font-size: 14px; color: var(--nv); margin-bottom: 14px; }
+  .cform i { font-style: normal; font-size: 11px; background: var(--or1); color: #fff; border-radius: 4px; padding: 1px 6px; margin-left: 8px; vertical-align: 1px; }
+  .cform i.opt { background: #9aa7b6; }
+  .cform input:not([type=radio]):not([type=checkbox]):not([type=hidden]), .cform textarea { display: block; width: 100%; margin-top: 6px; padding: 13px 14px; border: 1.5px solid var(--line); border-radius: 10px; font: 500 16px/1.5 "Zen Kaku Gothic New", sans-serif; background: var(--bg); color: var(--ink); box-sizing: border-box; }
+  .cform input:focus, .cform textarea:focus { outline: none; border-color: var(--cy-d); background: #fff; box-shadow: 0 0 0 4px rgba(60,200,216,.18); }
+  .cform fieldset { border: 0; margin: 0 0 14px; padding: 0; }
+  .cform legend { margin-bottom: 8px; padding: 0; }
+  .cform .rd { display: inline-flex; align-items: center; gap: 6px; margin: 0 8px 0 0; padding: 10px 16px; border: 1.5px solid var(--line); border-radius: 999px; font-weight: 500; cursor: pointer; }
+  .cform .rd:has(input:checked) { border-color: var(--or1); background: #fff5ec; }
+  .cform .rd input { accent-color: var(--or1); margin: 0; }
+  .cf-svc { display: flex; flex-wrap: wrap; gap: 8px; } .cf-svc .rd { margin: 0; white-space: nowrap; }
+  .cform button { display: block; width: 100%; max-width: 420px; margin: 8px auto 0; height: 60px; border: 0; border-radius: 999px; background: linear-gradient(90deg, var(--or1), var(--or2)); color: #fff; font: 700 17px "Zen Kaku Gothic New", sans-serif; cursor: pointer; box-shadow: 0 10px 24px rgba(240,125,34,.35); transition: transform .2s; }
+  .cform button:hover { transform: translateY(-2px); }
+  .cform button:disabled { opacity: .6; }
+  .cf-note { text-align: center; font-size: 12px; color: var(--mu); margin: 10px 0 0; }
+  .cf-done { text-align: center; padding: 30px 10px 10px; }
+  .cf-done b { font-size: 20px; color: var(--nv); }
+  .cf-done p { color: var(--mu); font-size: 14px; line-height: 1.9; }
+  .cf-done p strong { color: var(--nv); }
+  .cf-next { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; margin: 18px 0 14px; }
+  .cf-next a { flex: 1 1 220px; max-width: 280px; padding: 15px 16px; border-radius: 999px; font-weight: 700; text-decoration: none; }
+  .cf-next .ln { background: var(--green); color: #fff; }
+  .cf-next .tl { background: #fff; color: var(--nv); border: 1.5px solid var(--line); }
+  .cf-done small { color: var(--mu); font-size: 12px; }
+  .cform.sent h3 small { display: none; } .cf-done { padding-top: 6px; } .cf-done b { line-height: 1.6; }
+  .cform.sent > :not(h3):not(.cf-done) { display: none; }
+  @media (max-width: 900px) { .plans { grid-template-columns: 1fr; max-width: 460px; margin: 0 auto; gap: 26px; } }
+  @media (max-width: 560px) { .cform { padding: 24px 18px 22px; } .cf-row { grid-template-columns: 1fr; } .cform .rd { padding: 9px 13px; } }
+  body.at-form .float-ct, body.at-form .cb-btn { opacity: 0; pointer-events: none; }
+  body.at-form .stick { transform: translateY(110%); }
+  @media (max-width: 560px) { .cform .rd { padding: 9px 11px; margin-right: 4px; font-size: 13.5px; gap: 4px; } }
+  .contact .small { text-align: center; color: rgba(255,255,255,.55); font-size: 12.5px; margin-top: 18px; }
+  footer { background: var(--nv-d); color: rgba(255,255,255,.55); text-align: center; font-size: 12.5px; padding: 26px 0 30px; }
+  footer a { color: rgba(255,255,255,.85); margin: 0 10px; text-decoration: none; }
+  footer .code { color: var(--cy); }
+
+  .rv { opacity: 0; transform: translateY(24px); transition: opacity .8s, transform .8s; }
+  .rv.in { opacity: 1; transform: none; }
+  @media (prefers-reduced-motion: reduce) { .rv { opacity: 1; transform: none; transition: none; } .pc, .sp, .scr img, .fv .type .c, .fv h1 > .nw, .tags span, .stat, .fv .type .brand path { animation: none !important; opacity: 1 !important; transform: none !important; stroke-dashoffset: 0 !important; } .ttl .en::after { transform: none; } html { scroll-behavior: auto; } }
+
+  @media (max-width: 1100px) { nav.gn { display: none; } .hb { margin-left: auto; } }
+  @media (max-width: 900px) {
+    section { padding: 70px 0; }
+    .fv { padding: 30px 0 56px; }
+    .fv .wrap { grid-template-columns: 1fr; }
+    .devices { height: 270px; order: -1; max-width: 520px; width: 100%; margin: 0 auto; }
+    .pc { top: 20px; }
+    .fv .badge { display: none; }
+    .cc { grid-template-columns: 1fr; }
+    .cc::before { display: none; }
+    .cc .mid { display: none; }
+    .cc .l li { flex-direction: row; text-align: left; }
+    .samples { grid-template-columns: 1fr 1fr; gap: 16px; }
+    .reasons { gap: 34px 18px; } .reasons > .rs { flex-basis: calc((100% - 18px) / 2); }
+    .rs .ci { width: 120px; height: 120px; }
+    .rs .ci svg { width: 46px; height: 46px; }
+    .staff, .prices, .ct, .medias { grid-template-columns: 1fr; }
+    .card-me { max-width: 340px; margin: 0 auto; }
+    .flow { grid-template-columns: 1fr; }
+    .fl:not(:last-child)::after { content: "v"; right: 50%; top: auto; bottom: -20px; transform: translateX(50%); }
+    .side { display: none; }
+    .float-ct { width: 82px; height: 82px; font-size: 12px; right: 12px; bottom: 12px; }
+  }
+  @media (max-width: 560px) {
+    .wrap { padding: 0 18px; }
+    header .wrap { height: 60px; gap: 10px; }
+    .logo span { font-size: 23px; } .logo img { width: 25px; height: 27px; } .logo small { display: none; }
+    .rnd { width: 38px; height: 38px; } .slant { display: none; }
+    .stats { gap: 8px; } .stat b { font-size: 21px; } .stat b.sm { font-size: 15px; } .stat small { font-size: 10.5px; } .stat i { font-size: 10px; } .stat svg { width: 24px; height: 24px; }
+    .fv .ctas .btn { width: 100%; min-width: 0; }
+    .fv .type { font-size: 32px; }
+    .devices { height: 210px; }
+    .pc { top: 10px; }
+    .reasons > .rs { flex-basis: 100%; }
+    .rs .ci { width: 140px; height: 140px; }
+    .btn-cy::after { display: none; }
+    .topline { display: none; }
+  }
+
+  /* ---- 調整：お悩みの見出し・トップの画面・ボタンの大きさ・追尾CTA ---- */
+  .ttl { position: relative; z-index: 3; }
+  .concern .ttl { margin-bottom: 110px; }
+  .concern .answer { margin-top: 120px; }
+  .fv .wrap { grid-template-columns: .95fr 1.15fr; max-width: 1320px; }
+  .devices { height: 540px; }
+  .pc { top: 64px; width: 72%; }
+  .sp { width: 25.5%; bottom: 0; }
+  .float-ct { width: 124px; height: 124px; font-size: 16px; bottom: 96px; }
+  .float-ct svg { width: 26px; height: 26px; }
+  .cb-btn { width: 96px !important; height: 96px !important; bottom: 236px !important; right: 34px !important; }
+  .cb-btn svg { width: 38px !important; height: 38px !important; margin-top: -14px !important; }
+  .cb-btn small { font-size: 13px !important; bottom: 15px !important; }
+  /* 追尾CTA<wbr>（トップを過ぎると下に出る帯） */
+  .stick { position: fixed; left: 0; right: 0; bottom: 0; z-index: 45; background: rgba(11,26,49,.96); backdrop-filter: blur(6px); box-shadow: 0 -6px 24px rgba(0,0,0,.18); transform: translateY(110%); transition: transform .4s cubic-bezier(.2,.8,.2,1); }
+  .stick.on { transform: none; }
+  .stick .wrap { display: flex; align-items: center; gap: 14px; height: 76px; max-width: 1240px; }
+  .stick p { margin: 0 auto 0 0; color: #fff; font-weight: 700; font-size: 15px; line-height: 1.4; }
+  .stick p small { display: block; font-size: 12px; color: var(--cy); font-weight: 500; }
+  .stick a { display: inline-flex; align-items: center; justify-content: center; gap: 8px; height: 50px; padding: 0 22px; border-radius: 999px; font-weight: 700; text-decoration: none; font-size: 15px; white-space: nowrap; }
+  .stick .s-tel { background: #fff; color: var(--nv); font-family: var(--code); font-size: 18px; }
+  .stick .s-line { background: var(--green); color: #fff; }
+  .stick .s-form { background: linear-gradient(90deg, var(--or1), var(--or2)); color: #fff; }
+  .stick .ico { width: 20px; height: 20px; }
+  footer { padding-bottom: 100px; }
+  .spn { display: none; }
+  @media (max-width: 900px) { .pcn { display: none; } .spn { display: inline; } }
+  @media (max-width: 1100px) { .stick p { display: none; } .stick .wrap { justify-content: center; } }
+  @media (max-width: 900px) {
+    .devices { height: 330px; }
+    .pc { width: 74%; top: 20px; } .sp { width: 27%; }
+    .concern .ttl { margin-bottom: 40px; } .concern .answer { margin-top: 50px; }
+    .float-ct { width: 92px; height: 92px; font-size: 11.5px; bottom: 84px; right: 12px; letter-spacing: 0; }
+    .cb-btn { width: 80px !important; height: 80px !important; bottom: 186px !important; right: 18px !important; }
+    .cb-btn svg { width: 32px !important; height: 32px !important; margin-top: -12px !important; }
+    .cb-btn small { font-size: 11px !important; bottom: 12px !important; }
+    .stick .wrap { height: 66px; gap: 8px; padding: 0 10px; }
+    .stick a { flex: 1; height: 48px; padding: 0 8px; font-size: 13.5px; gap: 5px; }
+    .stick .s-tel { font-size: 13.5px; font-family: inherit; }
+  }
+  @media (max-width: 560px) { .devices { height: 250px; } }
+  /* ---- お悩み：円を中身に沿わせて、余白を詰める ---- */
+  .concern .ttl { margin-bottom: 96px; }
+  .concern .answer { margin-top: 96px; }
+  .cc { grid-template-columns: 1fr 460px 1fr; gap: 0 34px; max-width: 1180px; margin: 0 auto; }
+  .cc::before { width: 520px; height: 520px; box-shadow: 0 0 0 46px rgba(234,244,251,.7), 0 0 0 47px #e3ebf2; }
+  .cc .mid { width: 460px; height: 460px; }
+  .cc .mid img { width: 186px; }
+  .cc li span, .cc li { white-space: nowrap; }
+  .cc ul { gap: 30px; }
+  .cc li { font-size: 18px; gap: 18px; }
+  .cc li i { width: 60px; height: 60px; font-size: 24px; }
+  .cc .l { justify-self: end; } .cc > ul:last-child { justify-self: start; }
+  @media (max-width: 1100px) {
+    .cc { grid-template-columns: 1fr 340px 1fr; gap: 0 20px; }
+    .cc::before { width: 400px; height: 400px; box-shadow: 0 0 0 36px rgba(234,244,251,.7), 0 0 0 37px #e3ebf2; }
+    .cc .mid { width: 340px; height: 340px; } .cc .mid img { width: 150px; }
+    .cc li { font-size: 15.5px; gap: 12px; } .cc li i { width: 50px; height: 50px; font-size: 20px; }
+    .concern .ttl { margin-bottom: 70px; } .concern .answer { margin-top: 70px; }
+  }
+  @media (max-width: 900px) {
+    .cc { grid-template-columns: 1fr; gap: 22px; max-width: 560px; }
+    .cc .l, .cc > ul:last-child { justify-self: stretch; }
+    .cc li { font-size: 16px; gap: 14px; white-space: normal; } .cc li i { width: 50px; height: 50px; font-size: 20px; }
+    .concern .ttl { margin-bottom: 40px; } .concern .answer { margin-top: 50px; }
+  }
+  /* ---- トップの画面：PCを上、スマホを下に、重ならないように大きく ---- */
+  .devices { height: auto; align-self: center; }
+  .devices .tilt { position: relative; inset: auto; display: grid; grid-template-columns: 1fr 34%; grid-template-areas: "pc pc" "bd sp"; gap: 26px 24px; }
+  .devices .pc { position: relative; left: auto; top: auto; width: 100%; grid-area: pc; }
+  .devices .sp { position: relative; right: auto; bottom: auto; width: 100%; grid-area: sp; }
+  .fv .badge { position: relative; left: auto; top: auto; grid-area: bd; align-self: center; justify-self: stretch; padding: 26px 28px; font-size: 15px; border-radius: 16px; text-align: left; }
+  .fv .badge .bd-h { display: block; text-align: center; padding-bottom: 16px; border-bottom: 1px dashed #c9d4df; }
+  .fv .badge b { font-size: 28px; margin: 4px 0; }
+  .fv .badge .bd-l { list-style: none; margin: 16px 0 0; padding: 0; display: grid; gap: 12px; font-size: 15.5px; }
+  .fv .badge .bd-l li { position: relative; padding-left: 30px; }
+  .fv .badge .bd-l li::before { content: ""; position: absolute; left: 0; top: 3px; width: 20px; height: 20px; border-radius: 50%; background: var(--cy-d); }
+  .fv .badge .bd-l li::after { content: ""; position: absolute; left: 6px; top: 8px; width: 8px; height: 4px; border-left: 2px solid #fff; border-bottom: 2px solid #fff; transform: rotate(-45deg); }
+  .fv .badge .bd-f { display: block; margin-top: 18px; text-align: right; font-size: 14px; color: var(--cy-d); }
+  @media (max-width: 900px) {
+    .fv .wrap { grid-template-columns: 1fr; }
+    .devices { order: 0; height: auto; max-width: 560px; width: 100%; margin: 30px auto 0; }
+    .devices .tilt { grid-template-columns: 1fr 40%; gap: 18px 16px; }
+    .fv .badge { display: block; padding: 14px 14px; font-size: 12px; } .fv .badge b { font-size: 18px; }
+    .fv .badge .bd-h { padding-bottom: 10px; } .fv .badge .bd-l { margin-top: 10px; gap: 8px; font-size: 12px; }
+    .fv .badge .bd-l li { padding-left: 22px; } .fv .badge .bd-l li::before { width: 16px; height: 16px; top: 1px; } .fv .badge .bd-l li::after { left: 4px; top: 5px; width: 7px; }
+    .fv .badge .bd-f { margin-top: 10px; font-size: 11.5px; }
+  }
+  @media (max-width: 560px) { .devices { height: auto; } }
+  /* 数字は 0 の中に点がない書体で */
+  .stat b, .mnum b, .pcard .yen, .plan .pp, .ct .t, .stick .s-tel, .stick a.s-tel, .rs .ci em, .fl::before { font-family: var(--num); letter-spacing: .01em; }
+  .pcard .yen, .plan .pp { font-weight: 700; }
+
+  /* 見出し：英語のラベルをやめて、日本語の見出しをその位置に<wbr>（2026/11/3） */
+  .ttl h2 { margin: 0; font-size: clamp(26px, 3.6vw, 42px); font-weight: 900; letter-spacing: .04em; line-height: 1.4; color: var(--nv); }
+  .ttl h2::after { content: ""; display: block; width: 64px; height: 4px; border-radius: 2px; margin: 16px auto 0; background: linear-gradient(90deg, var(--cy), #2b8fd8); transform: scaleX(0); transform-origin: left; transition: transform .8s cubic-bezier(.2,.7,.2,1) .2s; }
+  .ttl.in h2::after { transform: scaleX(1); }
+  .works .ttl h2, .contact .ttl h2 { color: #fff; }
+  .side span { font-family: inherit; letter-spacing: .2em; }
+  .side span::before, .side span::after { content: none; }
+  .ref-fee { display: grid; grid-template-columns: auto 1fr; align-items: center; gap: 28px; margin-top: 24px; padding: 20px 28px; background: #fff; border: 2px solid var(--or1); border-radius: 16px; }
+  .ref-fee .h { text-align: center; }
+  .ref-fee .lb { display: inline-block; background: #eef1f5; border-radius: 999px; padding: 4px 22px; font-weight: 900; color: var(--nv); }
+  .ref-fee .yen { font-family: var(--num); font-weight: 700; font-size: 38px; color: var(--or); line-height: 1.3; margin-top: 6px; }
+  .ref-fee .yen small { font-family: "Zen Kaku Gothic New", sans-serif; font-size: 16px; color: var(--nv); }
+  .ref-fee p { margin: 0; font-size: 14.5px; line-height: 1.8; color: var(--nv); }
+  .ref-fee p b { font-weight: 900; }
+  .ref-fee p small { display: block; margin-top: 4px; font-size: 12.5px; color: var(--mu); }
+  @media (max-width: 760px) { .ref-fee { grid-template-columns: 1fr; gap: 10px; padding: 20px 18px; } }
+  .camp { display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: 18px; margin-top: 16px; padding: 14px 22px; border-radius: 10px; background: linear-gradient(100deg, #e0202a, #f07d22); color: #fff; }
+  .camp .t { font-size: 17px; font-weight: 900; line-height: 1.3; white-space: nowrap; }
+  .camp .m { font-size: 13px; font-weight: 500; line-height: 1.6; }
+  .camp .p { font-size: 14px; font-weight: 700; white-space: nowrap; }
+  .camp .p s { opacity: .85; }
+  .camp .p b { margin-left: 8px; color: #fff36b; font-size: 36px; line-height: 1; font-weight: 900; }
+  @media (max-width: 760px) { .camp { grid-template-columns: 1fr; gap: 8px; padding: 16px 18px; } .camp .t br { display: none; } .camp .t { white-space: normal; } }
+/* 2026-11-09 LINEの公式マーク<wbr>（紹介ページ） */
+.rnd.line img{display:block;width:24px;height:auto}
+.ct .l::before,.cf-next .ln::before,.cb-opts .ln::before{content:"";display:inline-block;width:1.45em;height:1.38em;margin-right:.45em;vertical-align:-.36em;background:url(img/line-bubble-w.png) center/contain no-repeat}
+
+  /* ===== 2026-11-11 料金を分かりやすく：結局いくら・例・あとから足せるもの ===== */
+  .sum { max-width: 760px; margin: 0 auto; background: #fff; border-radius: 18px; padding: 28px 24px 26px; text-align: center; box-shadow: 0 14px 34px rgba(18,41,74,.1); border: 2px solid var(--or1); }
+  .sum-q { margin: 0; font-size: 16px; font-weight: 900; color: var(--nv); }
+  .sum-a { margin: 6px 0 0; font-size: 22px; font-weight: 900; color: var(--nv); line-height: 1.2; }
+  .sum-a b { font-family: var(--num); font-size: 58px; color: #d35400; margin: 0 4px; letter-spacing: .01em; }
+  .sum-a small { font-size: 14px; font-weight: 500; color: var(--mu); }
+  .sum-0 { list-style: none; display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; margin: 16px 0 0; padding: 0; }
+  .sum-0 li { padding: 6px 14px; border-radius: 999px; background: #eef1f5; font-size: 14px; font-weight: 700; color: var(--nv); }
+  .sum-0 b { margin-left: 4px; color: #c24c00; }
+  .sum-n { margin: 14px 0 0; font-size: 14px; line-height: 1.8; color: var(--mu); }
+  .nw { display: inline-block; }
+  .plan .pt { display: block; text-align: center; }
+  .charge .runs > h3 { margin-bottom: 34px; }
+  .ex { max-width: 760px; margin: 26px auto 0; padding: 18px 20px; border-radius: 14px; background: #fff7ef; text-align: center; }
+  .ex-h { margin: 0; font-size: 14px; font-weight: 700; color: #c24c00; }
+  .ex-f { margin: 6px 0 0; font-size: 17px; font-weight: 700; color: var(--nv); line-height: 1.7; }
+  .ex-f .nw { margin: 0 .25em; }
+  .ex-f b { font-size: 22px; color: #d35400; }
+  .ex-f small { font-size: 12px; color: var(--mu); font-weight: 500; }
+  .adds { max-width: 900px; margin: 40px auto 0; }
+  .adds h3 { margin: 0 0 14px; color: var(--nv); font-size: 20px; text-align: center; }
+  .adds h3 small { font-size: 13px; font-weight: 500; color: var(--mu); }
+  .adds table { width: 100%; border-collapse: collapse; background: #fff; border-radius: 14px; overflow: hidden; box-shadow: 0 10px 24px rgba(18,41,74,.06); }
+  .adds th, .adds td { padding: 14px 16px; border-bottom: 1px solid var(--line); text-align: left; font-size: 14px; line-height: 1.7; vertical-align: middle; }
+  .adds tr:last-child th, .adds tr:last-child td { border-bottom: 0; }
+  .adds th { width: 11em; color: var(--nv); font-weight: 900; white-space: nowrap; }
+  .adds td.p { width: 11em; text-align: right; font-weight: 700; color: #c24c00; white-space: nowrap; }
+  .adds-lead { margin: 0 0 16px; font-size: 14px; line-height: 1.8; color: var(--mu); text-align: center; }
+  .ad-g { margin-top: 14px; background: #fff; border-radius: 14px; padding: 18px 18px 8px; box-shadow: 0 10px 24px rgba(18,41,74,.06); }
+  .ad-g h4 { margin: 0; font-size: 17px; color: var(--nv); }
+  .ad-l { margin: 6px 0 4px; font-size: 14px; line-height: 1.8; color: var(--ink, #333); }
+  .ad-g table { width: 100%; border-collapse: collapse; box-shadow: none; border-radius: 0; }
+  .ad-g th, .ad-g td { padding: 11px 0; border-bottom: 1px solid var(--line); font-size: 14px; line-height: 1.7; vertical-align: top; text-align: left; }
+  .ad-g tr:last-child th, .ad-g tr:last-child td { border-bottom: 0; }
+  .ad-g th { width: 8.5em; padding-right: 12px; color: var(--nv); font-weight: 900; white-space: nowrap; }
+  .ad-g td.p { width: 7em; padding-left: 12px; text-align: right; font-weight: 700; color: #c24c00; white-space: nowrap; }
+  @media (max-width: 760px) {
+    .ad-g { padding: 16px 14px 4px; }
+    .ad-g table, .ad-g tbody, .ad-g tr, .ad-g th, .ad-g td { display: block; width: auto; }
+    .adds .ad-g tr { padding: 10px 0; border-bottom: 1px solid var(--line); }
+    .adds .ad-g tr:last-child { border-bottom: 0; }
+    .ad-g th, .ad-g td { padding: 0; border: 0; }
+    .ad-g td.p { text-align: left; padding: 2px 0 0; }
+  }
+  .adds-n { margin: 10px 0 0; font-size: 13px; color: var(--mu); text-align: center; }
+  @media (max-width: 760px) {
+    .sum { padding: 22px 16px 20px; }
+    .sum-a b { font-size: 46px; }
+    .adds table, .adds tbody, .adds tr, .adds th, .adds td { display: block; width: auto; }
+    .adds tr { padding: 12px 14px; border-bottom: 1px solid var(--line); }
+    .adds tr:last-child { border-bottom: 0; }
+    .adds th, .adds td { padding: 0; border: 0; }
+    .adds td.p { text-align: left; margin-top: 4px; }
+    .ex-f { font-size: 15px; }
+    @media (max-width: 760px) { .runs h3 small.blk, .adds h3 small.blk { display: block; margin-top: 4px; } }
+  }
+  /* 2026-11-11 言葉の切れ目<wbr>（）でだけ改行する<wbr>（文節改行.py と組み合わせ） */
+  body { word-break: keep-all; overflow-wrap: anywhere; }
+  /* チャットはあとから文字が入る<wbr>（がない）ので、ふつうの折り返し */
+  [class^="cb"], [class*=" cb-"], [class^="cb"] * { word-break: normal; }
+  .runs-map { margin-top: 56px; }
+  .map-n { margin: 18px auto 0; max-width: 760px; font-size: 12.5px; line-height: 1.8; color: var(--mu); text-align: center; }
+  .charge .runs-map > h3 { margin-bottom: 6px; }
+  .plan .pp small { font-family: inherit !important; }
+
+  /* ===== 2026-11-11 足せるもの（SNS・LINE・そのほか）の表 ===== */
+  .adds .adt-g { padding: 0; overflow: hidden; }
+  .adds .ad-hd { display: flex; align-items: center; gap: 10px; padding: 16px 20px 0; }
+  .adds .ad-ic { flex: none; width: 34px; height: 34px; border-radius: 10px; display: grid; place-items: center; }
+  .adds .ad-ic.sns { background: linear-gradient(135deg, #12294a, #1fa8b9); }
+  .adds .ad-ic.line { background: #06c755; }
+  .adds .ad-ic.etc { background: #5c6b7d; }
+  .adds .adt-g h4 { margin: 0; font-size: 18px; }
+  .adds .adt-g .ad-l { margin: 8px 20px 14px; font-size: 14px; }
+  .adds .adt-g.g-etc .ad-hd { padding-bottom: 12px; }
+  .adds table.adt { display: table; width: 100%; border-collapse: collapse; background: none; box-shadow: none; border-radius: 0; }
+  .adds .adt thead { display: table-header-group; }
+  .adds .adt tbody { display: table-row-group; }
+  .adds .adt tr { display: table-row; padding: 0; }
+  .adds .adt th, .adds .adt td { display: table-cell; width: auto; vertical-align: top; text-align: left; border-bottom: 1px solid var(--line); padding: 16px 14px; font-size: 14px; line-height: 1.65; white-space: normal; }
+  .adds .adt thead th { padding: 8px 14px; background: var(--bg); color: var(--mu); font-size: 12px; font-weight: 700; letter-spacing: .08em; border-bottom: 0; }
+  .adds .adt th:first-child, .adds .adt td:first-child { padding-left: 20px; }
+  .adds .adt th:last-child, .adds .adt td:last-child { padding-right: 20px; }
+  .adds .adt tbody th { width: 13em; }
+  .adds .adt .p { width: 8em; text-align: right; white-space: nowrap; }
+  .adds .adt tbody tr:last-child th, .adds .adt tbody tr:last-child td { border-bottom: 0; }
+  .adds .adt .nm { display: block; color: var(--nv); font-size: 16px; font-weight: 900; line-height: 1.4; }
+  .adds .adt .rb { display: inline-block; margin-top: 6px; padding: 2px 10px; border-radius: 999px; background: linear-gradient(90deg, var(--or1), var(--or)); color: #fff; font-style: normal; font-size: 11.5px; font-weight: 700; }
+  .adds .adt .fr { display: block; margin-top: 6px; color: var(--mu); font-size: 12.5px; font-weight: 500; line-height: 1.5; }
+  .adds .adt td.p b { font-family: var(--num); font-size: 24px; font-weight: 700; color: #c24c00; letter-spacing: .01em; }
+  .adds .adt td.p b.q { font-family: inherit; font-size: 15px; }
+  .adds .adt td.p small { margin-left: 2px; font-size: 13px; font-weight: 700; color: var(--nv); }
+  .adds .adt tr.rec th, .adds .adt tr.rec td { background: #fff7ef; }
+  .adds .adt tr.rec th { box-shadow: inset 4px 0 0 var(--or1); }
+  .adds ul.ck { list-style: none; margin: 0; padding: 0; }
+  .adds ul.ck li { position: relative; padding: 2px 0 2px 22px; }
+  .adds ul.ck li + li { margin-top: 4px; }
+  .adds ul.ck li::before { content: ""; position: absolute; left: 3px; top: .62em; width: 10px; height: 5px; border-left: 2px solid var(--cy-d); border-bottom: 2px solid var(--cy-d); transform: rotate(-45deg); }
+  .adds ul.ck li.inh { font-weight: 700; color: var(--nv); }
+  .adds ul.ck li.inh::before { border-color: var(--or1); }
+  .adds .ad-nt { margin: 0; padding: 12px 20px 16px; border-top: 1px solid var(--line); font-size: 12.5px; line-height: 1.7; color: var(--mu); }
+  @media (max-width: 760px) {
+    .adds .ad-hd { padding: 16px 16px 0; }
+    .adds .adt-g .ad-l { margin: 8px 16px 12px; }
+    .adds table.adt, .adds .adt tbody { display: block; }
+    .adds .adt thead { display: none; }
+    .adds .adt tr { display: grid; grid-template-columns: 1fr auto; grid-template-areas: "n p" "l l"; column-gap: 12px; padding: 14px 16px; border-top: 1px solid var(--line); }
+    .adds .adt th, .adds .adt td { display: block; padding: 0 !important; border: 0; width: auto !important; }
+    .adds .adt tbody th { grid-area: n; }
+    .adds .adt td.p { grid-area: p; align-self: start; text-align: right; }
+    .adds .adt td.ls { grid-area: l; margin-top: 10px; }
+    .adds .adt tr.rec { background: #fff7ef; box-shadow: inset 4px 0 0 var(--or1); }
+    .adds .adt tr.rec th { box-shadow: none; }
+    .adds .adt td.p b { font-size: 22px; }
+    .adds .ad-nt { padding: 12px 16px 14px; }
+  }
+  @media (max-width: 360px) { .adds .adt-g h4 { font-size: 15.5px; } .adds .ad-hd { gap: 8px; } }
+  /* 2026-11-11 読みにくい色を濃く（コントラスト 2.9 → 4.7） */
+  .logo small { color: #137f8c; }
+  a.s-line { background: #137f8c !important; }
+  /* 運営メディア：小さなラベルを見出しの上から、名前の横へ */
+  .medias h3 .msub { margin-left: 10px; font-size: 13px; font-weight: 700; color: #137f8c; letter-spacing: .02em; vertical-align: 2px; }
+  .medias h3 .msub::before { content: "# "; font-family: var(--code); }
+  /* 括弧や句読点を前後の字と離さない。ほかの span の装飾は受けない */
+  span.kj { all: unset !important; white-space: nowrap !important; }
+</style>
+<script src="https://bunkai-stats.shiga-web.workers.dev/t.js" async></script>
+</head>
+<body>
+
+<div class="topline"><div class="wrap">全国の会社さま向け｜ホームページ制作・運用・SNS・Googleマップ・AI支援・システム開発</div></div>
+<header>
+  <div class="wrap">
+    <a class="logo" href="#top" aria-label="BUNKAI"><img src="img/logo-b.jpg" alt="B" width="30" height="32"><span>UNKAI<small>&lt; web for local /&gt;</small></span></a>
+    <nav class="gn"><a href="#concern">お悩み</a><a href="#works">見本サイト</a><a href="#reason">できる<wbr>こと</a><a href="#staff">プロフィール</a><a href="#media">運営メディア</a><a href="#charge">料金</a><a href="#flow">流れ</a><a href="#faq">FAQ</a></nav>
+    <div class="hb">
+      <a class="rnd tel" href="tel:08057148516" aria-label="電話する"><svg class="ico" viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/></svg></a>
+      <a class="rnd line" href="https://lin.ee/uWffMn8" target="_blank" rel="noopener" aria-label="LINEで相談"><img src="img/line-bubble-w.png" alt="" width="24" height="23"></a>
+      <a class="slant" href="#charge" aria-label="料金を見る"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v12m0 0l-5-5m5 5l5-5M4 19h16"/></svg></a>
+      <a class="slant" href="#contact" aria-label="お問い合わせ"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></a>
+    </div>
+  </div>
+</header>
+
+<div class="fv2" id="top">
+  <div class="fv2-in">
+    <div class="fv2-txt">
+      <p class="fv2-h"><span class="l1">HP制作・運用は</span><span class="fv2-band"><span class="m">毎月</span><b>19,800</b><span class="y">円</span></span><span class="l3">以外かかりません。</span></p>
+      <i class="fv2-rule" aria-hidden="true"></i>
+      <p class="fv2-note">※ライトプランの場合（税別）</p>
+      <div class="fv2-for"><h1><span class="nw">御社専用の</span><span class="nw">ホームページを、</span><span class="nw"><b>先に作って<wbr>お見せしま<span class="kj">す。</span></b></span><span id="typing" hidden></span></h1><p class="fv2-for-s">ご契約の<wbr>前<span class="kj">に、</span><wbr>無料で<wbr>お作りしま<span class="kj">す。</span><wbr>実際に<wbr>動く<wbr>ページ<span class="kj">で、</span><wbr>そのまま<wbr>ご覧いただけま<span class="kj">す。</span><span class="kj"></span></p></div>
+    </div>
+    <div class="fv2-demo">
+      <div class="fv2-dev" aria-hidden="true">
+        <div class="fv2-pc"><div class="scr"><img src="img/pc-long.jpg" alt="" width="900" height="2953"></div></div><div class="fv2-base"></div>
+        <div class="fv2-sp"><div class="scr"><img src="img/sp-long.jpg" alt="" width="400" height="2666"></div></div>
+      </div>
+      <a class="btn btn-or fv2-cta" href="#works"><span class="nw">見本の</span><span class="nw">HPデザインを見る</span><i aria-hidden="true">→</i></a>
+    </div>
+  </div>
+</div>
+
+<div class="progress" id="progress"></div>
+<div class="stick" id="stick"><div class="wrap">
+  <p>御社用の<wbr>ホームページの<wbr>見本<span class="kj">を、</span><wbr>無料で<wbr>お作りします<small>全国対応・電話や<wbr>LINEで<wbr>進めます</small></p>
+  <a class="s-tel" href="tel:08057148516"><svg class="ico" viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/></svg><span class="pcn">080-5714-8516</span><span class="spn">電話</span></a>
+  <a class="s-line" href="#charge">料金を<wbr>見る</a>
+  <a class="s-form" href="#form">無料相談フォーム</a>
+</div></div>
+<div class="side" id="side"><span id="sideTxt">お悩み</span><i></i></div>
+<a class="float-ct hide" id="floatCt" href="#contact">お問い合わせ<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></a>
+
+<section class="concern" id="concern" data-side="お悩み">
+  <div class="wrap">
+    <div class="ttl rv"><h2>こんな<wbr>お悩<span class="kj">み、</span><wbr>ありません<span class="kj">か？</span></h2></div>
+    <div class="cc rv">
+      <ul class="l">
+        <li><i>!</i>広告や<wbr>紹介サイトの<wbr>手数料が<wbr>重い。<br>値段の<wbr>勝負に<wbr>なりが<wbr>ち</li>
+        <li><i>!</i>「地域名＋業種」で<wbr>調べると、<br>Googleマップに<wbr>他社ばかり出る</li>
+        <li><i>!</i>仕事が<wbr>紹介頼みで、<br>月に<wbr>よって<wbr>波が<wbr>ある</li>
+      </ul>
+      <div class="mid"><img src="img/sp-shokunin.jpg" alt="" width="560" height="1212"></div>
+      <ul>
+        <li><i>!</i>ホームページを<wbr>作ったが、<br>何年も<wbr>更新していない</li>
+        <li><i>!</i>前の<wbr>制作会社は、<br>作って<wbr>終わりだった</li>
+        <li><i>!</i>パソコンや<wbr>ネットは<br>よく<wbr>わからない</li>
+      </ul>
+    </div>
+    <div class="answer rv"><span class="band">BUNKAIが、<wbr>まとめて<wbr>引き受けます</span><p><span class="nw">ホームページを<em>作って<wbr>終わりに<wbr>せず</em>、</span><span class="nw">問い合わせに<wbr>つなげま<span class="kj">す。</span><wbr></span></p></div>
+  </div>
+</section>
+
+<section class="works" id="works" data-side="見本サイト">
+  <div class="wrap">
+    <div class="ttl rv"><h2 class="pm-h">御社のホームページを<br><span style="display:inline-block">先に作って</span><span style="display:inline-block">お見せします</span></h2></div>
+    <p class="lead rv"><span class="iw">見本用の<wbr>会社で<wbr>作った<wbr>例です。</span><span class="iw">今は<wbr>塗装店の<wbr>例ですが、</span><span class="iw">御社の<wbr>業種に<wbr>合わせて<wbr>作ります。</span><span class="iw">画面を<wbr>押すと、<wbr>実際に<wbr>動く<wbr>サイトが<wbr>開きます。</span></p>
+    <!-- 会社ごとの紹介ページだけで表示<wbr>（紹介ページ生成.py が社名とURLを入れて hidden を外す） -->
+    <ol class="pm-flow rv"><li>見本を<wbr>見る</li><li>直したい所を<wbr>伝える</li><li>完成品を<wbr>確認する</li><li>問題なければ<wbr>契約して<wbr>公開</li></ol>
+    <div class="samples rv">
+      <a class="sample" href="https://konan-paint.shiga-web.workers.dev/craft.html" target="_blank" rel="noopener"><div class="ph"><img src="img/sp-craft.jpg" alt="職人の技術を見せるデザイン" loading="lazy" width="560" height="1212"></div><b>職人の<wbr>技術</b><span>技術力 × 下地の<wbr>こだわり × 職人の<wbr>顔</span><div class="s-more"><h4>どんな<wbr>ページ</h4><p>屋根を<wbr>塗る<wbr>職人の<wbr>写真と<wbr>大きな<wbr>見出しから<wbr>始ま<span class="kj">り、</span><wbr>地域の<wbr>地図で<wbr>対応エリアを<wbr>見せたあ<span class="kj">と、</span><wbr>診断・洗浄・シーリング・3回塗りの<wbr>工程ごと<span class="kj">に、</span><wbr>職人の<wbr>こだわりを<wbr>写真で<wbr>見せる<wbr>ページで<span class="kj">す。</span><wbr>下請け任せが<wbr>不安な方<span class="kj">に、</span><wbr>技術で<wbr>選んで<wbr>もらう<wbr>作りで<span class="kj">す。</span><wbr></p></div></a>
+      <a class="sample" href="https://konan-paint.shiga-web.workers.dev/chiiki" target="_blank" rel="noopener"><div class="ph"><img src="img/sp-chiiki.jpg" alt="地域密着のデザイン" loading="lazy" width="560" height="1212"></div><b>地域密着</b><span>近くの職人 × 代表の手紙 × 工事のあとも</span><div class="s-more"><h4>どんな<wbr>ページ</h4><p>紺と<wbr>水色<span class="kj">に、</span><wbr>うすい<wbr>紙の<wbr>質<span class="kj">感。</span><wbr>家の<wbr>写真が<wbr>切りかわる<wbr>最初の<wbr>画面か<span class="kj">ら、</span><wbr>縦書きの<wbr>見出<span class="kj">し、</span><wbr>代表からの<wbr>手<span class="kj">紙、</span><wbr>地図で<wbr>対応エリア<span class="kj">、</span><wbr>工事の<wbr>あとの<wbr>点検までを<wbr>順に<wbr>伝える<wbr>ページで<span class="kj">す。</span><wbr>近くに<wbr>い<span class="kj">て、</span><wbr>ずっと<wbr>相談できる<wbr>塗装店だと<wbr>伝わる<wbr>作りで<span class="kj">す。</span></p></div></a>
+      <a class="sample" href="https://konan-paint.shiga-web.workers.dev/seijitsu" target="_blank" rel="noopener"><div class="ph"><img src="img/sp-shokunin.jpg" alt="誠実のデザイン" loading="lazy" width="560" height="1212"></div><b>誠実</b><span>信頼 × 地域の<wbr>家 × 写真で<wbr>伝える</span><div class="s-more"><h4>どんな<wbr>ページ</h4><p>町と<wbr>家の<wbr>写真から<wbr>始ま<span class="kj">る、</span><wbr>白・黒・グレーの<wbr>落ち着いた<wbr>ページで<span class="kj">す。</span><wbr>施工事例を<wbr>画面いっぱいの<wbr>写真で<wbr>1件ずつ見<span class="kj">せ、</span><wbr>症状ごとの<wbr>急ぎ度も<wbr>写真で<wbr>分かりま<span class="kj">す。</span><wbr></p></div></a>
+      <a class="sample" href="https://konan-paint.shiga-web.workers.dev/pop" target="_blank" rel="noopener"><div class="ph"><img src="img/sp-pop.jpg" alt="ポップのデザイン" loading="lazy" width="560" height="1212"></div><b>ポップ</b><span>親しみやすさ × 幅<wbr>広い<wbr>工事 × すぐ<wbr>来る</span><div class="s-more"><h4>どんな<wbr>ページ</h4><p>クリームの<wbr>紙に<wbr>手書きの<wbr>英字<span class="kj">と、</span><wbr>水玉や<wbr>チェックの<wbr><span class="kj">柄。</span><wbr>ななめの<wbr>写真と<wbr>イラスト<span class="kj">で、</span><wbr>やわらかく<wbr>親しみやすく<wbr>見せる<wbr>ページで<span class="kj">す。</span><wbr>気軽に<wbr>相談して<wbr>もらいま<span class="kj">す。</span><wbr></p></div></a>
+    </div>
+    <p class="note">※ 見本は<wbr>提案用の<wbr>サンプルです<wbr><span class="kj">（料</span>金・施工事例などは<wbr>参考<span class="kj">例）。</span><wbr></p>
+  </div>
+</section>
+
+<section class="reason" id="reason" data-side="できること">
+  <div class="wrap">
+    <div class="ttl rv"><h2>できる<wbr>こと</h2><span class="band">作って<wbr>終わりに<wbr>しない、<wbr>ホームページ</span></div>
+    <div class="reasons rv">
+      <div class="rs"><div class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><rect x="3" y="4" width="18" height="13" rx="2"/><path d="M8 21h8M12 17v4M7 9l2 2-2 2M12 13h4"/></svg></div><h3>ホームページ制作</h3><p>スマホで<wbr>見やす<span class="kj">く、</span><wbr>電話・LINEが<wbr>ワンタッ<span class="kj">プ。</span><wbr>実績・口コミ・費用の<wbr>目安まで<wbr>載せま<span class="kj">す。</span><span class="kj"></span><wbr>何人が<wbr>見<span class="kj">て、</span><wbr>何件の<wbr>電話が<wbr>来たかを<wbr>毎月<wbr>確認できる<wbr>仕組みも<wbr>入れま<span class="kj">す。</span><wbr></p></div>
+      <div class="rs"><div class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg></div><h3>ホームページ運用</h3><p>問い合わせが<wbr>増えるよう<span class="kj">に、</span><wbr>毎月<wbr>こちらで<wbr>育てま<span class="kj">す。</span><wbr>実績・事例の<wbr>追加<wbr>（<wbr>何件でも<wbr>O<span class="kj">K。</span><wbr>写真は<wbr>LINEで<wbr>送るだ<span class="kj">け）</span><span class="kj">、</span><wbr>お客様の<wbr>声の<wbr>追加<wbr><span class="kj">（何</span>件でも<wbr>O<span class="kj">K）、</span><wbr>お知らせ・お役立ち記事の<wbr>作<span class="kj">成、</span><wbr>トップページの<wbr>改<span class="kj">修、</span><wbr><span class="kj">「地</span>域名＋業<span class="kj">種」</span>で<wbr>調べた<wbr>ときに<wbr>上の<wbr>方に<wbr>出る<wbr>対策まで<wbr>行いま<span class="kj">す。</span><wbr>今の<wbr>ホームページの<wbr>運用だけでも<wbr>OKで<span class="kj">す。</span><wbr></p></div>
+      <div class="rs"><div class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M12 21s-7-6.2-7-12a7 7 0 0 1 14 0c0 5.8-7 12-7 12z"/><circle cx="12" cy="9" r="2.5"/></svg></div><h3>Googleマップ対策</h3><p><span class="kj">「地</span>域名＋業<span class="kj">種」</span>で<wbr>調べた<wbr>とき<span class="kj">に、</span><wbr>地図に<wbr>御社が<wbr>出やすくなるようにしま<span class="kj">す。</span><wbr>お客さまから<wbr>口コミが<wbr>集まる<wbr>仕組みを<wbr>つく<span class="kj">り、</span><wbr>お店の<wbr>情報と<wbr>写真を<wbr>整えま<span class="kj">す。</span><span class="kj"></span></p></div>
+      <div class="rs"><div class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r=".8" fill="currentColor"/></svg></div><h3>SNS運用</h3><p>InstagramやTikTokの<wbr>投稿を<wbr>代わりに<wbr>作りま<span class="kj">す。</span><wbr>新しい人に<wbr>届きやすい<wbr>短い動画を<wbr>中心<span class="kj">に、</span><wbr>仕事の<wbr>様子や<wbr>お店の<wbr>雰囲気を<wbr>見せま<span class="kj">す。</span><span class="kj"></span><wbr>見た人が<wbr>LINEや<wbr>ホームページから<wbr>相談できるよう<span class="kj">に、</span><wbr>入口まで<wbr>整えま<span class="kj">す。</span></p></div>
+      <div class="rs"><div class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M12 3.5c-5 0-9 3.3-9 7.4 0 3.7 3.2 6.8 7.5 7.3l-.6 2.6 3.4-2.6c4.3-.5 7.7-3.5 7.7-7.3 0-4.1-4-7.4-9-7.4z"/><path d="M8 10v3M12 10v3M16 10v3"/></svg></div><h3>LINE運用</h3><p>LINE公式アカウント<span class="kj">で、</span><wbr>一度<wbr>来てくれた<wbr>お客さまと<wbr>つながりま<span class="kj">す。</span><span class="kj"></span><wbr>友だちを<wbr>増やす<wbr>仕組みづくりか<span class="kj">ら、</span><wbr>お礼・<wbr>口コミの<wbr>お願い・<wbr>点検の<wbr>ご案内までを<wbr>自動にし<span class="kj">て、</span><wbr>次に<wbr>必要に<wbr>なった<wbr>ときに<wbr>思い出して<wbr>もらえるようにしま<span class="kj">す。</span><span class="kj"></span></p></div>
+    </div>
+    <div class="also rv"><h3>必要に<wbr>応じて</h3><p>Web<wbr>広告／見積もりの<wbr>自動計算などの<wbr>仕組みづくり／見積書や<wbr>返信文づくりに<wbr>AIを<wbr>使う<wbr>お手伝い</p></div>
+  </div>
+</section>
+
+<section class="ops" id="ops" data-side="運用の中身">
+  <div class="wrap">
+    <div class="ttl rv"><h2 class="h-nw"><span>運用で<span class="kj">は、</span><wbr></span><span>毎月<wbr>ここまで<wbr>やります</span></h2></div>
+    <p class="lead rv">作って<wbr>終わりに<wbr>せ<span class="kj">ず、</span><wbr>毎月<wbr>この<wbr>流れを<wbr>続け<span class="kj">て、</span><wbr>問い合わせに<wbr>つなげま<span class="kj">す。</span><wbr></p>
+    <div class="ops-you rv"><div class="a"><small>御社に<wbr>お願い<wbr>する<wbr>こと</small><b>写真を<wbr>LINEで<wbr>送るだけ</b></div><div class="b"><small>その<wbr>あとは</small><b><span class="nw">記事づくりから<wbr>投<span class="kj">稿、</span><wbr>報告ま<span class="kj">で、</span><wbr></span><span class="nw">すべて<wbr>こちらで<wbr>行います</span></b></div></div>
+    <ol class="ops-wk rv"><li><div class="w">1週目</div><div><h3>先月の<wbr>結果を<wbr>見<span class="kj">て、</span><wbr>直す所を<wbr>決める</h3><ul><li>何人が<wbr>見<span class="kj">て、</span><wbr>電話が<wbr><span class="nw">何回押されたかを確認</span></li><li><span class="kj">「地</span>域名＋業<span class="kj">種」</span>の<wbr>検索順位を<wbr>確認</li><li>Googleマップに<wbr>出た回数と<wbr><span class="nw">電話の数を確認</span></li></ul></div></li><li><div class="w">2週目</div><div><h3>届いた<wbr>写真と<wbr>声<span class="kj">を、</span><wbr>ページに<wbr>載せる</h3><ul><li>写真を<wbr>選<span class="kj">び、</span><wbr>説明文を<wbr>書く</li><li>事例・実績を<wbr>追加<wbr>（<wbr>何件でも<wbr>O<span class="kj">K）</span><span class="kj"></span><wbr></li><li>お客様の<wbr>声を<wbr>追加<wbr><span class="kj">（何</span>件でも<wbr>O<span class="kj">K）</span><wbr></li></ul></div></li><li><div class="w">3週目</div><div><h3>検索と<wbr>Googleマップで<wbr>見つけて<wbr>もらう</h3><ul><li>お役立ち記事を<wbr>書いて<wbr>載せる<wbr><span class="kj">（月</span>4<span class="kj">本）</span><wbr></li><li>Googleマップに<wbr>投稿する<wbr><span class="kj">（月</span>4<span class="kj">回）</span><wbr></li><li>検索と<wbr>AIに<wbr>出やすくなるよう調整する</li></ul></div></li><li><div class="w">4週目</div><div><h3>結果を<wbr>まとめ<span class="kj">て、</span><wbr>来月の<wbr>作戦を<wbr>立てる</h3><ul><li>今月の<wbr>数字を<wbr>レポートに<wbr>まとめる</li><li>やった<wbr>ことと<wbr>結果を<wbr>お送りする</li><li>来月やる<wbr>ことを<wbr>ご提案する</li></ul></div></li><li><div class="w">毎月ずっと</div><div><h3>ホームページが<wbr>止まらないように<wbr>見守る</h3><ul><li>サーバーと<wbr>ドメインの<wbr>管理</li><li>不具合が<wbr>出たら<wbr>対応</li><li>文章や<wbr>写真の<wbr>修正<wbr><span class="kj">（月</span>2回ま<span class="kj">で）</span><wbr></li></ul></div></li></ol>
+    <p class="ops-note rv">※ スタンダードプランと<wbr>Googleマップの<wbr>運用を<wbr>組み合わせた<wbr>場合の<wbr>例で<span class="kj">す。</span><wbr>順番は<wbr>月に<wbr>よって<wbr>変わりま<span class="kj">す。</span><wbr></p>
+  </div>
+</section>
+
+<section class="report" id="report" data-side="運用レポート">
+  <div class="wrap">
+    <div class="ttl rv"><h2 class="h-nw"><span>毎月<wbr>このような</span><span>レポートを<wbr>お届けします</span></h2></div>
+    <p class="lead rv"><span class="iw">運用で<wbr>やった<wbr>こと<span class="kj">と、</span><wbr>その<wbr>結果を</span><span class="iw">毎月<wbr>お送りしま<span class="kj">す。</span><wbr></span><span class="iw"><span class="kj">「お</span>金を払って何をして<wbr>もらっているのか</span><span class="iw">分からな<span class="kj">い」</span><wbr>とは<wbr>なりませ<span class="kj">ん。</span><wbr></span></p>
+    <div class="rp rv">
+      <div class="rp-head"><h3>2026年11月 運用レポート<i class="rp-mark" style="font-style:normal">見本</i></h3><span>〇〇さま<wbr><span class="kj">（ス</span>タンダードプラ<span class="kj">ン）</span><span class="kj"></span><wbr></span></div>
+      <div class="rp-cols">
+        <div>
+          <h4>今月の<wbr>数字</h4>
+          <table><thead><tr><th scope="col">項目</th><th scope="col">今月</th><th scope="col">先月</th></tr></thead><tbody>
+            <tr class="sec"><td colspan="3">ホームページ</td></tr>
+            <tr><td>見に<wbr>来た<wbr>人</td><td><b>410人</b></td><td>340人</td></tr>
+            <tr><td>電話ボタンが<wbr>押された数</td><td><b>6回</b></td><td>4回</td></tr>
+            <tr><td>お問い合わせ</td><td><b>2件</b></td><td>1件</td></tr>
+            <tr class="sec"><td colspan="3">Googleマップ</td></tr>
+            <tr><td>地図や<wbr>検索に<wbr>出た回数</td><td><b><span class="kj">2,100回</span></b></td><td><span class="kj">1,850回</span></td></tr>
+            <tr><td>地図からの<wbr>電話</td><td><b>5回</b></td><td>3回</td></tr>
+            <tr><td>道順を<wbr>調べた<wbr>数</td><td><b>6回</b></td><td>4回</td></tr>
+          </tbody></table>
+        </div>
+        <div>
+          <h4>ホームページを<wbr>見に<wbr>来た<wbr>人の<wbr>数</h4>
+          <div class="rp-chart" role="img" aria-label="6月180人、7月220人、8月260人、9月300人、10月340人、11月410人"><div style="height:44%" title="6月：180人"><b>180</b></div><div style="height:54%" title="7月：220人"><b>220</b></div><div style="height:63%" title="8月：260人"><b>260</b></div><div style="height:73%" title="9月：300人"><b>300</b></div><div style="height:83%" title="10月：340人"><b>340</b></div><div style="height:100%" title="11月：410人"><b>410</b></div></div>
+          <div class="rp-mon" aria-hidden="true"><span>6月</span><span>7月</span><span>8月</span><span>9月</span><span>10月</span><span>11月</span></div>
+          <p class="rp-rank"><span class="kj">「〇</span>〇市 リフォー<span class="kj">ム」</span><span class="kj"></span><wbr>の<wbr>検索順位：<wbr>先月7位 → <span class="kj">今月 <b>4位</b></span></p>
+        </div>
+        <div>
+          <h4>今月やった<wbr>こと</h4>
+          <ul><li>事例の<wbr>追加 2件</li><li>お客様の<wbr>声の<wbr>追加 1件</li><li>お役立ち記事の<wbr>作成 4本</li><li>Googleマップの<wbr>投稿 4回</li><li>検索で<wbr>上に<wbr>出やすく<wbr>する<wbr>調整</li></ul>
+        </div>
+        <div>
+          <h4>来月やる<wbr>こと</h4>
+          <ul><li>電話が<wbr>多かった<wbr><span class="kj">「キ</span>ッチンの<wbr>交<span class="kj">換」</span>の<wbr>記事を<wbr>増やす</li><li>事例の<wbr>写真<span class="kj">を、</span><wbr>前と<wbr>後で<wbr>並べる</li><li>Googleマップに<wbr>写真を<wbr>足す</li><li>お客さまに<wbr>お願い<wbr>する<wbr>口コミの<wbr>案内を<wbr>用意する</li></ul>
+        </div>
+      </div>
+      <p class="rp-note">※ 見本で<span class="kj">す。</span><wbr>数字は<wbr>説明の<wbr>ための<wbr>架空の<wbr>例<span class="kj">で、</span><wbr>同じ<wbr>成果を<wbr>お約束する<wbr>ものでは<wbr>ありませ<span class="kj">ん。</span><wbr></p>
+    </div>
+  </div>
+</section>
+
+<section id="staff" data-side="プロフィール">
+  <div class="wrap">
+    <div class="ttl rv"><h2>プロフィール</h2></div>
+    <div class="staff rv">
+      <div class="card-me">
+        <img src="img/me.jpg" alt="BUNKAIの写真" width="260" height="260">
+        <div>
+          <span class="role">&lt; Web Marketer /&gt;</span>
+          <b>BUNKAI</b>
+          <ul><li>滋賀県大津市出身</li><li>現<span class="kj">在、</span><wbr>栗東市に<wbr>住んでいます</li><li>趣味は<wbr>ゴルフ</li></ul>
+        </div>
+      </div>
+      <div>
+        <p class="msg"><b>広告・検索・SNSで<wbr>人を<wbr>集める<wbr>仕事<span class="kj">を、</span><wbr>ずっと<wbr>してきまし<span class="kj">た。</span></b>食品宅配の<wbr>会社では<wbr>X・Google・Yahoo!の<wbr>広告<span class="kj">を、</span><wbr>Web事業の<wbr>会社では<wbr>検索対策と<wbr>広告で<wbr>問い合わせを<wbr>増やす仕事を<wbr>担当しまし<span class="kj">た。</span><wbr>今は<wbr>自分で<span class="kj">も、</span><wbr>検索から<wbr>人を<wbr>集める<wbr>サイトを<wbr>運営していま<span class="kj">す。</span></p>
+        <p class="msg">いい<wbr>仕事を<wbr>しているの<span class="kj">に、</span><wbr>それが<wbr>ネットで<wbr>伝わっていない<wbr>会社は<wbr>たくさん<wbr>ありま<span class="kj">す。</span><wbr>ホームページを<wbr>作って<wbr>終わりに<wbr>せ<span class="kj">ず、</span><wbr>検索・Googleマップ・SNS・LINEまで<wbr>つな<wbr>げ<span class="kj">て、</span><wbr>問い合わせが<wbr>来る<wbr>形にしま<span class="kj">す。</span><wbr>打ち合わせは<wbr>電話・LINE・ビデオ通話で<wbr>進めま<span class="kj">す。</span><wbr>滋賀県内な<span class="kj">ら、</span><wbr>事務所や<wbr>現場にも<wbr>伺いま<span class="kj">す。</span></p>
+        <div class="chips"><span>Web広告</span><span>検索対策</span><span>SNS・LINE</span><span>全国対応</span></div>
+        <ul class="career">
+          <li><b>BUNKAI<wbr><span class="kj">（現</span><span class="kj">在）</span><wbr></b><p>ダンススクール比較サイト<wbr><span class="kj">「ダ</span>ンス<span class="kj">ル」</span><wbr><span class="kj">（掲</span>載<em><span class="kj">2,397校</span></em>・月間利用<wbr>者<em>約5万人</em>）<span class="kj">と、</span><wbr>ボイトレ情報メディア<wbr><span class="kj">「ボ</span>イス<span class="kj">ル」</span><wbr>を<wbr>運<span class="kj">営。</span><wbr></p></li>
+          <li><b>株式会社ナッシュ<wbr><span class="kj">（食</span>品宅<span class="kj">配）</span><wbr></b><p>X<wbr><span class="kj">（旧</span>Twitte<span class="kj">r）</span><wbr>・Google・Yahoo!の<wbr>広告を<wbr>担<span class="kj">当。</span><wbr>決められた<wbr>予算の<wbr>中<span class="kj">で、</span><wbr><em>数千件の<wbr>申し込み</em>を<wbr>集めまし<span class="kj">た。</span><wbr></p></li>
+          <li><b>ラグザスクリエイト株式会社<wbr><span class="kj">（W</span>eb事<span class="kj">業）</span><wbr></b><p>自動車関連サイトの<wbr>マーケティング責任者と<wbr>し<span class="kj">て、</span><wbr>広告と<wbr>検索対策で<em>問い合わせ数を<wbr>約3倍</em>に<wbr><span class="kj">（4</span>か月で<wbr>最大約<span class="kj">6,000</span><span class="kj">件）。</span><wbr>人材紹介事業の<wbr>責任者と<wbr>し<span class="kj">て、</span><wbr>求人の<em>応募1件あたりの<wbr>広告費を<wbr>業界平均の<wbr>約半分</em>に<wbr>しまし<span class="kj">た。</span><wbr></p></li>
+          <li><b>人材派遣会社<wbr><span class="kj">（京</span>都・滋賀支<span class="kj">店）</span><wbr></b><p>滋賀・京都の<wbr>介護・医療施設など<em>30社</em>を<wbr>担当する<wbr>営業と<wbr>し<span class="kj">て、</span><wbr>地元の<wbr>経営者の<wbr>方と<wbr>向き合ってきまし<span class="kj">た。</span><wbr></p></li>
+          <li><b>SNS運用代行の<wbr>会社</b><p>中<wbr>小企業の<wbr>経営者の<wbr>方への<wbr>営業を<wbr>担<span class="kj">当。</span><wbr>小さな<wbr>会社の<wbr>集客の<wbr>悩み<span class="kj">を、</span><wbr>現場で<wbr>聞いてきまし<span class="kj">た。</span><wbr></p></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="media" id="media" data-side="運営メディア">
+  <div class="wrap">
+    <div class="ttl rv"><h2>自社で<wbr>運営している<wbr>メディア</h2><span class="band"><span class="bw"><span class="iw">検索から<wbr>人を<wbr>集める<wbr>サイト<span class="kj">を、</span><wbr></span><span class="iw">自分でも<wbr>運営しています</span></span></span></div>
+    <p class="mlead rv">地元の<wbr>会社の<wbr>ホームページに<span class="kj">も、</span><wbr>同じ<wbr>集客の<wbr>やり方を<wbr>使いま<span class="kj">す。</span><span class="kj"></span><wbr></p>
+    <div class="medias rv">
+      <a class="mcard" href="https://dansul.jp/" target="_blank" rel="noopener">
+        <div class="brw"><img src="img/media-dansul.jpg" alt="ダンスルの画面" loading="lazy" width="800" height="500"></div>
+        <div class="mb">
+          <h3>ダンスル<small class="msub">ダンススクール比較サイト</small></h3>
+          <p>大人の<wbr>初心者向け<span class="kj">に、</span><wbr>全国の<wbr>ダンススクールを<wbr>口コミ・料金・体験情報と<wbr>あわせて<wbr>紹介していま<span class="kj">す。</span><wbr></p>
+          <ul class="mnum"><li><b data-count="2397" data-comma><span class="kj">2,397</span></b>校<small>掲載スクール</small></li><li><b>約5万</b>人<small>月間利用<wbr>者</small></li><li><b data-count="47">47</b>都道府県<small>全国<wbr>対応</small></li></ul>
+          <span class="mlink">サイトを<wbr>見る<wbr> →</span>
+        </div>
+      </a>
+      <a class="mcard" href="https://www.voisul.jp/" target="_blank" rel="noopener">
+        <div class="brw"><img src="img/media-voisul.jpg" alt="ボイスルの画面" loading="lazy" width="800" height="500"></div>
+        <div class="mb">
+          <h3>ボイスル<small class="msub">ボイトレ情報メディア</small></h3>
+          <p>発声の<wbr>コツや<wbr>プロへの<wbr>インタビュ<span class="kj">ー、</span><wbr>全国の<wbr>地域別ボイトレスクール情報を<wbr>発信していま<span class="kj">す。</span><wbr></p>
+          <ul class="mnum"><li><b>全国</b><small>地域別スクール情報</small></li><li><b>記事</b><small>練習方<wbr>法・インタビュー</small></li></ul>
+          <span class="mlink">サイトを<wbr>見る<wbr> →</span>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="charge" id="charge" data-side="料金">
+  <div class="wrap">
+    <div class="ttl rv"><h2>料金</h2></div>
+    <div class="sum rv">
+      <p class="sum-q">結<span class="kj">局、</span><wbr>毎月いく<span class="kj">ら？</span></p>
+      <p class="sum-a">月<b><span class="kj">19,800</span></b>円から<small><span class="kj">（税</span><span class="kj">別）</span><wbr></small></p>
+      <ul class="sum-0"><li>制作費<b>0円</b></li><li>サーバー代<b>0円</b></li><li>ドメイン代<b>0円</b></li><li>最低<b>3か<wbr>月</b>から</li></ul>
+      <p class="sum-n"><span class="nw">ホームページ<span class="kj">は、</span><wbr>見本を<wbr>もとに</span><span class="nw">御社の<wbr>情報で<wbr>作り込みま<span class="kj">す。</span><wbr></span><span class="nw">その<wbr>あとの<wbr>更新と<wbr>毎月の<wbr>報告ま<span class="kj">で、</span><wbr></span><span class="nw">この<wbr>月額に<wbr>入っていま<span class="kj">す。</span><wbr></span></p>
+    </div>
+    <div class="runs rv">
+      <h3><span class="nw">ホームページの</span><span class="nw">3つの<wbr>プラン</span><small class="blk"><span class="kj">（月</span>額・税<span class="kj">別）</span><wbr></small></h3>
+      <div class="plans">
+        <div class="plan">
+          <b class="pt">ライト</b>
+          <div class="pp"><span class="kj">19,800</span><small>円</small></div>
+          <p class="for">まずは<wbr>ホームページを<br>きちんと<wbr>持っておきたい</p>
+          <ul>
+            <li>サイトの<wbr>管理・<wbr>不具合の<wbr>対応</li>
+            <li>セキュリティ対策と<wbr>バックアップ</li>
+            <li>スマホでの<wbr>表示<span class="kj">と、</span><wbr>電話・フォームの<wbr>動作確認</li>
+            <li>事例・お客様の<wbr>声の<wbr>追加<wbr>（<wbr>何件でも<wbr>O<span class="kj">K）</span><span class="kj"></span></li>
+            <li>文章・写真の<wbr>修正<span class="kj">（月</span>2回ま<span class="kj">で）</span></li>
+            <li>お知らせの<wbr>更新<span class="kj">（月</span>1<span class="kj">回）</span></li>
+            <li>月1回の<wbr>報告<wbr><span class="kj">（見</span>られた<wbr>数・電話の<wbr>数・来月やる<wbr>こ<span class="kj">と）</span></li>
+          </ul>
+        </div>
+        <div class="plan rec">
+          <span class="badge-rec">おすすめ</span>
+          <b class="pt">スタンダード</b>
+          <div class="pp"><span class="kj">29,800</span><small>円</small></div>
+          <p class="for">ホームページから<br>問い合わせを<wbr>増や<wbr>したい</p>
+          <ul>
+            <li class="inh">ライトの内容すべて</li>
+            <li>事例の<wbr>文章づくり<wbr><span class="kj">（L</span>INEで<wbr>写真を<wbr>送るだ<span class="kj">け）</span><span class="kj"></span></li><li>お役立ち記事の<wbr>作成<span class="kj">（月</span>4<span class="kj">本）</span></li>
+            <li>地域名で<wbr>調べた<wbr>とき<span class="kj">に、</span><wbr>上の<wbr>方に<wbr>出る<wbr>対策<wbr><span class="kj">（ペ</span>ージの<wbr>題名・説明<span class="kj">文）</span></li><li>AI検索<span class="kj">（C</span>hatGPTな<span class="kj">ど）</span>に<wbr>出やすい書き方</li>
+            <li>電話・LINE・フォームの<wbr>ボタンや<wbr>流れを<wbr>見直し<span class="kj">て、</span><wbr>問い合わせを<wbr>増やす<wbr><span class="kj">（月</span>1か<wbr><span class="kj">所）</span></li></ul>
+        </div>
+        <div class="plan">
+          <b class="pt">プレミアム</b>
+          <div class="pp"><span class="kj">49,800</span><small>円</small></div>
+          <p class="for">地域で<wbr>いちばんに<br>選ばれたい</p>
+          <ul>
+            <li class="inh">スタンダードの内容すべて</li>
+            <li>お役立ち記事の<wbr>作成<span class="kj">（月</span>8<span class="kj">本）</span></li>
+            <li>見られ方を<wbr>調べる<wbr>ツール<span class="kj">で、</span><wbr>よく<wbr>読まれる<wbr>所を<wbr>見<span class="kj">て、</span><wbr>トップページと<wbr>サービスページを<wbr>直す</li><li>季節の<wbr>特集ページ<span class="kj">（年</span><wbr>4回：業種の<wbr>忙しい<wbr>時期に<wbr>合わせ<span class="kj">て）</span><span class="kj"></span></li>
+            <li>近くの<wbr>同業の<wbr>ホームページとのくらべ</li></ul>
+        </div>
+      </div>
+    </div>
+    <div class="more more-pdf rv">
+      <a class="btn btn-cy" href="price.pdf" target="_blank" rel="noopener">詳しい<wbr>料金表<wbr>（PDF）を<wbr>見る</a>
+    </div>
+    <div class="runs runs-map rv">
+      <h3><span class="nw">Googleマップの</span><span class="nw">3つのプラン</span><small class="blk"><span class="kj">（月</span>額・税別・必要な方だ<span class="kj">け）</span></small></h3>
+      <p class="runs-lead"><span class="kj">「地</span>域名＋業<span class="kj">種」</span>で<wbr>調べた<wbr>とき<span class="kj">に、</span><wbr>地図に<wbr>御社が<wbr>出るようにしま<span class="kj">す。</span><span class="kj"></span><wbr><span class="nw">地図の順位は</span><wbr><span class="nw">口コミの数と中身・</span><wbr><span class="nw">お店の情報・</span><wbr><span class="nw">ホームページで</span><wbr>決まりま<span class="kj">す。</span><wbr><span class="nw">投稿だけでなく、</span><wbr><span class="nw">この3つを整えます。</span></p>
+      <div class="plans">
+        <div class="plan">
+          <b class="pt">地図に出す</b>
+          <div class="pp"><span class="kj">9,800</span><small>円</small></div>
+          <p class="for">まずは地図で<br>正しく見つけてもらいたい</p>
+          <ul>
+            <li>最初の<wbr>作り込み<span class="kj">（カ</span>テゴリ・<wbr>サービス・<wbr>対応エリア・<wbr>説明<span class="kj">文）</span></li>
+            <li>ほかのサイトの<wbr>会社情報をそろえる</li>
+            <li>写真の<wbr>追加<wbr><span class="kj">（月</span>4<span class="kj">枚）</span>と<wbr>投稿<wbr><span class="kj">（月</span>4<span class="kj">回）</span><span class="kj"></span></li>
+            <li>営業時間・<wbr>お休みの更新</li>
+            <li>口コミへの<wbr>返信</li>
+            <li>月1回の<wbr>報告<span class="kj">（電</span>話・<wbr>道順・<wbr>見られた<span class="kj">数）</span></li>
+          </ul>
+        </div>
+        <div class="plan rec">
+          <span class="badge-rec">おすすめ</span>
+          <b class="pt">口コミを増やす</b>
+          <div class="pp"><span class="kj">19,800</span><small>円</small></div>
+          <p class="for">口コミを増やして<br>選ばれる会社になりたい</p>
+          <ul>
+            <li class="inh"><span class="kj">「地</span>図に出<span class="kj">す」</span>の内容すべて</li>
+            <li>口コミを<wbr>集める<wbr>仕組み<span class="kj">（Q</span>Rカードの<wbr>印刷データ・<wbr>LINEの<wbr>お願い文・<wbr>お願いする時<span class="kj">期）</span></li>
+            <li>口コミの<wbr>お願いを<wbr>1件ずつ代行</li>
+            <li>口コミへの<wbr>返信を<wbr>すべて<wbr>こちらで書く</li>
+            <li>写真<wbr><span class="kj">（月</span>8<span class="kj">枚）</span>と<wbr>投稿<wbr><span class="kj">（月</span>8<span class="kj">回）</span><span class="kj"></span></li>
+            <li>口コミの<wbr>数と<wbr>星の<wbr>変わり方の報告</li>
+          </ul>
+        </div>
+        <div class="plan">
+          <b class="pt">地域で上位を狙う</b>
+          <div class="pp"><span class="kj">29,800</span><small>円</small></div>
+          <p class="for">近くの同業より<br>上に出たい</p>
+          <ul>
+            <li class="inh"><span class="kj">「口</span>コミを増や<span class="kj">す」</span>の内容すべて</li>
+            <li>市内5か所で<wbr>毎<span class="kj">月、</span><wbr>地図の<wbr>順位を測る</li>
+            <li>上位の<wbr>同業との<wbr>くらべ<span class="kj">（口</span>コミ・<wbr>写真・<wbr>カテゴ<span class="kj">リ）</span></li>
+            <li>カテゴリ・<wbr>サービスの<wbr>見直し</li>
+            <li>地域の<wbr>紹介サイトへの<wbr>登録を増やす</li>
+            <li>順位の<wbr>変化と<wbr>来月の手を報告</li>
+          </ul>
+        </div>
+      </div>
+      <p class="map-n">※ 地図の順位は<wbr>探す人との距離でも<wbr>変わるた<span class="kj">め、</span><wbr>何位になるかは<wbr>お約束できません。<wbr>お金と引き換えの口コ<span class="kj">ミや、</span><wbr>会社名に言葉を足すこと<span class="kj">は、</span><wbr>Googleの決まりに<wbr>反するので行いません。</p>
+    </div>
+    <div class="ex rv">
+      <p class="ex-h">た<wbr>とえば</p>
+      <p class="ex-f"><span class="nw">スタンダード 月<span class="kj">29,800円</span></span><span class="nw">＋ Googleマップ 月<span class="kj">9,800円</span></span><span class="nw">＝ <b>月<span class="kj">39,600円</span></b><small><span class="kj">（税</span><span class="kj">別）</span><wbr></small></span></p>
+    </div>
+    <div class="adds rv">
+      <h3><span class="nw">あとから</span><span class="nw">足せる<wbr>もの</span><small class="blk"><span class="kj">（月</span>額・税別・必要な<wbr>ものだ<span class="kj">け）</span><wbr></small></h3>
+      <p class="adds-lead">ホームページの<wbr>プラン<span class="kj">に、</span><wbr>必要な<wbr>ものだけ足せま<span class="kj">す。</span><wbr>写真や<wbr>動画は<wbr>LINEで<wbr>送っていただくだけ<span class="kj">で、</span><wbr><span class="nw">文章づくりから<wbr>投稿まで</span><span class="nw">こちらで<wbr>行いま<span class="kj">す。</span><wbr></span></p>
+      <div class="ad-g adt-g g-sns">
+        <div class="ad-hd"><span class="ad-ic sns" aria-hidden="true"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="M10 9.5v5l4.5-2.5z" fill="#fff"/></svg></span><h4>Instagram・TikTokの<wbr>運用</h4></div>
+        <p class="ad-l">事例や<wbr>仕事の<wbr>様子を<wbr>代わりに<wbr>投稿<span class="kj">し、</span><span class="kj"></span><wbr>SNSから<wbr>集客に<wbr>つながるように<wbr>運用しま<span class="kj">す。</span><wbr>新しい人に<wbr>届くのは<wbr>短い動画で<span class="kj">す。</span><wbr>見た人が<wbr>LINEや<wbr>ホームページに<wbr>進めるよう<span class="kj">に、</span><wbr>入口まで<wbr>整えま<span class="kj">す。</span></p>
+        <table class="adt">
+          <thead><tr><th>プラン</th><th>中身</th><th class="p">月額</th></tr></thead>
+          <tbody>
+          <tr><th><span class="nm">InstagramかTikTokで<wbr>見せる</span><small class="fr">事例を<wbr>見て<wbr>もらいたい</small></th><td class="ls"><ul class="ck"><li>Instagramか<wbr>TikTo<span class="kj">k、</span><wbr>どちらか<wbr>1つを<wbr>選べます</li><li>プロフィールの<wbr>作り込み<span class="kj">（地</span>域・仕事の<wbr>内容・LINEと<wbr>ホームページへの<wbr>入<span class="kj">口）</span><span class="kj"></span></li><li>ハイライトや<wbr>固定の<wbr>投稿<wbr><span class="kj">（事</span>例・料金・お客様の<wbr><span class="kj">声）</span><span class="kj"></span></li><li>事例の<wbr>投稿 月8本<wbr><span class="kj">（ビ</span>フォーアフター・仕事の<wbr>流<span class="kj">れ）</span><span class="kj"></span></li><li>地域の<wbr>ハッシュタグ</li><li>月1回の<wbr>報告<span class="kj">（見</span>られた数・<wbr>LINEや<wbr>ホームページに<wbr>進んだ<span class="kj">数）</span></li></ul></td><td class="p"><b><span class="kj">19,800</span></b><small>円</small></td></tr>
+          <tr class="rec"><th><span class="nm">動画で<wbr>広げる</span><em class="rb">おすすめ</em><small class="fr">新しいお客さんに<wbr>届けたい</small></th><td class="ls"><ul class="ck"><li class="inh"><span class="kj">「I</span>nstagramか<wbr>TikTokで<wbr>見せ<span class="kj">る」</span>の<wbr>内容すべて</li><li>Instagramと<wbr>TikTokの<wbr>両方を<wbr>運用</li><li>短い動画 月8本<span class="kj">（リ</span>ールと<wbr>TikTokの<wbr>両方に<wbr>出<span class="kj">す）</span></li><li>字幕・<wbr>音楽の<wbr>編集</li><li>毎月の<wbr>撮り方メモ<span class="kj">（「こ</span>の場面を<wbr>撮ってくださ<span class="kj">い」</span>を<wbr>LINE<span class="kj">で）</span></li></ul></td><td class="p"><b><span class="kj">39,800</span></b><small>円</small></td></tr>
+          <tr><th><span class="nm">撮影から<wbr>お任せ</span><small class="fr">撮る時間も<wbr>ない</small></th><td class="ls"><ul class="ck"><li class="inh"><span class="kj">「動</span>画で広げ<span class="kj">る」</span>の<wbr>内容すべて</li><li>月1<span class="kj">回、</span><wbr>御社に<wbr>伺って<wbr>撮影<wbr><span class="kj">（滋</span>賀県<span class="kj">内）</span><span class="kj"></span></li><li>短い動画 月12本</li><li>求人や<wbr>スタッフ紹介の<wbr>動画</li></ul></td><td class="p"><b><span class="kj">59,800</span></b><small>円</small></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="ad-g adt-g g-line">
+        <div class="ad-hd"><span class="ad-ic line" aria-hidden="true"><img src="img/line-bubble-w.png" alt="" width="22" height="21"></span><h4>LINEの<wbr>運用</h4></div>
+        <p class="ad-l">一度<wbr>来てくれた<wbr>お客さまと<wbr>LINEで<wbr>つながっておく<span class="kj">と、</span><wbr>次に<wbr>必要に<wbr>なった<wbr>ときに<wbr>思い出して<wbr>もらえま<span class="kj">す。</span><wbr>まずは<wbr>友だちを<wbr>増や<span class="kj">し、</span><wbr>ご利用の<wbr>あとの<wbr>案内を<wbr>自動に<wbr>しま<span class="kj">す。</span><span class="kj"></span></p>
+        <table class="adt">
+          <thead><tr><th>プラン</th><th>中身</th><th class="p">月額</th></tr></thead>
+          <tbody>
+          <tr><th><span class="nm">友だちを<wbr>増やす</span><small class="fr">まずは<wbr>つながりを<wbr>つくりたい</small></th><td class="ls"><ul class="ck"><li>友だちを<wbr>増やす仕組み<span class="kj">（見</span>積もりや<wbr>ご利用の<wbr>ときに<wbr>渡すQRカー<span class="kj">ド、</span><span class="kj"></span><wbr>ホームページ・<wbr>チラシ・<wbr>Googleマップからの<wbr>入<span class="kj">口、</span><wbr>友だち追加の<wbr>特典の<span class="kj">案）</span></li><li>あいさつ文・<wbr>メニュー画面</li><li>配信 月2回<span class="kj">（文</span>章・<wbr>画像の<wbr>作成つ<span class="kj">き）</span></li><li>月1回の<wbr>報告<span class="kj">（友</span>だち数・<wbr>ブロック数・<wbr>相談<span class="kj">数）</span></li></ul></td><td class="p"><b><span class="kj">9,800</span></b><small>円</small></td></tr>
+          <tr class="rec"><th><span class="nm">相談を<wbr>ふやす</span><em class="rb">おすすめ</em><small class="fr">LINEから<wbr>相談を<wbr>増やしたい</small></th><td class="ls"><ul class="ck"><li class="inh"><span class="kj">「友</span>だちを増や<span class="kj">す」</span>の<wbr>内容すべて</li><li><span class="kj">「写</span>真で相<span class="kj">談」</span><wbr><span class="kj">「見</span>積もりの予<span class="kj">約」</span><span class="kj">の入口</span></li><li>よくある<wbr>質問への<wbr>自動返信</li><li>ご利用の<wbr>あとの<wbr>自動の<wbr>案内<wbr><span class="kj">（お</span>礼・口コミの<wbr>お願い<wbr>・次の<wbr>ご案<span class="kj">内）</span><span class="kj"></span></li></ul></td><td class="p"><b><span class="kj">19,800</span></b><small>円</small></td></tr>
+          <tr><th><span class="nm">ぜんぶ<wbr>お任せ</span><small class="fr">ご利用の<wbr>あとまで<wbr>任せたい</small></th><td class="ls"><ul class="ck"><li class="inh"><span class="kj">「相</span>談をふや<span class="kj">す」</span>の<wbr>内容すべて</li><li>お客さまを<wbr>分けて<wbr>配信<span class="kj">（ご</span>利用いただいた<wbr>方<wbr>／見積もり中の<wbr><span class="kj">方）</span><span class="kj"></span></li><li>季節の<wbr>案内<span class="kj">（年</span>末・新年度な<span class="kj">ど、</span><wbr>業種に<wbr>合わせ<span class="kj">て）</span><span class="kj"></span></li></ul></td><td class="p"><b><span class="kj">29,800</span></b><small>円</small></td></tr>
+          </tbody>
+        </table>
+        <p class="ad-nt">※ LINE公式アカウントの<wbr>料金<span class="kj">は、</span><wbr>配信が<wbr>月200通までなら<wbr>無料で<span class="kj">す。</span><wbr>超えると<wbr>LINE社に<wbr>月<span class="kj">5,000</span>円<span class="kj">（5,000</span>通ま<span class="kj">で）</span>が<wbr>かか<span class="kj">り、</span><wbr>御社の<wbr>ご負担に<wbr>なりま<span class="kj">す。</span></p>
+      </div>
+      <div class="ad-g adt-g g-etc">
+        <div class="ad-hd"><span class="ad-ic etc" aria-hidden="true"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span><h4>その<wbr>ほか</h4></div>
+        <table class="adt">
+          <thead><tr><th>プラン</th><th>中身</th><th class="p">月額</th></tr></thead>
+          <tbody>
+          <tr><th><span class="nm">広告・<wbr>仕組みづくり</span><small class="fr">必要な<wbr>ときに</small></th><td class="ls"><ul class="ck"><li>Web広告の<wbr>運用</li><li>見積もりの<wbr>自動計算</li><li>AIを<wbr>使う<wbr>お手伝い など</li></ul></td><td class="p"><b class="q">お見積もり</b></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="adds-n">Instagram・TikTokと<wbr>LINE<span class="kj">は、</span><wbr>最初の<wbr>設定<wbr><span class="kj">（通</span>常<span class="kj">50,000</span><span class="kj">円）</span><wbr>が<span class="js-camp-end">2026年11月30日</span>までの<wbr>お申し込みで0円で<span class="kj">す。</span><wbr></p>
+    </div>
+    <div class="ref-fee rv">
+      <div class="h"><span class="lb">ご紹介の<wbr>お礼</span><div class="yen">1<small>か<wbr>月分</small></div></div>
+      <p>お知り合いの<wbr>会社さまを<wbr>ご紹介いただ<span class="kj">き、</span><wbr>ご契約が<wbr>決まった<span class="kj">ら、</span><wbr>ご紹介くださった方に<wbr>月額1か<wbr>月分を<wbr>お礼と<wbr>してお渡ししま<span class="kj">す。</span><wbr>ご紹介の<wbr>会社さま<span class="kj">は、</span><wbr>最初の<wbr>1か<wbr>月が<wbr>無料で<span class="kj">す。</span> <a href="shokai/" style="color:inherit;font-weight:700;text-decoration:underline">紹介制度の<wbr>くわしい<wbr>説明</a></p>
+    </div>
+    <div class="more rv">
+      <a class="btn btn-cy" href="price.pdf" target="_blank" rel="noopener">詳しい<wbr>料金表<wbr>（PDF）を<wbr>見る</a>
+      <p style="margin:0;font-size:13px;color:var(--mu)">やめると<wbr>ホームページは<wbr>止まりま<span class="kj">す。</span><wbr>ドメイン<wbr><span class="kj">（ア</span>ドレ<span class="kj">ス）</span><wbr>は<wbr>御社の<wbr>ものと<wbr>して<wbr>残りま<span class="kj">す。</span><wbr>続けて<wbr>使いたい<wbr>場合<span class="kj">は、</span><wbr><span class="kj">200,000円</span>で<wbr>買い取りも<wbr>できま<span class="kj">す。</span><wbr></p>
+    </div>
+  </div>
+</section>
+
+<section id="flow" data-side="ご依頼の流れ" style="background:var(--bg)">
+  <div class="wrap">
+    <div class="ttl rv"><h2>ご依頼の<wbr>流れ</h2></div>
+    <div class="flow rv">
+      <div class="fl"><b>見本を<wbr>見る</b><p>御社用の<wbr>見本<span class="kj">を、</span><wbr>先に<wbr>お作りします<wbr><span class="kj">（無</span><span class="kj">料）</span><wbr></p></div>
+      <div class="fl"><b>ご相談</b><p>電話・LINE・ビデオ通<span class="kj">話、</span><wbr>どれでも<wbr>OK<wbr><span class="kj">（無</span><span class="kj">料）</span><span class="kj"></span><wbr></p></div>
+      <div class="fl"><b>お申し込み</b><p>ヒアリングシートに<wbr>お答えいただ<span class="kj">き、</span><wbr>写真を<wbr>LINEで<wbr>送っていただきます</p></div>
+      <div class="fl"><b>作り込み・確認</b><p>見本を<wbr>もとに<wbr>御社の<wbr>情報で<wbr>作り込<span class="kj">み、</span><wbr>直したい所を<wbr>うかが<wbr>います</p></div>
+      <div class="fl"><b>公開</b><p>素材が<wbr>そろってか<span class="kj">ら、</span><wbr>約1週間で<wbr>公開します</p></div>
+      <div class="fl"><b>毎月の<wbr>運用</b><p>更新と<wbr>毎月の<wbr>報告を<wbr>しま<span class="kj">す。</span><wbr>最低3か月<span class="kj">で、</span><wbr>その<wbr>あとは<wbr>いつでも<wbr>やめられます</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="faq" data-side="よくあるご質問">
+  <div class="wrap">
+    <div class="ttl rv"><h2>よく<wbr>ある<wbr>ご質問</h2></div>
+    <div class="faq rv">
+      <details><summary>ホームページを<wbr>作れ<span class="kj">ば、</span><wbr>本当に<wbr>問い合わせは<wbr>増えます<span class="kj">か？</span></summary><p><span class="kj">「必</span>ず<wbr>増えま<span class="kj">す」</span><wbr>とは<wbr>お約束できませ<span class="kj">ん。</span><wbr>そのかわ<span class="kj">り、</span><wbr>事例を<wbr>毎月<wbr>増やす・Googleマップとつなげる<wbr>・月1回の<wbr>報告で<wbr>数字<wbr><span class="kj">（見</span>られた<wbr>数・電話が<wbr>押された<wbr><span class="kj">数）</span><wbr>を<wbr>見ながら直<span class="kj">す、</span><wbr>と<wbr>いう<wbr>形<span class="kj">で、</span><wbr>問い合わせに<wbr>つながるまで<wbr>一緒に<wbr>続けま<span class="kj">す。</span><wbr></p></details>
+      <details><summary>今ある<wbr>ホームページ<span class="kj">を、</span><wbr>そのまま<wbr>使えます<span class="kj">か？</span></summary><p>は<span class="kj">い。</span><wbr>ほかの<wbr>会社で<wbr>作った<wbr>ホームページで<span class="kj">も、</span><wbr>改修や<wbr>毎月の<wbr>運用だけを<wbr>お引き<wbr>受けできま<span class="kj">す。</span><wbr>作り直した<wbr>ほうが<wbr>いい<wbr>場合<span class="kj">は、</span><wbr>理由と<wbr>費用を<wbr>ご説明しま<span class="kj">す。</span><wbr></p></details>
+      <details><summary>結<span class="kj">局、</span><wbr>毎月<wbr>いくら<wbr>かかります<span class="kj">か？</span></summary><p>ホームページの<wbr>制作費は<wbr>0円<span class="kj">で、</span><wbr>毎月<wbr>かかるのは<wbr>運用プランの<wbr>月19,800円から<wbr><span class="kj">（税</span>別・最低3か<wbr><span class="kj">月）</span><wbr>で<span class="kj">す。</span><wbr>サーバー代と<wbr>独自ドメイン代<span class="kj">も、</span><wbr>この<wbr>中に<wbr>含みま<span class="kj">す。</span><wbr></p></details>
+      <details><summary>仕事が<wbr>忙しく<span class="kj">て、</span><wbr>打ち合わせの<wbr>時間が<wbr>取れませ<span class="kj">ん。</span><span class="kj"></span><wbr></summary><p>最初の<wbr>打ち合わせは<wbr>30分ほどで<span class="kj">す。</span><wbr>その<wbr>あと<span class="kj">は、</span><wbr>写真や<wbr>直したい<wbr>ところを<wbr>LINEで<wbr>送っていただくだけで<wbr>進められま<span class="kj">す。</span><wbr></p></details>
+      <details><summary>滋賀県の<wbr>外でも<wbr>頼めます<span class="kj">か？</span></summary><p>は<span class="kj">い、</span><wbr>お受けしま<span class="kj">す。</span><wbr>打ち合わせは<wbr>電話・LINE・ビデオ通話で<wbr>進めま<span class="kj">す。</span><wbr>写真や<wbr>直したい所<span class="kj">は、</span><wbr>LINEで<wbr>送っていただくだけで<span class="kj">す。</span><wbr>滋賀県内な<span class="kj">ら、</span><wbr>事務所や<wbr>現場にも<wbr>伺いま<span class="kj">す。</span></p></details>
+      <details><summary>ほかの<wbr>制作会社<span class="kj">と、</span><wbr>何が<wbr>違います<span class="kj">か？</span></summary><p>御社用の<wbr>見本を<wbr>先に<wbr>無料で<wbr>作ってお見せしてか<span class="kj">ら、</span><wbr>ご検討いただけま<span class="kj">す。</span><wbr>作って<wbr>終わりではな<span class="kj">く、</span><wbr>自分でも<wbr>検索から<wbr>人を<wbr>集める<wbr>サイトを<wbr>運営している<wbr>やり方<span class="kj">で、</span><wbr>ホームページ・Googleマップ・SNS・LINEを<wbr>まとめて<wbr>運用しま<span class="kj">す。</span><wbr>最初の<wbr>ご相談から<wbr>公開後の<wbr>運用ま<span class="kj">で、</span><wbr>同じ<wbr>担当が<wbr>見ま<span class="kj">す。</span></p></details>
+      <details><summary>途中で<wbr>やめた<span class="kj">ら、</span><wbr>ホームページは<wbr>どうなります<span class="kj">か？</span></summary><p>最低3か月の<wbr>あと<span class="kj">は、</span><wbr>いつでも<wbr>やめられま<span class="kj">す。</span><wbr>やめると<wbr>ホームページは<wbr>止まりま<span class="kj">す。</span><wbr>独自ドメイン<wbr><span class="kj">（ホ</span>ームページの<wbr>アドレ<span class="kj">ス）</span><wbr>は<wbr>御社の<wbr>名義なの<span class="kj">で、</span><wbr>そのまま<wbr>御社に<wbr>残ります<wbr><span class="kj">（や</span>めた<wbr>あとの<wbr>更新<span class="kj">代、</span><wbr>年<span class="kj">1,500円</span>前後は<wbr>御社の<wbr>ご負担で<span class="kj">す）。</span><wbr>ホームページを<wbr>続けて<wbr>使いたい<wbr>場合<span class="kj">は、</span><wbr><span class="kj">200,000円</span>で<wbr>買い取りも<wbr>できま<span class="kj">す。</span><wbr></p></details>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact" data-side="お問い合わせ">
+  <div class="wrap">
+    <div class="ttl rv"><h2><span class="iw">まずは<wbr>無料で</span><span class="iw">相談してみません<span class="kj">か？</span></span></h2></div>
+    <div class="ct rv">
+      <a class="t" href="tel:08057148516">☎ 080-5714-8516</a>
+      <a class="l" href="https://lin.ee/uWffMn8" target="_blank" rel="noopener">公式LINEで<wbr>相談する</a>
+      <a class="f" href="#form">無料相談フォームへ<wbr> ↓</a>
+      <a class="m" href="mailto:bunkai.work@gmail.com">bunkai.work@gmail.com</a>
+    </div>
+    <form class="cform rv" id="form" action="https://docs.google.com/forms/d/e/1FAIpQLScZLpnTv2oFiFIrG9GaXlIB5MwyVmJwPKZKyGhHoYbUk5zHmQ/formResponse" method="POST" target="cf-sink">
+      <h3>無料相談フォーム<small>1分で<wbr>送れま<span class="kj">す。</span><wbr>2営業日以内に<wbr>ご連絡しま<span class="kj">す。</span><wbr></small></h3>
+      <div class="cf-row">
+        <label>会社名<i>必須</i><input name="entry.791475808" required autocomplete="organization" value=""></label>
+        <label>お名前<i>必須</i><input name="entry.769151182" required autocomplete="name" placeholder="例）山田 太郎"></label>
+      </div>
+      <div class="cf-row">
+        <label>メールアドレス<i>必須</i><input type="email" name="entry.410298032" required autocomplete="email" placeholder="例）info@example.jp"></label>
+        <label>電話番号<i class="opt">任意</i><input type="tel" name="entry.540072708" id="cfTel" autocomplete="tel-national" inputmode="tel" placeholder="例）090-1234-5678"></label>
+      </div>
+      <!-- Googleフォームの<wbr>「ご相談内容」は無料相談で固定。選んだサービスは<wbr>「ご相談の詳細」の先頭に書き足して送る -->
+      <input type="hidden" name="entry.853477094" value="無料相談">
+      <input type="hidden" name="entry.203523163" id="cfSend">
+      <!-- 注意：Googleフォームの<wbr>「回答のコピーを回答者に送信」はオンにしない<wbr>（ロボット対策が付いて、このページから送れなくなる）。
+           控えのメールは、回答シートの Apps Script<wbr>（営業資料/フォーム自動返信.gs）で送る -->
+      <fieldset><legend>気に<wbr>なる<wbr>こと<i class="opt">いくつでも</i></legend>
+        <div class="cf-svc">
+          <label class="rd"><input type="checkbox" value="ホームページ制作">ホームページ制作</label>
+          <label class="rd"><input type="checkbox" value="保守運用">保守運用</label>
+          <label class="rd"><input type="checkbox" value="HP運用">HP運用</label>
+          <label class="rd"><input type="checkbox" value="SNS運用">SNS運用</label>
+          <label class="rd"><input type="checkbox" value="LINE運用">LINE運用</label>
+          <label class="rd"><input type="checkbox" value="Googleマップ対策">Googleマップ対策</label>
+          <label class="rd"><input type="checkbox" value="システム開発">システム開発</label>
+          <label class="rd"><input type="checkbox" value="Web広告">Web<wbr>広告</label>
+          <label class="rd"><input type="checkbox" value="AI支援">AI支援</label>
+          <label class="rd"><input type="checkbox" value="まだ決めていない">まだ<wbr>決めていない</label>
+        </div>
+      </fieldset>
+      <label>ご相談の<wbr>詳細<i class="opt">任意</i><textarea id="cfDetail" rows="4" placeholder="例）うちの見本も作ってほしい／今のホームページの更新だけお願いしたい など"></textarea></label>
+      <button type="submit">この<wbr>内容で<wbr>送信する</button>
+      <p class="cf-note">送っていただいた<wbr>内容<span class="kj">は、</span><wbr>ご相談の<wbr>お返事にだけ<wbr>使いま<span class="kj">す。</span><wbr></p>
+      <div class="cf-done" hidden>
+        <b>送信しまし<span class="kj">た。</span><wbr><br>ありがとう<wbr>ございま<span class="kj">す！</span></b>
+        <p>内容を<wbr>確認し<span class="kj">て、</span><wbr><strong>2営業日以内</strong>に<wbr>メールか<wbr>お電話で<wbr>ご連絡しま<span class="kj">す。</span><wbr><br>お急ぎの<wbr>場合<span class="kj">や、</span><wbr>すぐに<wbr>話を<wbr>聞きたい<wbr>場合<span class="kj">は、</span><wbr>こちらから<wbr>どう<span class="kj">ぞ。</span><wbr></p>
+        <div class="cf-next"><a class="ln" href="https://lin.ee/uWffMn8" target="_blank" rel="noopener">公式LINEで<wbr>相談する</a><a class="tl" href="tel:08057148516">電話する<wbr><span class="kj">（0</span>80-5714-851<span class="kj">6）</span><wbr></a></div>
+        <small>※ メールが<wbr>届かない<wbr>場合<span class="kj">は、</span><wbr>迷惑メールフォルダも<wbr>ご確認くださ<span class="kj">い。</span><wbr></small>
+      </div>
+    </form>
+    <iframe name="cf-sink" title="送信用" hidden></iframe>
+    <p class="small"><span class="kj">「う</span>ちのも<wbr>作って<wbr>ほし<span class="kj">い」</span><wbr><span class="kj">「話</span>だけ<wbr>聞きた<span class="kj">い」、</span><wbr>どちらでも<wbr>大歓迎で<span class="kj">す。</span><wbr>しつこい<wbr>営業は<wbr>一切しませ<span class="kj">ん。</span><wbr></p>
+  </div>
+</section>
+
+<footer>
+  <a href="https://www.instagram.com/bunkai_official/" target="_blank" rel="noopener">Instagram</a>
+  <a href="https://twitter.com/bunkai_work_jp" target="_blank" rel="noopener">X</a>
+  <a href="https://note.com/bunkai_work_2026" target="_blank" rel="noopener">note</a>
+  <a href="https://lit.link/bunkai" target="_blank" rel="noopener">lit.link</a>
+  <p style="margin:10px auto 0;font-size:11px;max-width:640px;line-height:1.7">この<wbr>サイトで<span class="kj">は、</span><wbr>より<wbr>見やすく<wbr>する<wbr>ために<wbr>Googleアナリティクスと<wbr>Microsoft Clarityで<wbr>閲覧の<wbr>状況を<wbr>調べています<wbr><span class="kj">（個</span>人を<wbr>特定する<wbr>情報は<wbr>集めませ<span class="kj">ん）。</span><wbr></p>
+  <div style="margin-top:10px"><span class="code">&lt;/&gt;</span> © 2026 BUNKAI. All rights reserved.</div>
+</footer>
+
+<script>
+  (function () {
+    var still = window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches;
+    // ふわっと表示
+    var els = document.querySelectorAll(".rv");
+    if (!("IntersectionObserver" in window)) { els.forEach(function (e) { e.classList.add("in"); }); return; }
+    var io = new IntersectionObserver(function (en) { en.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); } }); }, { rootMargin: "0px 0px -8% 0px" });
+    els.forEach(function (e) { io.observe(e); });
+    // 左の縦ラベル：いま見ているセクション名
+    var side = document.getElementById("side"), txt = document.getElementById("sideTxt");
+    var so = new IntersectionObserver(function (en) { en.forEach(function (e) { if (e.isIntersecting) { txt.textContent = e.target.getAttribute("data-side"); side.classList.add("on"); } }); }, { rootMargin: "-45% 0px -45% 0px" });
+    document.querySelectorAll("[data-side]").forEach(function (s) { so.observe(s); });
+    var fc = document.getElementById("floatCt"), st = document.getElementById("stick");
+    new IntersectionObserver(function (en) { var v = en[0].isIntersecting; if (v) side.classList.remove("on"); fc.classList.toggle("hide", v); st.classList.toggle("on", !v); }).observe(document.getElementById("top"));
+    // 電話・LINE・フォームが押された数を、アクセス解析に送る
+    document.addEventListener("click", function (e) {
+      var a = e.target.closest && e.target.closest("a"); if (!a) return;
+      var h = a.getAttribute("href") || "", where = (a.closest("section,header,.stick,.cb-panel,#floatCt") || {}).id || a.className || "";
+      if (/^tel:/.test(h)) track("tel_click", where);
+      else if (/lin\.ee/.test(h)) track("line_click", where);
+      else if (h === "#form") track("form_open", where);
+      else if (/^mailto:/.test(h)) track("mail_click", where);
+    });
+    // フォームを書いている間は、追尾ボタンを隠す
+    new IntersectionObserver(function (en) { document.body.classList.toggle("at-form", en[0].isIntersecting); }, { rootMargin: "-20% 0px -20% 0px" }).observe(document.getElementById("form"));
+    // 読み進みバー
+    var bar = document.getElementById("progress");
+    function prog() { var h = document.documentElement.scrollHeight - innerHeight; bar.style.transform = "scaleX(" + (h > 0 ? scrollY / h : 0) + ")"; }
+    addEventListener("scroll", prog, { passive: true }); prog();
+    // 画面の中の見本サイトを、最後までスクロールさせる距離
+    function dist() { document.querySelectorAll(".scr").forEach(function (sc) { var im = sc.querySelector("img"); if (im.offsetHeight) im.style.setProperty("--d", -(im.offsetHeight - sc.offsetHeight) + "px"); }); }
+    document.querySelectorAll(".scr img").forEach(function (im) { im.complete ? dist() : im.addEventListener("load", dist); });
+    addEventListener("resize", dist);
+    // 数字を数え上げる
+    var co = new IntersectionObserver(function (en) { en.forEach(function (e) {
+      if (!e.isIntersecting) return; co.unobserve(e.target);
+      var el = e.target, to = +el.getAttribute("data-count"), cm = el.hasAttribute("data-comma"), t0 = performance.now(), dur = 1400;
+      if (still || !to) return;
+      (function f(t) { var k = Math.min(1, (t - t0) / dur), v = Math.round(to * (1 - Math.pow(1 - k, 3))); el.textContent = cm ? v.toLocaleString("ja-JP") : v; if (k < 1) requestAnimationFrame(f); })(t0);
+    }); }, { rootMargin: "0px 0px -10% 0px" });
+    document.querySelectorAll("[data-count]").forEach(function (el) { co.observe(el); });
+    if (still) return;
+    // トップの見出し：1文字ずつ浮かび上がる
+    var ty = document.getElementById("typing"), n = 0;
+    (function split(node) { Array.prototype.slice.call(node.childNodes).forEach(function (ch) {
+      if (ch.nodeType === 3) { var f = document.createDocumentFragment(); ch.textContent.split("").forEach(function (c) { var sp = document.createElement("span"); sp.className = "c"; sp.textContent = c; sp.style.animationDelay = (0.35 + n++ * 0.06) + "s"; f.appendChild(sp); }); node.replaceChild(f, ch); }
+      else if (ch.nodeType === 1 && ch.tagName !== "svg") split(ch);
+    }); })(ty);
+    document.querySelectorAll(".tags span").forEach(function (t, i) { t.style.animationDelay = (0.9 + i * 0.06) + "s"; });
+    // トップの画面：マウスに合わせて少し傾く
+    var tilt = document.getElementById("tilt") || document.createElement("div"), fv = document.getElementById("top");
+    if (matchMedia("(hover: hover)").matches) {
+      fv.addEventListener("mousemove", function (e) { var r = fv.getBoundingClientRect(), x = (e.clientX - r.left) / r.width - .5, y = (e.clientY - r.top) / r.height - .5; tilt.style.transform = "rotateY(" + (x * 8) + "deg) rotateX(" + (-y * 6) + "deg)"; });
+      fv.addEventListener("mouseleave", function () { tilt.style.transform = ""; });
+      // 見本・メディアのカード：マウスに合わせて傾く
+      document.querySelectorAll(".sample .ph, .mcard").forEach(function (c) {
+        c.addEventListener("mousemove", function (e) { var r = c.getBoundingClientRect(), x = (e.clientX - r.left) / r.width - .5, y = (e.clientY - r.top) / r.height - .5; c.style.transform = "perspective(800px) rotateY(" + (x * 10) + "deg) rotateX(" + (-y * 8) + "deg) translateY(-4px)"; });
+        c.addEventListener("mouseleave", function () { c.style.transform = ""; });
+      });
+    }
+  })();
+</script>
+<!-- チャットボット<wbr>（ボタンを選んで進む形。入力した内容はどこにも送られない） -->
+<style>
+  .cb-btn { position: fixed; right: 26px; bottom: 136px; z-index: 41; width: 76px; height: 76px; border-radius: 50%; border: 3px solid #fff; background: linear-gradient(135deg, var(--cy), #2b8fd8); color: #fff; cursor: pointer; display: grid; place-items: center; box-shadow: 0 8px 22px rgba(18,41,74,.3); padding: 0; transition: transform .2s, opacity .3s; font-family: inherit; }
+  .cb-btn:hover { transform: scale(1.06); }
+  .cb-btn svg { width: 30px; height: 30px; margin-top: -10px; }
+  .cb-btn small { position: absolute; bottom: 12px; left: 0; right: 0; font-size: 10.5px; font-weight: 700; }
+  .cb-btn.hide { opacity: 0; pointer-events: none; }
+  .cb-panel { position: fixed; right: 20px; bottom: 20px; z-index: 60; width: 380px; height: min(620px, calc(100vh - 40px)); background: #fff; border-radius: 16px; box-shadow: 0 18px 50px rgba(11,26,49,.35); display: flex; flex-direction: column; overflow: hidden; opacity: 0; transform: translateY(20px); pointer-events: none; transition: opacity .3s, transform .3s; }
+  .cb-panel.open { opacity: 1; transform: none; pointer-events: auto; }
+  .cb-head { background: linear-gradient(135deg, var(--nv-d), var(--nv)); color: #fff; display: flex; align-items: center; gap: 10px; padding: 12px 14px; }
+  .cb-head img { width: 38px; height: 38px; border-radius: 50%; object-fit: cover; border: 2px solid var(--cy); }
+  .cb-head b { display: block; font-size: 14px; }
+  .cb-head small { display: block; font-size: 11px; color: var(--cy); font-family: var(--code); }
+  .cb-head button { margin-left: auto; width: 32px; height: 32px; border-radius: 50%; border: 0; background: rgba(255,255,255,.15); color: #fff; font-size: 18px; cursor: pointer; }
+  .cb-log { flex: 1; overflow-y: auto; padding: 16px 14px; background: var(--bg); display: flex; flex-direction: column; gap: 10px; }
+  .cb-msg { max-width: 86%; background: #fff; border-radius: 4px 14px 14px 14px; padding: 10px 13px; font-size: 14px; line-height: 1.7; white-space: pre-line; box-shadow: 0 1px 3px rgba(0,0,0,.06); }
+  .cb-msg.me { align-self: flex-end; background: var(--nv); color: #fff; border-radius: 14px 4px 14px 14px; }
+  .cb-typing { align-self: flex-start; background: #fff; border-radius: 14px; padding: 12px 14px; display: flex; gap: 4px; }
+  .cb-typing i { width: 6px; height: 6px; border-radius: 50%; background: #b8c2cc; animation: cbd 1s infinite; }
+  .cb-typing i:nth-child(2) { animation-delay: .15s; } .cb-typing i:nth-child(3) { animation-delay: .3s; }
+  @keyframes cbd { 30% { transform: translateY(-3px); opacity: 1; } 0%, 60%, 100% { opacity: .4; } }
+  .cb-opts { display: flex; flex-direction: column; gap: 7px; }
+  .cb-opts button, .cb-opts a { display: block; text-align: center; padding: 10px 12px; border-radius: 10px; border: 1.5px solid var(--line); background: #fff; color: var(--nv); font: inherit; font-size: 14px; font-weight: 700; cursor: pointer; text-decoration: none; }
+  .cb-opts button:hover, .cb-opts a:hover { border-color: var(--cy); background: #effafc; }
+  .cb-opts .main { background: linear-gradient(90deg, var(--or1), var(--or2)); color: #fff; border: 0; }
+  .cb-opts .ln { background: var(--green); color: #fff; border: 0; }
+  .cb-opts .main:hover { background: linear-gradient(90deg, #e06d14, var(--or1)); color: #fff; }
+  .cb-opts .ln:hover { background: #05a849; color: #fff; }
+  .cb-opts .sub { font-weight: 500; color: var(--mu); font-size: 13px; }
+  .cb-opts.used { opacity: .45; pointer-events: none; }
+  .cb-foot { font-size: 11px; color: var(--mu); text-align: center; padding: 7px; border-top: 1px solid var(--line); }
+  @media (max-width: 900px) { .cb-btn { right: 16px; bottom: 104px; width: 64px; height: 64px; } .cb-btn svg { width: 26px; height: 26px; } .cb-btn small { font-size: 9px; bottom: 10px; } }
+  @media (max-width: 560px) { .cb-panel { right: 0; left: 0; bottom: 0; width: auto; height: 86vh; border-radius: 16px 16px 0 0; } }
+
+  /* ===== 2026-10-30 調整：先に作りました帯・FVの動き・画面を大きく・チャットボタン ===== */
+  /* 先に作りました<wbr>（会社用ページだけ） */
+  .fv a.for-co { display: inline-flex; align-items: center; gap: 14px; margin: 0 0 22px; padding: 10px 12px 10px 18px; max-width: 100%; border-radius: 14px; background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.28); color: #fff; text-decoration: none; box-shadow: none; font-weight: 700; backdrop-filter: blur(4px); opacity: 0; animation: rise .7s cubic-bezier(.2,.8,.2,1) .05s forwards; transform: translateY(14px); }
+  .fv a.for-co::before { display: none; }
+  .fv a.for-co em { flex: none; font-style: normal; font-size: 12px; font-weight: 900; color: #fff; background: var(--or1); border-radius: 6px; padding: 4px 9px; line-height: 1.3; letter-spacing: .04em; }
+  .fv a.for-co span, .fv a.for-co .t .nw { margin: 0; padding: 0; background: none; border-radius: 0; font-size: inherit; color: inherit; }
+  .fv a.for-co .t { font-size: 15px; line-height: 1.5; }
+  .fv a.for-co i { flex: none; font-style: normal; width: 34px; height: 34px; border-radius: 50%; background: #fff; color: var(--nv); display: grid; place-items: center; font-size: 15px; transition: transform .25s; }
+  .fv a.for-co:hover i { transform: translateX(4px); }
+  .fv a.for-co .t b { color: var(--cy); }
+  /* 画面：バッジを外して、PCとスマホを大きく横に並べる */
+  .devices .tilt { grid-template-columns: 1fr 27%; grid-template-areas: "pc sp"; align-items: end; gap: 0 22px; }
+  .devices .pc { animation: devIn 1s cubic-bezier(.2,.8,.2,1) .5s both, float 6s ease-in-out 1.5s infinite; }
+  .devices .sp { animation: devIn 1s cubic-bezier(.2,.8,.2,1) .8s both, float 6s ease-in-out -1.5s infinite; margin-bottom: -10px; }
+  @keyframes devIn { from { opacity: 0; transform: translateY(40px) scale(.96); } to { opacity: 1; transform: none; } }
+  .fv .wrap { grid-template-columns: .9fr 1.25fr; max-width: 1380px; }
+  /* FVの動き：光の流れ星・背景の光がゆっくり動く・ボタンが光る */
+  .fv::after { animation: streak 5s linear infinite; height: 40%; top: -45%; }
+  @keyframes streak { 0% { transform: translate(0, 0) rotate(8deg); opacity: 0; } 15% { opacity: 1; } 70% { opacity: 1; } 100% { transform: translate(-260px, 260%) rotate(8deg); opacity: 0; } }
+  .fv .glow { position: absolute; border-radius: 50%; filter: blur(60px); opacity: .55; pointer-events: none; z-index: 0; }
+  .fv .glow.g1 { width: 420px; height: 420px; right: 10%; top: 10%; background: rgba(60,200,216,.35); animation: drift 12s ease-in-out infinite alternate; }
+  .fv .glow.g2 { width: 360px; height: 360px; left: -5%; bottom: -10%; background: rgba(240,125,34,.25); animation: drift 14s ease-in-out infinite alternate-reverse; }
+  @keyframes drift { to { transform: translate(-60px, 40px) scale(1.15); } }
+  .fv .tags span:nth-child(1) { animation-delay: .6s; } .fv .tags span:nth-child(2) { animation-delay: .7s; } .fv .tags span:nth-child(3) { animation-delay: .8s; }
+  .fv .tags span:nth-child(4) { animation-delay: .9s; } .fv .tags span:nth-child(5) { animation-delay: 1s; } .fv .tags span:nth-child(6) { animation-delay: 1.1s; } .fv .tags span:nth-child(7) { animation-delay: 1.2s; }
+  .fv .ctas .btn { position: relative; overflow: hidden; }
+  .fv .ctas .btn::before { content: ""; position: absolute; top: 0; left: -60%; width: 40%; height: 100%; background: linear-gradient(100deg, transparent, rgba(255,255,255,.45), transparent); transform: skewX(-20deg); animation: shine 4s ease-in-out 2s infinite; }
+  @keyframes shine { 0%, 70% { left: -60%; } 100% { left: 130%; } }
+  .fv .stat b span[data-count] { display: inline-block; }
+  /* 料金の数字は白いカードの上で読みやすいよう、少し濃いオレンジに<wbr>（2026-11-11） */
+  .fv .stat b { color: #d35400; }
+  .fv .stat b i { color: #c24c00; }
+  /* チャットの呼び出し：丸い<wbr>「診断」風のボタン */
+  .cb-btn { width: 168px !important; height: 168px !important; right: 18px !important; bottom: 236px !important; border: 7px solid #3d3d3d !important; background: #fff !important; color: var(--nv) !important; box-shadow: 0 10px 30px rgba(0,0,0,.25) !important; display: flex !important; flex-direction: column; align-items: center; justify-content: center; gap: 1px; padding: 0 !important; text-align: center; font-family: inherit; }
+  .cb-btn > svg { display: none !important; }
+  .cb-btn small { position: static !important; display: block; }
+  .cb-btn .cb1 { font-size: 13px !important; font-weight: 900; color: #6b7480; }
+  .cb-btn .cb2 { font-size: 11px !important; font-weight: 700; color: var(--nv); background: linear-gradient(transparent 55%, #ffe36e 55%); padding: 0 2px; }
+  .cb-btn .cb3 { font-size: 18px; font-weight: 900; color: var(--or1); line-height: 1.25; margin-top: 2px; }
+  .cb-btn .cb4 { font-size: 26px; font-weight: 900; color: var(--or1); line-height: 1.15; letter-spacing: .04em; }
+  .cb-btn .cb5 { margin-top: 5px; background: var(--or1); color: #fff; border-radius: 999px; font-size: 12px; font-weight: 900; padding: 5px 14px; }
+  .cb-btn:hover .cb5 { background: #d96510; }
+  .cb-btn { animation: cbPulse 2.6s ease-in-out infinite; }
+  @keyframes cbPulse { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.04); } }
+  @media (max-width: 900px) {
+    .fv .wrap { grid-template-columns: 1fr; }
+    .fv a.for-co { gap: 10px; padding: 9px 10px 9px 12px; }
+    .fv a.for-co em { font-size: 11px; padding: 3px 7px; }
+    .fv a.for-co .t { font-size: 13.5px; }
+    .fv a.for-co i { width: 30px; height: 30px; font-size: 13px; }
+    .devices { max-width: none; margin-top: 28px; }
+    .devices .tilt { grid-template-columns: 1fr 30%; gap: 0 12px; }
+    .cb-btn { width: 128px !important; height: 128px !important; right: 10px !important; bottom: 176px !important; border-width: 5px !important; }
+    .fv h1 { font-size: 22px; }
+    .stats { gap: 8px; } .stat { padding: 10px 4px 12px; } .stat b.sm { font-size: 17px; } .stat i { font-size: 10.5px; }
+    .cb-btn .cb1 { font-size: 10.5px !important; } .cb-btn .cb2 { font-size: 9px !important; } .cb-btn .cb3 { font-size: 14px; } .cb-btn .cb4 { font-size: 20px; } .cb-btn .cb5 { font-size: 10px; padding: 3px 10px; margin-top: 3px; }
+  }
+  @media (prefers-reduced-motion: reduce) { .fv a.for-co, .devices .pc, .devices .sp, .fv::after, .fv .glow, .fv .ctas .btn::before, .cb-btn { animation: none !important; opacity: 1; transform: none; } }
+
+  /* 2026-10-30：FVはPCの画面だけを大きく */
+  .fv .wrap { grid-template-columns: .92fr 1.35fr; max-width: 1440px; }
+  .fv .ctas .btn { padding-left: 14px; padding-right: 14px; }
+  .fv .ctas .btn small { white-space: nowrap; font-size: 11.5px; letter-spacing: 0; }
+  .devices .tilt { grid-template-columns: 1fr; grid-template-areas: "pc"; }
+  .devices .pc { padding: 26px 10px 10px; border-radius: 14px; }
+  .devices .pc .scr { aspect-ratio: 16 / 11; }
+  .cb-btn .cb2 { margin-top: 2px; }
+  @media (max-width: 900px) { .fv .wrap { grid-template-columns: 1fr; } .devices .tilt { grid-template-columns: 1fr; } .devices .pc { padding: 20px 6px 6px; } .devices .pc .scr { aspect-ratio: 16 / 12; } }
+
+  /* 試し：トップの背景に見本サイトを薄く流す */
+  .fv-bg { position: absolute; inset: 0; z-index: 0; overflow: hidden; pointer-events: none; }
+  .fv-bg img { position: absolute; left: 0; top: 0; width: 100%; height: auto; opacity: .5; animation: fvbg 70s linear infinite alternate; }
+  .fv-bg::after { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(11,26,49,.9) 0%, rgba(11,26,49,.72) 40%, rgba(11,26,49,.35) 70%, rgba(11,26,49,.5) 100%); }
+  @keyframes fvbg { from { transform: translateY(0); } to { transform: translateY(-62%); } }
+  @media (max-width: 900px) {
+    .fv-bg img { width: 100%; left: 0; opacity: .5; }
+    .fv-bg::after { background: linear-gradient(180deg, rgba(11,26,49,.75), rgba(11,26,49,.6) 50%, rgba(11,26,49,.75)); }
+    /* スマホでもPCと同じく、見出しのすぐ近くに見本の画面を出す */
+    .fv .wrap > .fv-l { display: contents; }
+    .fv .for-co { order: 1; } .fv h1 { order: 2; } .fv .devices { order: 3; margin: 22px 0 6px; }
+    .fv .tags { order: 4; } .fv .stats { order: 5; } .fv .ctas { order: 6; }
+  }
+  @media (prefers-reduced-motion: reduce) { .fv-bg img { animation: none; } }
+  .float-ct { display: none !important; }
+  .cb-btn { animation: none !important; display: grid !important; place-items: center; right: 14px !important; bottom: 92px !important; width: 56px !important; height: 56px !important; padding: 0 !important; border: 2px solid #fff !important; border-radius: 50% !important; background: linear-gradient(135deg, var(--or2), var(--or1)) !important; color: #fff !important; box-shadow: 0 4px 12px rgba(0,0,0,.28) !important; }
+  .cb-btn > :not(svg) { display: none !important; }
+  .cb-btn > svg { display: block !important; position: static !important; width: 26px !important; height: 26px !important; margin: 0 !important; color: #fff !important; }
+  @media (max-width: 900px) { .cb-btn { display: flex !important; flex-direction: row !important; align-items: center !important; justify-content: center !important; gap: 6px !important; right: 10px !important; bottom: 76px !important; width: auto !important; height: 54px !important; padding: 0 16px 0 13px !important; border-radius: 999px !important; } .cb-btn > svg { flex: none; } .cb-btn::after { content: "チャットで質問"; color: #fff; font-size: 15px; font-weight: 800; line-height: 1; white-space: nowrap; } }
+  .fv .ctas .btn small, .btn-big small { display: block; white-space: normal !important; line-height: 1.35; overflow-wrap: anywhere; }
+  .fv a.for-co { flex-wrap: wrap; }
+  .fv a.for-co em { flex: 0 1 auto; white-space: normal; overflow-wrap: anywhere; }
+  .fv a.for-co .t { flex: 1 1 160px; min-width: 0; }
+  h1, h2, h3, summary, .band, .fl b { text-wrap: balance; }
+  .pm-pick { margin: 0 !important; padding: 14px 16px; border-radius: 10px; background: #fff3e6; color: var(--nv) !important; font-size: 16px !important; font-weight: 900; line-height: 1.6; }
+  .stat svg { display: none; }
+  .fv .tags { margin: 14px 0 16px; }
+  .stat small { font-size: 15px; }
+  .stat b { font-size: 38px; }
+  .stat b.sm { font-size: 31px; }
+  .stat b i { font-size: .5em; }
+  .stat > i { font-size: 14px; }
+  @media (max-width: 900px) {
+    .fv .wrap { display: flex; flex-direction: column; }
+    .fv-l { display: contents; }
+    .fv .for-co { order: 1; margin-bottom: 8px; padding: 8px 12px; }
+    .fv h1 { order: 2; font-size: 21px; line-height: 1.4; }
+    .fv .type { font-size: 32px; margin-top: 0; }
+    .fv .stats { order: 3; width: 100%; max-width: none; margin-top: 10px; gap: 6px; }
+    .fv .devices { order: 4; margin: 14px 0 6px; }
+    .fv .tags { order: 5; }
+    .fv .ctas { order: 6; }
+    .stat { padding: 8px 2px 10px; }
+    .stat svg { display: none; }
+    .stat small { font-size: 14px; line-height: 1.4; }
+    .stat b { font-size: 31px; line-height: 1.25; }
+    .stat b.sm { font-size: 22px; line-height: 1.75; }
+    .stat > i { display: block; font-size: 12px; line-height: 1.4; letter-spacing: 0; }
+    .stat::after { border-width: 8px; }
+    .ttl h2 { font-size: 24px; line-height: 1.45; }
+    @media (max-width: 360px) { .stat b.sm { font-size: 17px; line-height: 2.2; } .stat > i { font-size: 10.5px; } .stat small { font-size: 13px; } }
+    .ttl .band { padding: 8px 18px; font-size: 13px; line-height: 1.45; }
+  }
+  @media (min-width: 901px) { .samples { grid-template-columns: repeat(4, 1fr); gap: 16px; } .sample span { display: block; font-size: 12px; line-height: 1.6; margin-top: 2px; min-height: 3.2em; } .s-more { margin-top: 6px !important; } }
+  .s-more { margin-top: 12px; padding: 12px 12px 14px; border-radius: 10px; background: rgba(255,255,255,.08); text-align: left; color: rgba(255,255,255,.92); font-size: 13px; line-height: 1.7; }
+  .s-more h4 { margin: 0 0 4px; color: var(--cy); font-size: 12px; font-weight: 900; letter-spacing: .04em; }
+  .s-more ul + h4, .s-more p + h4 { margin-top: 10px; }
+  .s-more p { margin: 0; color: inherit; }
+  .s-more ul { margin: 0; padding: 0; list-style: none; }
+  .s-more li { position: relative; padding-left: 13px; margin-top: 3px; }
+  .s-more li::before { content: ""; position: absolute; left: 1px; top: .62em; width: 6px; height: 6px; border-radius: 50%; background: var(--or1, #f07d22); }
+  /* 2026-11-06 見本の前置きを文字だけに<wbr>（カードと比較をなくす） */
+  .ttl h2.pm-h { line-height: 1.45; text-wrap: initial; }
+  .pm-flow { list-style: none; display: grid; grid-template-columns: repeat(4, auto); justify-content: center; gap: 0; margin: 26px auto 34px; padding: 14px 0; max-width: 900px; border-block: 1px solid rgba(255,255,255,.28); color: #fff; font-size: 15px; font-weight: 700; }
+  .pm-flow[hidden] { display: none; }
+  .pm-flow li { padding: 0 18px; text-align: center; }
+  .pm-flow li + li::before { content: "→"; margin-right: 18px; margin-left: -18px; opacity: .6; font-weight: 400; }
+  @media (max-width: 760px) {
+    .ttl h2.pm-h { font-size: clamp(19px, 5.4vw, 24px); }
+    .pm-flow { grid-template-columns: 1fr; justify-items: start; margin: 18px 0 26px; padding: 10px 0; font-size: 15px; }
+    .pm-flow li { padding: 7px 0; text-align: left; }
+    .pm-flow li + li::before { margin: 0 8px 0 0; }
+  }
+  /* 2026-11-06 紹介ページ改修 */
+  .fv h1 { font-size: clamp(24px, 2.5vw, 33px); line-height: 1.45; }
+  .fv h1 > .nw { display: block; white-space: normal; opacity: 1; transform: none; animation: none; }
+  .fv h1 > .nw + .nw { white-space: nowrap; }
+  .fv h1 b { color: var(--cy); font-weight: 900; }
+  .fv .fv-sub { margin: 14px 0 0; max-width: 34em; font-size: 15.5px; font-weight: 500; line-height: 1.8; color: #fff; }
+  .fv .ctas { flex-direction: column; align-items: stretch; }
+  .fv .ctas .btn-big { flex: 0 0 auto; }
+  .cta-sub { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+  .cta-sub a { display: flex; align-items: center; justify-content: center; min-height: 48px; padding: 8px 10px; border: 1.5px solid #fff; border-radius: 999px; color: #fff; font-size: 14.5px; font-weight: 700; line-height: 1.4; text-align: center; text-decoration: none; transition: background-color .2s, color .2s; }
+  .cta-sub a:hover { background: #fff; color: var(--nv); }
+  .devices .sp-mock { position: absolute; right: 2%; bottom: -14px; z-index: 3; width: 21%; padding: 5px; border-radius: 16px; background: #1b2436; box-shadow: 0 14px 30px rgba(0,0,0,.35); }
+  .devices .sp-mock div { aspect-ratio: 9 / 18; overflow: hidden; border-radius: 11px; background: #fff; }
+  .devices .sp-mock img { display: block; width: 100%; height: auto; }
+  .roi { margin: 34px auto 0; max-width: 860px; padding: 26px 30px; border-radius: 12px; background: #fff; box-shadow: 0 8px 24px rgba(18,41,74,.08); text-align: center; }
+  .roi h3 { margin: 0; color: var(--nv); font-size: clamp(20px, 2.4vw, 27px); font-weight: 900; line-height: 1.5; }
+  .roi h3 b { color: var(--or); }
+  .roi p { margin: 12px 0 0; font-size: 15px; line-height: 1.9; text-align: left; }
+  .roi small { display: block; margin-top: 8px; color: var(--mu, #5f6b77); font-size: 12px; line-height: 1.6; text-align: left; }
+  .reasons { justify-content: center; }
+  .reasons > .rs { flex: 0 1 calc((100% - 60px) / 3); }
+  .also { margin: 34px auto 0; max-width: 860px; padding-top: 22px; border-top: 1px solid rgba(18,41,74,.14); text-align: center; }
+  .also h3 { margin: 0; font-size: 17px; font-weight: 900; color: var(--nv); }
+  .also p { margin: 8px 0 0; font-size: 14.5px; line-height: 1.9; }
+  @media (min-width: 901px) { .fv-l { display: flex; flex-direction: column; } .fv .ctas { order: 3; margin-top: 22px; width: 100%; } .fv .stats { order: 4; margin-top: 18px; } }
+  section { padding: 62px 0; }
+  .ttl { margin-bottom: 30px; }
+  .concern .ttl { margin-bottom: 70px; }
+  .answer, .concern .answer { margin-top: 64px; }
+  .answer p { text-wrap: balance; }
+  .answer p .nw { display: inline-block; }
+  .stick .s-line { background: var(--cy-d); }
+  .h-nw span { display: inline-block; }
+  .iw { display: inline-block; }
+  .band .bw { display: block; text-align: center; }
+  .ops .lead { max-width: 40em; margin: 18px auto 0; text-align: center; }
+  .ops-you { display: grid; grid-template-columns: 1fr 1.6fr; gap: 0; max-width: 960px; margin: 28px auto 0; border-radius: 6px; overflow: hidden; background: #fff; box-shadow: 0 6px 22px rgba(18,41,74,.08); }
+  .ops-you > div { padding: 22px 26px; }
+  .ops-you .a { background: var(--nv); color: #fff; }
+  .ops-you b .nw { display: inline-block; }
+  .ops-you small { display: block; font-size: 13px; font-weight: 700; line-height: 1.6; }
+  .ops-you b { display: block; margin-top: 4px; font-size: 20px; font-weight: 900; line-height: 1.5; }
+  .ops-you .b { background: #e3f5f7; }
+  .ops-you .b b { color: var(--nv); }
+  .ops-wk { max-width: 960px; margin: 30px auto 0; padding: 0; list-style: none; }
+  .ops-wk > li { display: grid; grid-template-columns: 84px 1fr; gap: 0 20px; padding: 20px 0; border-top: 1px solid #dfe7ef; }
+  .ops-wk > li:last-child { border-bottom: 1px solid #dfe7ef; }
+  .ops-wk .w { color: var(--or); font-size: 16px; font-weight: 900; line-height: 1.6; }
+  .ops-wk h3 { margin: 0 0 7px; color: var(--nv); font-size: 18px; font-weight: 900; line-height: 1.5; }
+  .ops-wk ul { display: grid; grid-template-columns: repeat(3, 1fr); gap: 4px 20px; margin: 0; padding: 0; list-style: none; font-size: 14px; line-height: 1.7; }
+  .ops-wk ul li { position: relative; padding-left: 15px; }
+  .ops-wk ul li::before { content: ""; position: absolute; left: 1px; top: .72em; width: 7px; height: 7px; border-radius: 50%; background: var(--nv); }
+  .ops-note { max-width: 960px; margin: 14px auto 0; color: #5f6b77; font-size: 12.5px; line-height: 1.7; }
+  @media (max-width: 900px) {
+    .opts span { display: flex; flex-direction: column; align-items: center; gap: 1px; line-height: 1.5; }
+    .opts span em { display: block; margin: 0; white-space: nowrap; }
+    .ops-you { grid-template-columns: 1fr; margin-top: 22px; }
+    .ops-you > div { padding: 16px 18px; }
+    .ops-you b { font-size: 17px; }
+    .ops-wk > li { grid-template-columns: 1fr; padding: 16px 0; }
+    .ops-wk .w { font-size: 14px; }
+    .ops-wk h3 { font-size: 16.5px; }
+    .ops-wk ul { grid-template-columns: 1fr; }
+  }
+  .report { background: var(--bg, #f4f7fa); }
+  .report .lead { max-width: 40em; margin: 18px auto 0; text-align: center; }
+  .rp { max-width: 960px; margin: 34px auto 0; padding: 38px 42px; border-radius: 6px; background: #fff; box-shadow: 0 10px 34px rgba(18,41,74,.1); }
+  .rp-head { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 6px 20px; padding-bottom: 14px; border-bottom: 2px solid var(--nv); }
+  .rp-head h3 { margin: 0; color: var(--nv); font-size: 22px; font-weight: 900; line-height: 1.5; }
+  .rp-head span { font-size: 13.5px; }
+  .rp-mark { display: inline-block; margin-left: 10px; padding: 1px 9px; border-radius: 3px; background: var(--or1); color: #fff; font-size: 12px; font-weight: 700; vertical-align: 3px; }
+  .rp-cols { display: grid; grid-template-columns: 1.15fr 1fr; gap: 26px 38px; margin-top: 24px; }
+  .rp h4 { margin: 0 0 9px; color: var(--nv); font-size: 15.5px; font-weight: 900; line-height: 1.5; }
+  .rp table { width: 100%; border-collapse: collapse; font-size: 14px; line-height: 1.5; }
+  .rp th, .rp td { padding: 8px 4px; border-bottom: 1px solid #dfe7ef; text-align: right; font-weight: 500; white-space: nowrap; }
+  .rp th:first-child, .rp td:first-child { text-align: left; white-space: normal; }
+  .rp thead th { color: #5f6b77; font-size: 12px; }
+  .rp td b { color: var(--nv); font-size: 16px; font-weight: 900; }
+  .rp tr.sec td { padding-top: 13px; color: var(--nv); font-size: 13px; font-weight: 900; }
+  .rp-chart { display: grid; grid-template-columns: repeat(6, 1fr); gap: 10px; align-items: end; height: 150px; padding-top: 22px; border-bottom: 1px solid #b9c5d2; }
+  .rp-chart div { position: relative; min-height: 3px; border-radius: 4px 4px 0 0; background: #9fb4c9; }
+  .rp-chart div:last-child { background: var(--nv); }
+  .rp-chart div b { position: absolute; left: 50%; bottom: 100%; transform: translateX(-50%); margin-bottom: 3px; color: var(--nv); font-size: 13px; font-weight: 900; white-space: nowrap; }
+  .rp-mon { display: grid; grid-template-columns: repeat(6, 1fr); gap: 10px; margin-top: 5px; color: #5f6b77; font-size: 12px; text-align: center; }
+  .rp-rank { margin: 20px 0 0; padding: 13px 15px; border-radius: 4px; background: #f4f7fa; font-size: 14px; line-height: 1.7; }
+  .rp-rank b { color: var(--or); font-size: 18px; font-weight: 900; }
+  .rp ul { margin: 0; padding: 0; list-style: none; font-size: 14px; line-height: 1.7; }
+  .rp li { position: relative; padding: 6px 0 6px 17px; border-bottom: 1px solid #dfe7ef; }
+  .rp li::before { content: ""; position: absolute; left: 2px; top: 1.05em; width: 7px; height: 7px; border-radius: 50%; background: var(--nv); }
+  .rp-note { margin: 18px 0 0; color: #5f6b77; font-size: 12px; line-height: 1.7; }
+  @media (max-width: 900px) {
+    section { padding: 44px 0; }
+    .fv { padding-bottom: 34px; }
+    .ttl { margin-bottom: 22px; }
+    .concern .ttl { margin-bottom: 40px; }
+    .answer, .concern .answer { margin-top: 40px; }
+    .rp { margin-top: 24px; padding: 22px 16px; }
+    .rp-head h3 { font-size: 18px; }
+    .rp-cols { grid-template-columns: 1fr; }
+    .rp-chart, .rp-mon { gap: 6px; }
+    .rp-chart div b { font-size: 11px; }
+  }
+  @media (max-width: 900px) {
+    .fv .fv-sub { order: 2; font-size: 14.5px; margin: 8px 0 4px; }
+    .fv h1 { width: 100%; align-self: stretch; text-align: left; font-size: 24px; line-height: 1.45; }
+    .fv .stats { order: 3; margin-top: 12px; }
+    .fv .ctas { order: 4; width: 100%; margin-top: 14px; }
+    .fv .devices { order: 5; margin: 16px 0 6px; }
+    .fv .tags { order: 6; }
+    .devices .sp-mock { width: 24%; bottom: -8px; }
+    .roi { padding: 22px 18px; }
+    .reasons > .rs { flex: 1 1 100%; }
+  }
+  @media (max-width: 360px) { .fv h1 { font-size: 20px; } .answer p { font-size: 15px; } .ops-you b { font-size: 15px; } .band { font-size: 11.5px; } .lead .iw { display: inline; } }
+</style>
+<button type="button" class="cb-btn hide" id="cbBtn" aria-label="チャットで相談する"><span class="cbx-ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 3h16a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2h-8l-5 4v-4H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2zm3 6.5a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3zm5 0a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3zm5 0a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3z"/></svg></span><span class="cbx-t">チャットで質問<small>料金・見本のことなど</small></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1.1-4.6A8 8 0 1 1 21 12z"/><path d="M8.5 11h.01M12 11h.01M15.5 11h.01"/></svg><small class="cb2">料金・見本が<wbr>すぐ<wbr>分かる</small><span class="cb3">ホームページの</span><span class="cb4">無料相談</span><span class="cb5">チャットで<wbr>聞く<wbr> ▶</span></button>
+<div class="cb-panel" id="cbPanel" role="dialog" aria-label="チャットで相談">
+  <div class="cb-head"><img src="img/me.jpg" alt=""><span><b>BUNKAI　チャット相談</b><small>&lt; reply in seconds /&gt;</small></span><button type="button" id="cbClose" aria-label="閉じる">×</button></div>
+  <div class="cb-log" id="cbLog" aria-live="polite"></div>
+  <div class="cb-foot">ボタンを<wbr>選ぶだ<span class="kj">け。</span><wbr>入力した<wbr>内容は<wbr>どこにも<wbr>送られません</div>
+</div>
+<script>
+  (function () {
+    var btn = document.getElementById("cbBtn"), panel = document.getElementById("cbPanel"), log = document.getElementById("cbLog"), started = false;
+    var still = window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches;
+    // 無料相談フォーム：Googleフォームへ送って、ページ内でお礼を表示
+    (function () {
+      var f = document.getElementById("form"); if (!f) return;
+      // 電話番号：+81〜（自動入力の国際電話の形）を 0〜 に直し、携帯は 080-1234-5678 の形にする
+      var tel = document.getElementById("cfTel");
+      function fixTel() {
+        var v = tel.value.replace(/[０-９＋－]/g, function (c) { return String.fromCharCode(c.charCodeAt(0) - 0xFEE0); }).trim();
+        if (!v) return;
+        var d = v.replace(/[^0-9+]/g, ""), intl = /^\+?81/.test(d);
+        if (intl) d = "0" + d.replace(/^\+?81/, "").replace(/^0/, "");
+        d = d.replace(/\D/g, "");
+        if (/^0[5789]0\d{8}$/.test(d)) v = d.slice(0, 3) + "-" + d.slice(3, 7) + "-" + d.slice(7);
+        else if (intl) v = d;
+        tel.value = v;
+      }
+      tel.addEventListener("blur", fixTel); tel.addEventListener("change", fixTel);
+      f.addEventListener("submit", function () {
+        fixTel();
+        var pick = [].map.call(f.querySelectorAll(".cf-svc input:checked"), function (c) { return c.value; });
+        var memo = document.getElementById("cfDetail").value;
+        document.getElementById("cfSend").value = (pick.length ? "【気になること】" + pick.join("、") + "\n" : "") + memo;
+        var b = f.querySelector("button"); b.disabled = true; b.textContent = "送信しています…"; if (window.track) track("generate_lead", "form");
+        setTimeout(function () { f.classList.add("sent"); f.querySelector(".cf-done").hidden = false; f.scrollIntoView({ behavior: still ? "auto" : "smooth", block: "start" }); }, 900);
+      });
+    })();
+    // 会社ごとの紹介ページでは、紹介ページ生成.py がここに見本サイトのURLと社名を入れる
+    var CO_URL = "", CO_NAME = "";
+    var LINE = "https://lin.ee/uWffMn8", TEL = "tel:08057148516", FORM = "#form";
+    // トップを過ぎたらボタンを出す
+    new IntersectionObserver(function (en) { btn.classList.toggle("hide", en[0].isIntersecting); }).observe(document.getElementById("top"));
+    function open() { panel.classList.add("open"); btn.classList.add("hide"); if (!started) { started = true; go("start"); } }
+    function close() { panel.classList.remove("open"); btn.classList.remove("hide"); }
+    btn.addEventListener("click", open);
+    document.getElementById("cbClose").addEventListener("click", close);
+    function down() { log.scrollTop = log.scrollHeight; }
+    function bot(t, next) {
+      var ty = document.createElement("div"); ty.className = "cb-typing"; ty.innerHTML = "<i></i><i></i><i></i>"; log.appendChild(ty); down();
+      setTimeout(function () { ty.remove(); var m = document.createElement("div"); m.className = "cb-msg"; m.textContent = t; log.appendChild(m); down(); if (next) next(); }, still ? 0 : 600);
+    }
+    function me(t) { var m = document.createElement("div"); m.className = "cb-msg me"; m.textContent = t; log.appendChild(m); down(); }
+    function opts(list) {
+      var box = document.createElement("div"); box.className = "cb-opts";
+      list.forEach(function (o) {
+        var el = o.href ? document.createElement("a") : document.createElement("button");
+        if (o.href) { el.href = o.href; if (/^https?:/.test(o.href)) { el.target = "_blank"; el.rel = "noopener"; } } else el.type = "button";
+        el.textContent = o.t; if (o.c) el.className = o.c;
+        el.addEventListener("click", function () {
+          if (o.href) { if (o.href.charAt(0) === "#") close(); return; }
+          box.classList.add("used"); me(o.t);
+          if (o.jump) { bot(o.say || "下に移動しました。ほかに気になることがあれば、いつでもどうぞ。", function () { opts(talk.concat([back])); }); setTimeout(function () { close(); var s = document.getElementById(o.jump); if (s) s.scrollIntoView({ behavior: still ? "auto" : "smooth" }); }, 700); return; }
+          if (o.go) go(o.go);
+        });
+        box.appendChild(el);
+      });
+      log.appendChild(box); down();
+    }
+    var back = { t: "最初のメニューに戻る", go: "start", c: "sub" };
+    var talk = [{ t: "LINEで相談する", href: LINE, c: "ln" }, { t: "電話する（080-5714-8516）", href: TEL }, { t: "フォームで相談する", href: FORM, c: "main" }];
+    var S = {
+      start: function () { bot("ご覧いただきありがとうございます！BUNKAIです。\n会社さま・お店のホームページづくりと集客をお手伝いしています。\nご用件をお選びください。", function () {
+        opts([{ t: CO_URL ? "見本サイトを見たい" : "うちの会社の見本を作ってほしい", go: "sample" }, { t: "料金を知りたい", go: "price" }, { t: "どんなことをしてくれるの？", go: "what" }, { t: "運用とはどんなことをしてくれる？", go: "run" }, { t: "今あるサイトの修正もできる？", go: "fix" }, { t: "細かい修正の依頼もできる？", go: "small" }, { t: "AIの活用も教えてくれる？", go: "ai" }, { t: "自社のシステムも安く作れる？", go: "sys" }, { t: "会って相談したい", go: "meet" }, { t: "その他のご相談", go: "other" }]); }); },
+      sample: function () {
+        if (CO_URL) { bot(CO_NAME + "さま用のホームページデザインは、もうできています！\n下のボタンから、スマホでもそのまま動く見本をご覧いただけます。\n雰囲気は4つから選べます。", function () {
+          opts([{ t: "見本サイトを開く", href: CO_URL + "craft.html", c: "main" }, { t: "地域密着のデザインで見る", href: CO_URL + "chiiki" }, { t: "誠実のデザインで見る", href: CO_URL + "seijitsu" }, { t: "ポップのデザインで見る", href: CO_URL + "pop" }, { t: "このページで4つを見比べる", jump: "works", say: "4つのデザインを並べたところに移動しますね。画面を押すと、実際のサイトが開きます。" }, { t: "LINEで相談する", href: LINE, c: "ln" }, back]); }); return; }
+        bot("ありがとうございます！\n会社名と地域を教えていただければ、御社用のホームページの見本を無料でお作りします。\n作ったあとに、無理に契約をおすすめすることはありません。", function () { opts(talk.concat([{ t: "先に見本サイトを見てみる", jump: "works" }, back])); }); },
+      price: function () { bot("ホームページの制作費は0円です。毎月の運用プラン（月19,800円〜・税別・最低3か月）で、作ったあとの更新や報告まで行います。サーバー代と独自ドメイン代も含みます。\nGoogleマップの運用は月9,800円からです。お知り合いの会社さまをご紹介いただき契約が決まったら、ご紹介くださった方に月額1か月分をお礼としてお渡しします（ご紹介の会社さまは最初の1か月が無料）。", function () { opts([{ t: "料金の詳しい説明を見る", jump: "charge" }, { t: "料金表（PDF）を開く", href: "price.pdf" }].concat([back])); }); },
+      what: function () { bot("ホームページづくりに加えて、作ったあとのHP運用（事例・記事・検索で上に出やすくする対策）、SNS・LINEの運用、Googleマップの対策、事務作業を短くするAI支援やシステム開発まで、まとめて引き受けます。今のホームページの運用だけでもOKです。\n写真はLINEで送っていただくだけで大丈夫です。", function () { opts([{ t: "できることを見る", jump: "reason" }, { t: "見本サイトを見る", jump: "works" }, back]); }); },
+      run: function () { bot("運用は大きく2つです。\n・保守運用：サーバーやドメインの管理、不具合の対応、文章や写真の小さな修正\n・HP運用：事例やお役立ち記事の追加、トップページの改修、検索で上に出やすくする対策\n写真はLINEで送っていただくだけで、更新はこちらで行います。月19,800円からで、おすすめは月29,800円のプランです。", function () { opts([{ t: "運用プランの料金を見る", jump: "charge", say: "運用プランの料金に移動しますね。3つのプランと、それぞれの中身を並べています。" }].concat(talk, [back])); }); },
+      fix: function () { bot("はい、できます。ほかの会社で作ったホームページでも、改修や毎月の運用だけをお引き受けします。\nまずは今のサイトを拝見して、直したほうがいい所をお伝えします（無料）。作り直したほうがいい場合は、理由と費用をご説明します。", function () { opts(talk.concat([back])); }); },
+      small: function () { bot("はい、文章1行・写真1枚の差し替えからお受けします。\n直したい所をLINEで送っていただくだけでOKです。\n運用プラン（月19,800円〜）なら月2回までの修正が含まれます。プランなしの場合は、その都度お見積もりします。", function () { opts(talk.concat([back])); }); },
+      ai: function () { bot("はい、お教えします。たとえば、\n・見積書や報告書の下書きを作る\n・LINEの問い合わせや口コミへの返信文を作る\n・写真から、事例紹介の文章を作る\nなど、仕事のあとの事務作業を短くする使い方を、隣で一緒に設定します。パソコンが苦手でも大丈夫です。", function () { opts(talk.concat([back])); }); },
+      sys: function () { bot("はい、必要な機能だけに絞って小さく作るので、大きなシステム会社に頼むより費用をおさえられます。\nたとえば、問い合わせへの自動返信、見積もりの自動計算、お客様や案件の管理などです。\n「こんなことに困っている」を伺ってから、お見積もりします。", function () { opts(talk.concat([back])); }); },
+      meet: function () { bot("打ち合わせは、電話・LINE・ビデオ通話で進めます。滋賀県内なら、事務所や現場にも伺います。\nご都合のいい日時を、お気軽にお知らせください。", function () { opts(talk.concat([back])); }); },
+      other: function () { bot("どんなことでもお気軽にどうぞ。\n「ホームページが本当に必要か迷っている」というご相談も大歓迎です。", function () { opts(talk.concat([back])); }); }
+    };
+    function go(k) { S[k] && S[k](); }
+  })();
+</script>
+<script>
+// キャンペーンの期限：24日までは今月末、25日からは翌月末（日本時間）を自動で表示
+(function () { var d = new Date(Date.now() + 9 * 3600 * 1000); d = new Date(Date.UTC(d.getUTCFullYear(), d.getUTCMonth() + (d.getUTCDate() >= 25 ? 1 : 0), 1)); var y = d.getUTCFullYear(), m = d.getUTCMonth() + 1, l = new Date(Date.UTC(y, m, 0)).getUTCDate(); document.querySelectorAll(".js-camp-end").forEach(function (e) { e.textContent = y + "年" + m + "月" + l + "日"; }); })();
+</script>
+<style id="cbx">
+/* チャットの呼び出し：見本サイトのチャットと同じ形（丸い白のアイコン＋2行）2026-11-12 */
+#cbBtn.cb-btn{display:flex!important;flex-direction:row!important;align-items:center!important;justify-content:flex-start!important;gap:9px!important;width:auto!important;height:auto!important;padding:6px 20px 6px 6px!important;border:2px solid #fff!important;border-radius:40px!important;background:var(--nv)!important;color:#fff!important;right:18px!important;bottom:136px!important;box-shadow:0 6px 18px rgba(0,0,0,.35)!important;animation:none!important;place-items:initial!important}
+#cbBtn.cb-btn::after{content:none!important;display:none!important}
+#cbBtn.cb-btn > :not(.cbx-ic):not(.cbx-t){display:none!important}
+#cbBtn .cbx-ic{display:grid!important;place-items:center;flex:none;width:42px;height:42px;border-radius:50%;background:#fff;color:var(--nv)}
+#cbBtn .cbx-ic svg{display:block!important;position:static!important;width:23px!important;height:23px!important;margin:0!important;color:var(--nv)!important;fill:currentColor!important;stroke:none!important}
+#cbBtn .cbx-t{display:block!important;margin:0!important;padding:0!important;align-self:center;color:#fff;font-size:15px;font-weight:700;line-height:1.3;letter-spacing:.04em;text-align:left;white-space:nowrap}
+#cbBtn .cbx-t small{display:block!important;position:static!important;font-size:10.5px!important;font-weight:500;opacity:.92}
+#cbBtn.cb-btn:hover{transform:translateY(-2px)!important}
+@media (max-width:900px){#cbBtn.cb-btn{right:10px!important;bottom:76px!important;padding:5px 16px 5px 5px!important;gap:7px!important}#cbBtn .cbx-t small{display:none!important}#cbBtn .cbx-t{line-height:1.2}}
+
+  /* 2026-11-12 FV：料金を一番に（HP制作・運用は毎月19,800円以外かかりません） */
+  .fv2 { position: relative; overflow: hidden; background: #fafaf8; color: #262b33; }
+  .fv2-in { position: relative; max-width: 1360px; margin: 0 auto; min-height: clamp(520px, calc(100svh - 120px), 720px); display: flex; align-items: center; padding: 0 48px; }
+  .fv2-txt { position: relative; z-index: 1; padding: 60px 0; width: 56%; }
+  .fv2-h { margin: 0; font-weight: 900; line-height: 1.3; letter-spacing: .02em; }
+  .fv2-h .l1, .fv2-h .l3 { display: block; font-size: clamp(32px, 4.1vw, 60px); white-space: nowrap; }
+  .fv2-band { display: flex; align-items: baseline; gap: .06em; width: max-content; margin: .26em 0 .3em -48px; padding: .1em .7em .14em 48px; background: #3a4656; color: #fff; clip-path: polygon(-100vw 0, 100% 0, calc(100% - .55em) 100%, -100vw 100%); position: relative; }
+  .fv2-band::before { content: ""; position: absolute; top: 0; bottom: 0; right: 100%; width: 100vw; background: inherit; }
+  .fv2-band .m, .fv2-band .y { font-size: clamp(32px, 4.3vw, 64px); font-weight: 900; }
+  .fv2-band b { font-family: var(--num); font-weight: 800; font-size: clamp(64px, 8.4vw, 124px); line-height: 1; letter-spacing: 0; }
+  .fv2-rule { display: block; width: min(100%, 640px); height: 1px; margin: 28px 0 16px; background: #3a4656; opacity: .55; }
+  .fv2-note { margin: 0; font-size: clamp(14px, 1.35vw, 19px); font-weight: 700; color: #3a4656; }
+  .fv2-cta { margin-top: 30px; gap: 0; padding: 16px 28px; font-size: 17px; line-height: 1.5; }
+  .fv2-cta i { margin-left: 12px; }
+  .fv2-cta, .op-go { text-align: center; }
+  .fv2-cta i { font-style: normal; transition: transform .25s; } .fv2-cta:hover i { transform: translateX(4px); }
+  .fv2-txt { width: 50%; }
+  .fv2-for { margin-top: 28px; padding: 18px 0 0; border-top: 0; }
+  .fv2-for-k { display: inline-block; margin: 0 0 8px; padding: 4px 12px; border-radius: 6px; background: #fff0e3; color: #b84a00; font-size: clamp(13px, 1.1vw, 15px); font-weight: 900; letter-spacing: .04em; }
+  .fv2-for h1 { margin: 0; color: var(--nv); font-size: clamp(22px, 2.3vw, 32px); font-weight: 900; line-height: 1.5; }
+  .fv2-for h1 b { background: linear-gradient(transparent 62%, #ffd6b0 62%); }
+  .fv2-for-s { margin: 10px 0 0; font-size: clamp(13.5px, 1.1vw, 15px); color: var(--mu); line-height: 1.8; }
+  .fv2-for h1 .nw { display: inline-block; }
+  .fv2-for h1 b { color: #d35400; }
+  .fv2-demo { position: relative; z-index: 1; width: 50%; padding: 40px 0 40px 24px; display: flex; flex-direction: column; align-items: center; gap: 26px; }
+  .fv2-dev { position: relative; width: 100%; max-width: 660px; padding: 0 19% 0 5%; }
+  /* 本物に近い見た目（2026-11-12）：ノートPC＝黒いふち＋銀の本体、スマホ＝黒いふち＋金属の枠・上の切り欠き・横のボタン */
+  .fv2-pc { position: relative; padding: 2.3% 2.3% 2.6%; background: #0b0c0e; border-radius: 16px 16px 6px 6px; box-shadow: 0 0 0 1.5px #3b3f45, 0 0 0 3px #c9ccd1; }
+  .fv2-pc::before { content: ""; position: absolute; left: 50%; top: .9%; width: 6px; height: 6px; margin-left: -3px; border-radius: 50%; background: #23262b; box-shadow: inset 0 0 0 1.5px #1a1c20, 0 0 0 1px #2e3238; }
+  .fv2-pc .scr { position: relative; aspect-ratio: 16 / 10; overflow: hidden; border-radius: 3px; background: #fff; }
+  .fv2-base { position: relative; width: 114%; height: clamp(10px, 1.25vw, 17px); margin: 0 0 0 -7%; border-radius: 2px 2px 14px 14px / 2px 2px 100% 100%; background: linear-gradient(#f1f2f4 0%, #d5d8dc 30%, #b3b7bd 75%, #8f949b 100%); box-shadow: 0 22px 34px -12px rgba(18,41,74,.45), 0 2px 3px rgba(0,0,0,.18); }
+  .fv2-base::before { content: ""; position: absolute; left: 50%; top: 0; width: 15%; height: 42%; transform: translateX(-50%); border-radius: 0 0 10px 10px; background: linear-gradient(#b9bdc3, #cfd2d6); }
+  .fv2-sp { position: absolute; right: 0; bottom: 0; width: 24%; padding: 2.2% 1.9%; border-radius: 24px; background: #0b0c0e; box-shadow: 0 0 0 1.5px #2f3237, 0 0 0 3.5px #a9adb3, 0 0 0 4.5px #e1e3e6, 0 26px 40px -10px rgba(18,41,74,.45); }
+  .fv2-sp::before { content: ""; position: absolute; z-index: 2; left: 50%; top: 4.2%; width: 30%; height: 3.4%; transform: translateX(-50%); border-radius: 99px; background: #000; }
+  .fv2-sp::after { content: ""; position: absolute; right: -6px; top: 24%; width: 3px; height: 13%; border-radius: 0 3px 3px 0; background: linear-gradient(90deg, #8d9197, #c7cace); }
+  .fv2-sp .scr { position: relative; aspect-ratio: 9 / 19.5; overflow: hidden; border-radius: 19px; background: #fff; }
+  .fv2-pc .scr::after, .fv2-sp .scr::after { content: ""; position: absolute; inset: 0; pointer-events: none; background: linear-gradient(115deg, rgba(255,255,255,.14) 0%, rgba(255,255,255,0) 38%); }
+  .fv2-dev img { display: block; width: 100%; height: auto; animation: fv2scr 26s ease-in-out 1.2s infinite alternate; }
+  @keyframes fv2scr { 0%, 8% { transform: translateY(0); } 100% { transform: translateY(calc(-100% + 300px)); } }
+  .fv2-sp img { animation-name: fv2scr2; } @keyframes fv2scr2 { 0%, 8% { transform: translateY(0); } 100% { transform: translateY(calc(-100% + 260px)); } }
+  .fv2-demo .fv2-cta { margin-top: 18px; }
+  .fv2-txt > * { animation: rise .7s cubic-bezier(.2,.8,.2,1) both; } .fv2-txt > :nth-child(2) { animation-delay: .12s; } .fv2-txt > :nth-child(3) { animation-delay: .2s; } .fv2-txt > :nth-child(4) { animation-delay: .28s; }
+  @media (max-width: 900px) {
+    .fv2-in { display: block; min-height: 0; padding: 0; }
+    .fv2-txt { width: auto; padding: 34px 16px 8px; }
+    .fv2-h .l1, .fv2-h .l3 { font-size: min(9.4vw, 40px); }
+    .fv2-band { margin-left: -16px; padding-left: 16px; }
+    .fv2-band .m, .fv2-band .y { font-size: min(8.6vw, 38px); }
+    .fv2-band b { font-size: min(17vw, 76px); }
+    .fv2-rule { margin: 20px 0 12px; }
+    .fv2-cta { display: flex; width: 100%; justify-content: center; flex-wrap: wrap; margin-top: 22px; padding: 14px 40px; font-size: 16px; position: relative; }
+    .fv2-cta i { position: absolute; right: 18px; top: 50%; margin: -.75em 0 0; }
+    .fv2-txt { width: auto; padding-bottom: 0; }
+    .fv2-for { margin-top: 22px; padding-top: 0; }
+    .fv2-for h1 { font-size: min(5.5vw, 24px); }
+    .fv2-demo { width: auto; padding: 22px 16px 34px; gap: 22px; }
+    .fv2-dev { max-width: 460px; }
+    .fv2-demo .fv2-cta { margin-top: 14px; }
+  }
+  @media (prefers-reduced-motion: reduce) { .fv2-txt > *, .fv2-dev img { animation: none; } }
+
+  /* 開いたとき：見本サイトを見せてから「〇〇さま専用の…」 */
+  html.op-on, html.op-on body { overflow: hidden; }
+  .op { position: fixed; inset: 0; z-index: 10000; overflow-y: auto; overscroll-behavior: contain; -webkit-overflow-scrolling: touch; background: #fff; transition: opacity .45s ease; }
+  .op[hidden] { display: none; }
+  .op.out { opacity: 0; pointer-events: none; }
+  .op-site img { display: block; width: 100%; height: auto; }
+  .op-dim { position: fixed; inset: 0; background: rgba(11,26,49,.5); opacity: 0; pointer-events: none; transition: opacity .5s ease; }
+  .op.on .op-dim { opacity: 1; }
+  .op-rv { position: fixed; left: 0; right: 0; bottom: 0; z-index: 2; display: flex; justify-content: center; padding: 0 12px calc(12px + env(safe-area-inset-bottom)); transform: translateY(110%); transition: transform .65s cubic-bezier(.2,.8,.2,1); }
+  .op.on .op-rv { transform: none; }
+  .op-card { width: min(100%, 560px); background: #fff; border-radius: 18px; padding: 24px 20px 14px; text-align: center; box-shadow: 0 -10px 40px rgba(11,26,49,.25); }
+  .op-tag { display: inline-block; margin: 0 0 10px; padding: 3px 12px; border-radius: 999px; background: #eef3f8; color: var(--nv); font-size: 12px; font-weight: 700; letter-spacing: .06em; }
+  .op-card .op-h { margin: 0; color: var(--nv); font-size: clamp(21px, 2.2vw, 27px); font-weight: 900; line-height: 1.55; }
+  .op-card .op-h .nw { display: inline-block; }
+  .op-card .op-h b { color: #d35400; }
+  .op-sub { margin: 10px 0 18px; font-size: 14px; color: var(--mu); line-height: 1.7; }
+  .op-go { display: flex; flex-wrap: wrap; justify-content: center; gap: 0; width: 100%; padding: 15px 12px; font-size: 16px; line-height: 1.5; }
+  .op-skip { margin-top: 6px; padding: 12px; border: 0; background: none; color: var(--nv); font: inherit; font-size: 14px; font-weight: 700; text-decoration: underline; text-underline-offset: 4px; cursor: pointer; }
+  @media (min-width: 901px) {
+    .op { background: #e6ebf1; }
+    .op-site { position: relative; max-width: 1080px; margin: 32px auto 0; padding-top: 34px; border-radius: 12px 12px 0 0; overflow: hidden; background: #fff; box-shadow: 0 24px 70px rgba(18,41,74,.22); }
+    .op-site::before { content: ""; position: absolute; left: 0; right: 0; top: 0; height: 34px; background: #f1f3f6 radial-gradient(circle at 18px 17px, #f26b5b 5px, transparent 5.5px), radial-gradient(circle at 36px 17px, #f5b942 5px, transparent 5.5px), radial-gradient(circle at 54px 17px, #4fc26a 5px, transparent 5.5px); background-color: #f1f3f6; border-bottom: 1px solid #e1e5ea; }
+    .op-rv { top: 0; align-items: center; padding: 24px; transform: translateY(24px); opacity: 0; pointer-events: none; transition: transform .6s cubic-bezier(.2,.8,.2,1), opacity .5s ease; }
+    .op.on .op-rv { opacity: 1; pointer-events: auto; transform: none; }
+    .op-card { padding: 36px 40px 22px; box-shadow: 0 24px 70px rgba(11,26,49,.35); }
+  }
+  @media (prefers-reduced-motion: reduce) { .op, .op-dim, .op-rv { transition: none; } }
+</style>
+<script>
+/* 開いたとき：見本サイト（誠実）→ 2秒かスクロールで「〇〇さま専用の…」（同じタブで2回目からは出さない） */
+(function () {
+  var op = document.getElementById("op"); if (!op) return;
+  if (matchMedia("(max-width: 900px)").matches) return; // スマホは開いたときの画面を出さない（2026-11-12）
+  var seen = false; try { seen = sessionStorage.getItem("bk-op") === "1"; } catch (e) {}
+  if ((seen || location.hash) && !/[?&]op=1/.test(location.search)) return;
+  var html = document.documentElement, shown = false, t;
+  op.hidden = false; html.classList.add("op-on");
+  function show() { if (shown) return; shown = true; clearTimeout(t); op.classList.add("on"); }
+  function close(to) {
+    try { sessionStorage.setItem("bk-op", "1"); } catch (e) {}
+    op.classList.add("out"); html.classList.remove("op-on");
+    if (to) { var el = document.querySelector(to); if (el) el.scrollIntoView(); } else window.scrollTo(0, 0);
+    setTimeout(function () { op.hidden = true; }, 460);
+  }
+  t = setTimeout(show, 2000);
+  op.addEventListener("scroll", function () { if (op.scrollTop > innerHeight * .45) show(); }, { passive: true });
+  op.querySelector(".op-go").addEventListener("click", function (e) { e.preventDefault(); close("#works"); });
+  op.querySelector(".op-skip").addEventListener("click", function () { close(""); });
+  document.addEventListener("keydown", function (e) { if (e.key === "Escape" && !op.hidden) close(""); });
+})();
+</script>
+</body>
+</html>
