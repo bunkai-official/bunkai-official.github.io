@@ -58,6 +58,7 @@
   .steps li:not(:last-child)::after { content: ""; position: absolute; left: 16px; top: 40px; bottom: 6px; width: 2px; background: var(--line); }
   .steps b { display: block; font-size: 17px; color: var(--nv); line-height: 1.6; padding-top: 3px; }
   .steps p { margin: 6px 0 0; }
+  .btn-copy { margin: 10px 0 0; padding: 8px 16px; border: 1.5px solid var(--nv); border-radius: 30px; background: #fff; color: var(--nv); font: inherit; font-size: 14px; font-weight: 700; cursor: pointer; }
   .sendbox { margin: 12px 0 0; padding: 14px 16px; background: var(--bg); border-left: 4px solid var(--cy); font-size: 15px; line-height: 1.8; }
 
   /* お礼の金額 */
@@ -147,17 +148,18 @@
 </div></div>
 
 <section><div class="w">
-  <h2>紹介の<wbr>しかた</h2>
+  <h2>紹介方法</h2>
   <ol class="steps">
-    <li><b>LINEで、<wbr>会社名と<wbr>電話番号を<wbr>送る</b>
+    <li><b>LINEで、<wbr>次の<wbr>形式で<wbr>送る</b>
       <p>BUNKAIの<wbr>公式LINEに<wbr>送ってください。<wbr>わかる<wbr>範囲で<wbr>大丈夫です。</p>
-      <div class="sendbox">会社名：〇〇塗装<br>代表の<wbr>方の<wbr>お名前：〇〇さん<br>電話<wbr>番号：090-〇〇〇〇-〇〇〇〇<br>ひと<wbr>言：ホームページが<wbr>なくて<wbr>困っている、<wbr>など</div>
+      <div class="sendbox">会社名：株式会社〇〇<br>業種：製造業<br>会社URL：なし<wbr>（あれば<wbr>入れてください）<br>お名前：〇〇 〇〇<br>役職：代表取締役<br>電話番号：090-0000-0000<br>課題：ホームページが<wbr>ないので、<wbr>新しく<wbr>作りたい</div>
+      <button class="btn-copy" type="button" id="copyfmt">この<wbr>形式を<wbr>コピーする</button>
     </li>
-    <li><b>相手の<wbr>方に、<wbr>ひと<wbr>言伝えておく</b>
-      <p>「BUNKAIの<wbr>森さんから<wbr>連絡が<wbr>来る」と<wbr>伝えていただけると、<wbr>話が<wbr>早く<wbr>進みます。<wbr>伝えにくいときは、<wbr>この<wbr>ページを<wbr>相手の<wbr>方に<wbr>送るだけでもかまいません。<wbr>その<wbr>ときは、<wbr>送った<wbr>ことだけBUNKAIの<wbr>LINEで<wbr>教えてください。<wbr>誰からの<wbr>ご紹介か<wbr>分かるように<wbr>する<wbr>ためです。</p>
+    <li><b>相手の<wbr>方に、<wbr>ひと<wbr>言お伝えください</b>
+      <p>「BUNKAIの<wbr>森から<wbr>連絡が<wbr>あります」とお伝えいただけると、<wbr>話が<wbr>早く<wbr>進みます。<wbr>お伝えしにくい<wbr>場合は、<wbr>この<wbr>ページを<wbr>相手の<wbr>方に<wbr>送っていただくだけでもかまいません。<wbr>その<wbr>場合も、<wbr>送った<wbr>ことを<wbr>LINEで<wbr>お知らせください<wbr>（どなたからの<wbr>ご紹介か<wbr>分かるように<wbr>する<wbr>ためです）。</p>
     </li>
     <li><b>あとは<wbr>BUNKAIが<wbr>進めます</b>
-      <p>BUNKAIから<wbr>ご連絡し、<wbr>その<wbr>会社用の<wbr>ホームページの<wbr>見本を<wbr>無料で<wbr>作ってお見せします。<wbr>完成した<wbr>ものを<wbr>見ていただいてから、<wbr>ご契約を<wbr>決めて<wbr>いただきます。</p>
+      <p>BUNKAIから<wbr>ご連絡し、<wbr>その<wbr>会社さま専用の<wbr>ホームページの<wbr>見本を<wbr>無料で<wbr>お作りします。<wbr>完成品を<wbr>ご覧いただいてから、<wbr>ご契約を<wbr>ご判断いただけます。</p>
     </li>
   </ol>
 </div></section>
@@ -243,6 +245,13 @@
     f.classList.toggle("on", past && !atEnd);
   }
   addEventListener("scroll", chk, { passive: true }); chk();
+  // 紹介方法の形式をコピー
+  var cf = document.getElementById("copyfmt");
+  if (cf) cf.addEventListener("click", function () {
+    var t = "会社名：\n業種：\n会社URL：\nお名前：\n役職：\n電話番号：\n課題：";
+    var ok = function () { cf.textContent = "コピーしました。LINEに貼りつけてください"; };
+    if (navigator.clipboard) navigator.clipboard.writeText(t).then(ok, function () {});
+  });
   // このページを相手に送る：スマホは共有メニュー、ないときはアドレスをコピー
   var url = "https://bunkai-official.github.io/shokai/";
   document.getElementById("share").addEventListener("click", function () {
