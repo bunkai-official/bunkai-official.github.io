@@ -297,6 +297,7 @@
   @media (max-width: 760px) { .runs h3 small.blk { display: block; margin-top: 4px; } }
   .runs-lead { text-align: center; margin: 6px 0 22px; font-size: 14px; color: var(--mu); }
   .plans { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; align-items: stretch; }
+  @media (min-width: 901px) { .plans.plans4 { grid-template-columns: repeat(4, 1fr); gap: 14px; } .plans.plans4 .plan { padding-left: 18px; padding-right: 18px; } }
   .plan { position: relative; background: #fff; border-radius: 16px; padding: 26px 22px 24px; box-shadow: 0 14px 34px rgba(18,41,74,.08); border: 2px solid transparent; transition: transform .25s; }
   .plan:hover { transform: translateY(-3px); }
   .plan.rec { border-color: var(--or1); box-shadow: 0 18px 40px rgba(240,125,34,.18); }
@@ -313,6 +314,14 @@
   .plan li::before { content: ""; position: absolute; left: 3px; top: 12px; width: 11px; height: 6px; border-left: 2px solid var(--cy-d); border-bottom: 2px solid var(--cy-d); transform: rotate(-45deg); }
   .plan li.inh { font-weight: 700; color: var(--nv); }
   .plan li.inh::before { border-color: var(--or1); }
+  .plan li b.v { color: var(--or); font-weight: 900; white-space: nowrap; margin-left: 4px; }
+  .seoai { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin: 22px auto 0; max-width: 1080px; }
+  .seoai > div { background: #fff; border-radius: 14px; padding: 18px 20px; box-shadow: 0 10px 26px rgba(18,41,74,.06); border-left: 4px solid var(--cy-d); }
+  .seoai b { color: var(--nv); font-size: 16px; }
+  .seoai p { margin: 6px 0 0; font-size: 13.5px; color: var(--mu); line-height: 1.75; }
+  .seoai p.eg { font-size: 13px; color: var(--ink); background: var(--bg); border-radius: 8px; padding: 8px 12px; margin-top: 10px; }
+  .seoai .seoai-n { grid-column: 1 / -1; margin: 0; font-size: 12.5px; color: var(--mu); text-align: center; }
+  @media (max-width: 900px) { .seoai { grid-template-columns: 1fr; max-width: 460px; } }
   .opts { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 10px; margin-top: 20px; font-size: 13.5px; }
   .opts b { color: var(--nv); }
   .opts span { background: #fff; border: 1px solid var(--line); border-radius: 999px; padding: 6px 16px; }
@@ -699,9 +708,9 @@
 <div class="fv2" id="top">
   <div class="fv2-in">
     <div class="fv2-txt">
-      <p class="fv2-h"><span class="l1">HP制作・運用は</span><span class="fv2-band"><span class="m">毎月</span><b>19,800</b><span class="y">円</span></span><span class="l3">以外かかりません。</span></p>
+      <p class="fv2-h"><span class="l1">HP制作・運用は</span><span class="fv2-band"><span class="m">毎月</span><b>9,800</b><span class="y">円</span></span><span class="l3">以外かかりません。</span></p>
       <i class="fv2-rule" aria-hidden="true"></i>
-      <p class="fv2-note">※ライトプランの場合（税別）</p>
+      <p class="fv2-note">※ベーシックプランの場合（税別）</p>
       <div class="fv2-for"><h1><span class="nw">御社専用の</span><span class="nw">ホームページを、</span><span class="nw"><b>先に作って<wbr>お見せしま<span class="kj">す。</span></b></span><span id="typing" hidden></span></h1><p class="fv2-for-s">ご契約の<wbr>前<span class="kj">に、</span><wbr>無料で<wbr>お作りしま<span class="kj">す。</span><wbr>実際に<wbr>動く<wbr>ページ<span class="kj">で、</span><wbr>そのまま<wbr>ご覧いただけま<span class="kj">す。</span><span class="kj"></span></p></div>
     </div>
     <div class="fv2-demo">
@@ -765,7 +774,7 @@
     <div class="ttl rv"><h2>できる<wbr>こと</h2><span class="band">作って<wbr>終わりに<wbr>しない、<wbr>ホームページ</span></div>
     <div class="reasons rv">
       <div class="rs"><div class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><rect x="3" y="4" width="18" height="13" rx="2"/><path d="M8 21h8M12 17v4M7 9l2 2-2 2M12 13h4"/></svg></div><h3>ホームページ制作</h3><p>スマホで<wbr>見やす<span class="kj">く、</span><wbr>電話・LINEが<wbr>ワンタッ<span class="kj">プ。</span><wbr>実績・口コミ・費用の<wbr>目安まで<wbr>載せま<span class="kj">す。</span><span class="kj"></span><wbr>何人が<wbr>見<span class="kj">て、</span><wbr>何件の<wbr>電話が<wbr>来たかを<wbr>毎月<wbr>確認できる<wbr>仕組みも<wbr>入れま<span class="kj">す。</span><wbr></p></div>
-      <div class="rs"><div class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg></div><h3>ホームページ運用</h3><p>問い合わせが<wbr>増えるよう<span class="kj">に、</span><wbr>毎月<wbr>こちらで<wbr>育てま<span class="kj">す。</span><wbr>実績・事例の<wbr>追加<wbr>（<wbr>何件でも<wbr>O<span class="kj">K。</span><wbr>写真は<wbr>LINEで<wbr>送るだ<span class="kj">け）</span><span class="kj">、</span><wbr>お客様の<wbr>声の<wbr>追加<wbr><span class="kj">（何</span>件でも<wbr>O<span class="kj">K）、</span><wbr>お知らせ・お役立ち記事の<wbr>作<span class="kj">成、</span><wbr>トップページの<wbr>改<span class="kj">修、</span><wbr><span class="kj">「地</span>域名＋業<span class="kj">種」</span>で<wbr>調べた<wbr>ときに<wbr>上の<wbr>方に<wbr>出る<wbr>対策まで<wbr>行いま<span class="kj">す。</span><wbr>今の<wbr>ホームページの<wbr>運用だけでも<wbr>OKで<span class="kj">す。</span><wbr></p></div>
+      <div class="rs"><div class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg></div><h3>ホームページ運用</h3><p>問い合わせが<wbr>増えるよう<span class="kj">に、</span><wbr>毎月<wbr>こちらで<wbr>育てま<span class="kj">す。</span><wbr>実績・事例の<wbr>追加<wbr>（<wbr>何件でも<wbr>O<span class="kj">K。</span><wbr>写真は<wbr>LINEで<wbr>送るだ<span class="kj">け）</span><span class="kj">、</span><wbr>お客様の<wbr>声の<wbr>追加<wbr><span class="kj">（何</span>件でも<wbr>O<span class="kj">K）、</span><wbr>お知らせ・お役立ち記事の<wbr>作<span class="kj">成、</span><wbr><span class="kj">「地</span>域名＋業<span class="kj">種」</span>で<wbr>調べた<wbr>ときに<wbr>上の<wbr>方に<wbr>出る<wbr>対策まで<wbr>行いま<span class="kj">す。</span><wbr>今の<wbr>ホームページの<wbr>運用だけでも<wbr>OKで<span class="kj">す。</span><wbr></p></div>
       <div class="rs"><div class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M12 21s-7-6.2-7-12a7 7 0 0 1 14 0c0 5.8-7 12-7 12z"/><circle cx="12" cy="9" r="2.5"/></svg></div><h3>Googleマップ対策</h3><p><span class="kj">「地</span>域名＋業<span class="kj">種」</span>で<wbr>調べた<wbr>とき<span class="kj">に、</span><wbr>地図に<wbr>御社が<wbr>出やすくなるようにしま<span class="kj">す。</span><wbr>お客さまから<wbr>口コミが<wbr>集まる<wbr>仕組みを<wbr>つく<span class="kj">り、</span><wbr>お店の<wbr>情報と<wbr>写真を<wbr>整えま<span class="kj">す。</span><span class="kj"></span></p></div>
       <div class="rs"><div class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r=".8" fill="currentColor"/></svg></div><h3>SNS運用</h3><p>InstagramやTikTokの<wbr>投稿を<wbr>代わりに<wbr>作りま<span class="kj">す。</span><wbr>新しい人に<wbr>届きやすい<wbr>短い動画を<wbr>中心<span class="kj">に、</span><wbr>仕事の<wbr>様子や<wbr>お店の<wbr>雰囲気を<wbr>見せま<span class="kj">す。</span><span class="kj"></span><wbr>見た人が<wbr>LINEや<wbr>ホームページから<wbr>相談できるよう<span class="kj">に、</span><wbr>入口まで<wbr>整えま<span class="kj">す。</span></p></div>
       <div class="rs"><div class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M12 3.5c-5 0-9 3.3-9 7.4 0 3.7 3.2 6.8 7.5 7.3l-.6 2.6 3.4-2.6c4.3-.5 7.7-3.5 7.7-7.3 0-4.1-4-7.4-9-7.4z"/><path d="M8 10v3M12 10v3M16 10v3"/></svg></div><h3>LINE運用</h3><p>LINE公式アカウント<span class="kj">で、</span><wbr>一度<wbr>来てくれた<wbr>お客さまと<wbr>つながりま<span class="kj">す。</span><span class="kj"></span><wbr>友だちを<wbr>増やす<wbr>仕組みづくりか<span class="kj">ら、</span><wbr>お礼・<wbr>口コミの<wbr>お願い・<wbr>点検の<wbr>ご案内までを<wbr>自動にし<span class="kj">て、</span><wbr>次に<wbr>必要に<wbr>なった<wbr>ときに<wbr>思い出して<wbr>もらえるようにしま<span class="kj">す。</span><span class="kj"></span></p></div>
@@ -779,7 +788,7 @@
     <div class="ttl rv"><h2 class="h-nw"><span>運用で<span class="kj">は、</span><wbr></span><span>毎月<wbr>ここまで<wbr>やります</span></h2></div>
     <p class="lead rv">作って<wbr>終わりに<wbr>せ<span class="kj">ず、</span><wbr>毎月<wbr>この<wbr>流れを<wbr>続け<span class="kj">て、</span><wbr>問い合わせに<wbr>つなげま<span class="kj">す。</span><wbr></p>
     <div class="ops-you rv"><div class="a"><small>御社に<wbr>お願い<wbr>する<wbr>こと</small><b>写真を<wbr>LINEで<wbr>送るだけ</b></div><div class="b"><small>その<wbr>あとは</small><b><span class="nw">記事づくりから<wbr>投<span class="kj">稿、</span><wbr>報告ま<span class="kj">で、</span><wbr></span><span class="nw">すべて<wbr>こちらで<wbr>行います</span></b></div></div>
-    <ol class="ops-wk rv"><li><div class="w">1週目</div><div><h3>先月の<wbr>結果を<wbr>見<span class="kj">て、</span><wbr>直す所を<wbr>決める</h3><ul><li>何人が<wbr>見<span class="kj">て、</span><wbr>電話が<wbr><span class="nw">何回押されたかを確認</span></li><li><span class="kj">「地</span>域名＋業<span class="kj">種」</span>の<wbr>検索順位を<wbr>確認</li><li>Googleマップに<wbr>出た回数と<wbr><span class="nw">電話の数を確認</span></li></ul></div></li><li><div class="w">2週目</div><div><h3>届いた<wbr>写真と<wbr>声<span class="kj">を、</span><wbr>ページに<wbr>載せる</h3><ul><li>写真を<wbr>選<span class="kj">び、</span><wbr>説明文を<wbr>書く</li><li>事例・実績を<wbr>追加<wbr>（<wbr>何件でも<wbr>O<span class="kj">K）</span><span class="kj"></span><wbr></li><li>お客様の<wbr>声を<wbr>追加<wbr><span class="kj">（何</span>件でも<wbr>O<span class="kj">K）</span><wbr></li></ul></div></li><li><div class="w">3週目</div><div><h3>検索と<wbr>Googleマップで<wbr>見つけて<wbr>もらう</h3><ul><li>お役立ち記事を<wbr>書いて<wbr>載せる<wbr><span class="kj">（月</span>4<span class="kj">本）</span><wbr></li><li>Googleマップに<wbr>投稿する<wbr><span class="kj">（月</span>4<span class="kj">回）</span><wbr></li><li>検索と<wbr>AIに<wbr>出やすくなるよう調整する</li></ul></div></li><li><div class="w">4週目</div><div><h3>結果を<wbr>まとめ<span class="kj">て、</span><wbr>来月の<wbr>作戦を<wbr>立てる</h3><ul><li>今月の<wbr>数字を<wbr>レポートに<wbr>まとめる</li><li>やった<wbr>ことと<wbr>結果を<wbr>お送りする</li><li>来月やる<wbr>ことを<wbr>ご提案する</li></ul></div></li><li><div class="w">毎月ずっと</div><div><h3>ホームページが<wbr>止まらないように<wbr>見守る</h3><ul><li>サーバーと<wbr>ドメインの<wbr>管理</li><li>不具合が<wbr>出たら<wbr>対応</li><li>文章や<wbr>写真の<wbr>修正<wbr><span class="kj">（月</span>2回ま<span class="kj">で）</span><wbr></li></ul></div></li></ol>
+    <ol class="ops-wk rv"><li><div class="w">1週目</div><div><h3>先月の<wbr>結果を<wbr>見<span class="kj">て、</span><wbr>直す所を<wbr>決める</h3><ul><li>何人が<wbr>見<span class="kj">て、</span><wbr>電話が<wbr><span class="nw">何回押されたかを確認</span></li><li><span class="kj">「地</span>域名＋業<span class="kj">種」</span>の<wbr>検索順位を<wbr>確認</li><li>Googleマップに<wbr>出た回数と<wbr><span class="nw">電話の数を確認</span></li></ul></div></li><li><div class="w">2週目</div><div><h3>届いた<wbr>写真と<wbr>声<span class="kj">を、</span><wbr>ページに<wbr>載せる</h3><ul><li>写真を<wbr>選<span class="kj">び、</span><wbr>説明文を<wbr>書く</li><li>事例・実績を<wbr>追加<wbr>（<wbr>何件でも<wbr>O<span class="kj">K）</span><span class="kj"></span><wbr></li><li>お客様の<wbr>声を<wbr>追加<wbr><span class="kj">（何</span>件でも<wbr>O<span class="kj">K）</span><wbr></li></ul></div></li><li><div class="w">3週目</div><div><h3>検索と<wbr>AIで<wbr>見つけて<wbr>もらう</h3><ul><li>SEO対策か<wbr>AI対策を<wbr>行う<wbr><span class="kj">（例</span>：市町の<wbr>ページを<wbr>足<span class="kj">す）</span></li><li>コラム記事を<wbr>書いて<wbr>載せる<wbr><span class="kj">（月</span>2<span class="kj">本）</span></li><li>Googleマップに<wbr>投稿する<wbr><span class="kj">（月</span>4<span class="kj">回）</span></li></ul></div></li><li><div class="w">4週目</div><div><h3>結果を<wbr>まとめて<wbr>来月の<wbr>作戦を<wbr>立てる</h3><ul><li>今月の<wbr>数字を<wbr>レポートに<wbr>まとめる</li><li>打ち合わせで<wbr>結果を<wbr>お伝えする<wbr><span class="kj">（3</span>0〜60<span class="kj">分）</span></li><li>来月やる<wbr>ことを<wbr>一緒に<wbr>決める</li></ul></div></li><li><div class="w">毎月ずっと</div><div><h3>ホームページが<wbr>止まらないように<wbr>見守る</h3><ul><li>サーバーと<wbr>ドメインの<wbr>管理</li><li>不具合が<wbr>出たら<wbr>対応</li><li>文章や<wbr>写真の<wbr>修正<wbr><span class="kj">（月</span>4回ま<span class="kj">で）</span></li></ul></div></li></ol>
     <p class="ops-note rv">※ スタンダードプランと<wbr>Googleマップの<wbr>運用を<wbr>組み合わせた<wbr>場合の<wbr>例で<span class="kj">す。</span><wbr>順番は<wbr>月に<wbr>よって<wbr>変わりま<span class="kj">す。</span><wbr></p>
   </div>
 </section>
@@ -812,7 +821,7 @@
         </div>
         <div>
           <h4>今月やった<wbr>こと</h4>
-          <ul><li>事例の<wbr>追加 2件</li><li>お客様の<wbr>声の<wbr>追加 1件</li><li>お役立ち記事の<wbr>作成 4本</li><li>Googleマップの<wbr>投稿 4回</li><li>検索で<wbr>上に<wbr>出やすく<wbr>する<wbr>調整</li></ul>
+          <ul><li>事例の<wbr>追加 2件</li><li>お客様の<wbr>声の<wbr>追加 1件</li><li>コラム記事の<wbr>作成 2本</li><li>SEO対策：<wbr><span class="kj">「〇</span>〇市 リフォー<span class="kj">ム」</span><span class="kj"></span>の<wbr>ページを<wbr>足した</li><li>Googleマップの<wbr>投稿 4回</li></ul>
         </div>
         <div>
           <h4>来月やる<wbr>こと</h4>
@@ -884,48 +893,71 @@
     <div class="ttl rv"><h2>料金</h2></div>
     <div class="sum rv">
       <p class="sum-q">結<span class="kj">局、</span><wbr>毎月いく<span class="kj">ら？</span></p>
-      <p class="sum-a">月<b><span class="kj">19,800</span></b>円から<small><span class="kj">（税</span><span class="kj">別）</span><wbr></small></p>
+      <p class="sum-a">月<b><span class="kj">9,800</span></b>円から<small><span class="kj">（税</span><span class="kj">別）</span><wbr></small></p>
       <ul class="sum-0"><li>制作費<b>0円</b></li><li>サーバー代<b>0円</b></li><li>ドメイン代<b>0円</b></li><li>最低<b>3か<wbr>月</b>から</li></ul>
-      <p class="sum-n"><span class="nw">ホームページ<span class="kj">は、</span><wbr>見本を<wbr>もとに</span><span class="nw">御社の<wbr>情報で<wbr>作り込みま<span class="kj">す。</span><wbr></span><span class="nw">その<wbr>あとの<wbr>更新と<wbr>毎月の<wbr>報告ま<span class="kj">で、</span><wbr></span><span class="nw">この<wbr>月額に<wbr>入っていま<span class="kj">す。</span><wbr></span></p>
+      <p class="sum-n"><span class="nw">ホームページ<span class="kj">は、</span><wbr>見本を<wbr>もとに</span><span class="nw">御社の<wbr>情報で<wbr>作り込みま<span class="kj">す。</span><wbr></span><span class="nw">その<wbr>あとの<wbr>更新ま<span class="kj">で、</span><wbr></span><span class="nw">この<wbr>月額に<wbr>入っていま<span class="kj">す。</span><wbr></span></p>
     </div>
     <div class="runs rv">
-      <h3><span class="nw">ホームページの</span><span class="nw">3つの<wbr>プラン</span><small class="blk"><span class="kj">（月</span>額・税<span class="kj">別）</span><wbr></small></h3>
-      <div class="plans">
+      <h3><span class="nw">ホームページの</span><span class="nw">4つの<wbr>プラン</span><small class="blk"><span class="kj">（月</span>額・税<span class="kj">別）</span><wbr></small></h3>
+      <div class="plans plans4">
+        <div class="plan">
+          <b class="pt">ベーシック</b>
+          <div class="pp"><span class="kj">9,800</span><small>円</small></div>
+          <p class="for">まずは<br>ホームページを<wbr>持っておきたい</p>
+          <ul>
+            <li>サイトの<wbr>管理と<wbr>不具合の<wbr>対応</li>
+            <li>セキュリティ対策と<wbr>バックアップ</li>
+            <li>スマホ・電話・フォームの<wbr>動作確認</li>
+            <li>事例の<wbr>追加 <b class="v">月2件</b></li>
+            <li>お客様の<wbr>声の<wbr>追加 <b class="v">月2件</b></li>
+            <li>文章・写真の<wbr>修正 <b class="v">月1回</b></li>
+          </ul>
+        </div>
         <div class="plan">
           <b class="pt">ライト</b>
           <div class="pp"><span class="kj">19,800</span><small>円</small></div>
-          <p class="for">まずは<wbr>ホームページを<br>きちんと<wbr>持っておきたい</p>
+          <p class="for">事例を<br>どんどん<wbr>増や<wbr>したい</p>
           <ul>
-            <li>サイトの<wbr>管理・<wbr>不具合の<wbr>対応</li>
-            <li>セキュリティ対策と<wbr>バックアップ</li>
-            <li>スマホでの<wbr>表示<span class="kj">と、</span><wbr>電話・フォームの<wbr>動作確認</li>
-            <li>事例・お客様の<wbr>声の<wbr>追加<wbr>（<wbr>何件でも<wbr>O<span class="kj">K）</span><span class="kj"></span></li>
-            <li>文章・写真の<wbr>修正<span class="kj">（月</span>2回ま<span class="kj">で）</span></li>
-            <li>お知らせの<wbr>更新<span class="kj">（月</span>1<span class="kj">回）</span></li>
-            <li>月1回の<wbr>報告<wbr><span class="kj">（見</span>られた<wbr>数・電話の<wbr>数・来月やる<wbr>こ<span class="kj">と）</span></li>
+            <li class="inh">ベーシックの<wbr>内容すべて</li>
+            <li>事例の<wbr>追加 <b class="v">何件でも</b></li>
+            <li>お客様の<wbr>声の<wbr>追加 <b class="v">何件でも</b></li>
+            <li>文章・写真の<wbr>修正 <b class="v">月2回</b></li>
+            <li>お知らせの<wbr>更新 <b class="v">月1回</b></li>
+            <li>補助金・助成金の<wbr>ページ<wbr><span class="kj">（毎</span>月<wbr>確かめて<wbr>更<span class="kj">新）</span></li>
+            <li>毎月の<wbr>報告<wbr><span class="kj">（見</span>られた<wbr>数・電話の<wbr><span class="kj">数）</span></li>
           </ul>
         </div>
         <div class="plan rec">
           <span class="badge-rec">おすすめ</span>
           <b class="pt">スタンダード</b>
           <div class="pp"><span class="kj">29,800</span><small>円</small></div>
-          <p class="for">ホームページから<br>問い合わせを<wbr>増や<wbr>したい</p>
+          <p class="for">検索と<wbr>AIから<br>問い<wbr>合わせを<wbr>増や<wbr>したい</p>
           <ul>
-            <li class="inh">ライトの内容すべて</li>
-            <li>事例の<wbr>文章づくり<wbr><span class="kj">（L</span>INEで<wbr>写真を<wbr>送るだ<span class="kj">け）</span><span class="kj"></span></li><li>お役立ち記事の<wbr>作成<span class="kj">（月</span>4<span class="kj">本）</span></li>
-            <li>地域名で<wbr>調べた<wbr>とき<span class="kj">に、</span><wbr>上の<wbr>方に<wbr>出る<wbr>対策<wbr><span class="kj">（ペ</span>ージの<wbr>題名・説明<span class="kj">文）</span></li><li>AI検索<span class="kj">（C</span>hatGPTな<span class="kj">ど）</span>に<wbr>出やすい書き方</li>
-            <li>電話・LINE・フォームの<wbr>ボタンや<wbr>流れを<wbr>見直し<span class="kj">て、</span><wbr>問い合わせを<wbr>増やす<wbr><span class="kj">（月</span>1か<wbr><span class="kj">所）</span></li></ul>
+            <li class="inh">ライトの<wbr>内容すべて</li>
+            <li>SEO対策・AI対策 <b class="v">月1回</b></li>
+            <li>コラム記事の<wbr>作成 <b class="v">月2本</b></li>
+            <li>文章・写真の<wbr>修正 <b class="v">月4回</b></li>
+            <li>お知らせの<wbr>更新 <b class="v">月2回</b></li>
+            <li>打ち合わせ<wbr><span class="kj">（3</span>0〜60<span class="kj">分）</span> <b class="v">月1回</b></li>
+          </ul>
         </div>
         <div class="plan">
           <b class="pt">プレミアム</b>
           <div class="pp"><span class="kj">49,800</span><small>円</small></div>
           <p class="for">地域で<wbr>いちばんに<br>選ばれたい</p>
           <ul>
-            <li class="inh">スタンダードの内容すべて</li>
-            <li>お役立ち記事の<wbr>作成<span class="kj">（月</span>8<span class="kj">本）</span></li>
-            <li>見られ方を<wbr>調べる<wbr>ツール<span class="kj">で、</span><wbr>よく<wbr>読まれる<wbr>所を<wbr>見<span class="kj">て、</span><wbr>トップページと<wbr>サービスページを<wbr>直す</li><li>季節の<wbr>特集ページ<span class="kj">（年</span><wbr>4回：業種の<wbr>忙しい<wbr>時期に<wbr>合わせ<span class="kj">て）</span><span class="kj"></span></li>
-            <li>近くの<wbr>同業の<wbr>ホームページとのくらべ</li></ul>
+            <li class="inh">スタンダードの<wbr>内容すべて</li>
+            <li>SEO対策・AI対策 <b class="v">月3回</b></li>
+            <li>コラム記事の<wbr>作成 <b class="v">月4本</b></li>
+            <li>文章・写真の<wbr>修正 <b class="v">何回でも</b></li>
+            <li>お知らせの<wbr>更新 <b class="v">月4回</b></li>
+          </ul>
         </div>
+      </div>
+      <div class="seoai">
+        <div><b>SEO対策</b><p><span class="kj">「地</span>域名＋業<span class="kj">種」</span>で<wbr>調べた<wbr>人に<wbr>見つけて<wbr>もらう<wbr>対策で<span class="kj">す。</span><span class="kj"></span><wbr>毎月の<wbr>結果を<wbr>見<span class="kj">て、</span><wbr>その<wbr>月に<wbr>いちばん効く<wbr>ものを<wbr>選んで<wbr>行いま<span class="kj">す。</span></p><p class="eg">例：市町ごとの<wbr>ページを<wbr>足す／事例に<wbr>地域の<wbr>情報を<wbr>足す／よく<wbr>調べられている<wbr>言葉に<wbr>合わせて<wbr>ページを<wbr>直す</p></div>
+        <div><b>AI対策</b><p>ChatGPTや<wbr>Googleの<wbr>AIに<wbr><span class="kj">「地</span>域名で<wbr>おすすめの<wbr>会社<span class="kj">は？」</span><span class="kj"></span>と<wbr>聞かれた<wbr>とき<span class="kj">に、</span><wbr>御社の<wbr>名前が<wbr>出るように<wbr>する<wbr>対策で<span class="kj">す。</span></p><p class="eg">例：AIの<wbr>答えに<wbr>名前が<wbr>出るか<wbr>確かめる<wbr>／AIの<wbr>答えに<wbr>足りない<wbr>会社の<wbr>情報を<wbr>足す／よく<wbr>ある<wbr>質問を<wbr>足す</p></div>
+        <p class="seoai-n">※ SEO対策と<wbr>AI対策<span class="kj">は、</span><wbr>毎月の<wbr>結果を<wbr>見<span class="kj">て、</span><wbr>その月に<wbr>効く<wbr>ほうを<wbr>選んで<wbr>行いま<span class="kj">す。</span><wbr>検索と<wbr>AIの<wbr>基本の<wbr>設定<span class="kj">は、</span><wbr>どの<wbr>プランでも<wbr>作る<wbr>ときに<wbr>済ませて<wbr>おきま<span class="kj">す。</span></p>
       </div>
     </div>
     <div class="more more-pdf rv">
@@ -1052,11 +1084,11 @@
     <div class="faq rv">
       <details><summary>ホームページを<wbr>作れ<span class="kj">ば、</span><wbr>本当に<wbr>問い合わせは<wbr>増えます<span class="kj">か？</span></summary><p><span class="kj">「必</span>ず<wbr>増えま<span class="kj">す」</span><wbr>とは<wbr>お約束できませ<span class="kj">ん。</span><wbr>そのかわ<span class="kj">り、</span><wbr>事例を<wbr>毎月<wbr>増やす・Googleマップとつなげる<wbr>・月1回の<wbr>報告で<wbr>数字<wbr><span class="kj">（見</span>られた<wbr>数・電話が<wbr>押された<wbr><span class="kj">数）</span><wbr>を<wbr>見ながら直<span class="kj">す、</span><wbr>と<wbr>いう<wbr>形<span class="kj">で、</span><wbr>問い合わせに<wbr>つながるまで<wbr>一緒に<wbr>続けま<span class="kj">す。</span><wbr></p></details>
       <details><summary>今ある<wbr>ホームページ<span class="kj">を、</span><wbr>そのまま<wbr>使えます<span class="kj">か？</span></summary><p>は<span class="kj">い。</span><wbr>ほかの<wbr>会社で<wbr>作った<wbr>ホームページで<span class="kj">も、</span><wbr>改修や<wbr>毎月の<wbr>運用だけを<wbr>お引き<wbr>受けできま<span class="kj">す。</span><wbr>作り直した<wbr>ほうが<wbr>いい<wbr>場合<span class="kj">は、</span><wbr>理由と<wbr>費用を<wbr>ご説明しま<span class="kj">す。</span><wbr></p></details>
-      <details><summary>結<span class="kj">局、</span><wbr>毎月<wbr>いくら<wbr>かかります<span class="kj">か？</span></summary><p>ホームページの<wbr>制作費は<wbr>0円<span class="kj">で、</span><wbr>毎月<wbr>かかるのは<wbr>運用プランの<wbr>月19,800円から<wbr><span class="kj">（税</span>別・最低3か<wbr><span class="kj">月）</span><wbr>で<span class="kj">す。</span><wbr>サーバー代と<wbr>独自ドメイン代<span class="kj">も、</span><wbr>この<wbr>中に<wbr>含みま<span class="kj">す。</span><wbr></p></details>
+      <details><summary>結<span class="kj">局、</span><wbr>毎月<wbr>いくら<wbr>かかります<span class="kj">か？</span></summary><p>ホームページの<wbr>制作費は<wbr>0円<span class="kj">で、</span><wbr>毎月<wbr>かかるのは<wbr>運用プランの<wbr>月9,800円から<wbr><span class="kj">（税</span><span class="kj">別）</span><wbr>で<span class="kj">す。</span><wbr>サーバー代と<wbr>独自ドメイン代<span class="kj">も、</span><wbr>この<wbr>中に<wbr>含みま<span class="kj">す。</span><wbr></p></details>
       <details><summary>仕事が<wbr>忙しく<span class="kj">て、</span><wbr>打ち合わせの<wbr>時間が<wbr>取れませ<span class="kj">ん。</span><span class="kj"></span><wbr></summary><p>最初の<wbr>打ち合わせは<wbr>30分ほどで<span class="kj">す。</span><wbr>その<wbr>あと<span class="kj">は、</span><wbr>写真や<wbr>直したい<wbr>ところを<wbr>LINEで<wbr>送っていただくだけで<wbr>進められま<span class="kj">す。</span><wbr></p></details>
       <details><summary>滋賀県の<wbr>外でも<wbr>頼めます<span class="kj">か？</span></summary><p>は<span class="kj">い、</span><wbr>お受けしま<span class="kj">す。</span><wbr>打ち合わせは<wbr>電話・LINE・ビデオ通話で<wbr>進めま<span class="kj">す。</span><wbr>写真や<wbr>直したい所<span class="kj">は、</span><wbr>LINEで<wbr>送っていただくだけで<span class="kj">す。</span><wbr>滋賀県内な<span class="kj">ら、</span><wbr>事務所や<wbr>現場にも<wbr>伺いま<span class="kj">す。</span></p></details>
       <details><summary>ほかの<wbr>制作会社<span class="kj">と、</span><wbr>何が<wbr>違います<span class="kj">か？</span></summary><p>御社用の<wbr>見本を<wbr>先に<wbr>無料で<wbr>作ってお見せしてか<span class="kj">ら、</span><wbr>ご検討いただけま<span class="kj">す。</span><wbr>作って<wbr>終わりではな<span class="kj">く、</span><wbr>自分でも<wbr>検索から<wbr>人を<wbr>集める<wbr>サイトを<wbr>運営している<wbr>やり方<span class="kj">で、</span><wbr>ホームページ・Googleマップ・SNS・LINEを<wbr>まとめて<wbr>運用しま<span class="kj">す。</span><wbr>最初の<wbr>ご相談から<wbr>公開後の<wbr>運用ま<span class="kj">で、</span><wbr>同じ<wbr>担当が<wbr>見ま<span class="kj">す。</span></p></details>
-      <details><summary>途中で<wbr>やめた<span class="kj">ら、</span><wbr>ホームページは<wbr>どうなります<span class="kj">か？</span></summary><p>最低3か月の<wbr>あと<span class="kj">は、</span><wbr>いつでも<wbr>やめられま<span class="kj">す。</span><wbr>やめると<wbr>ホームページは<wbr>止まりま<span class="kj">す。</span><wbr>独自ドメイン<wbr><span class="kj">（ホ</span>ームページの<wbr>アドレ<span class="kj">ス）</span><wbr>は<wbr>御社の<wbr>名義なの<span class="kj">で、</span><wbr>そのまま<wbr>御社に<wbr>残ります<wbr><span class="kj">（や</span>めた<wbr>あとの<wbr>更新<span class="kj">代、</span><wbr>年<span class="kj">1,500円</span>前後は<wbr>御社の<wbr>ご負担で<span class="kj">す）。</span><wbr>ホームページを<wbr>続けて<wbr>使いたい<wbr>場合<span class="kj">は、</span><wbr><span class="kj">200,000円</span>で<wbr>買い取りも<wbr>できま<span class="kj">す。</span><wbr></p></details>
+      <details><summary>途中で<wbr>やめた<span class="kj">ら、</span><wbr>ホームページは<wbr>どうなります<span class="kj">か？</span></summary><p>最低の<wbr>期間の<wbr>あと<span class="kj">は、</span><wbr>いつでも<wbr>やめられま<span class="kj">す。</span><wbr>やめると<wbr>ホームページは<wbr>止まりま<span class="kj">す。</span><wbr>独自ドメイン<wbr><span class="kj">（ホ</span>ームページの<wbr>アドレ<span class="kj">ス）</span><wbr>は<wbr>御社の<wbr>名義なの<span class="kj">で、</span><wbr>そのまま<wbr>御社に<wbr>残ります<wbr><span class="kj">（や</span>めた<wbr>あとの<wbr>更新<span class="kj">代、</span><wbr>年<span class="kj">1,500円</span>前後は<wbr>御社の<wbr>ご負担で<span class="kj">す）。</span><wbr>ホームページを<wbr>続けて<wbr>使いたい<wbr>場合<span class="kj">は、</span><wbr><span class="kj">200,000円</span>で<wbr>買い取りも<wbr>できま<span class="kj">す。</span><wbr></p></details>
     </div>
   </div>
 </section>
@@ -1551,11 +1583,11 @@
         if (CO_URL) { bot(CO_NAME + "さま用のホームページデザインは、もうできています！\n下のボタンから、スマホでもそのまま動く見本をご覧いただけます。\n雰囲気は4つから選べます。", function () {
           opts([{ t: "見本サイトを開く", href: CO_URL + "craft.html", c: "main" }, { t: "地域密着のデザインで見る", href: CO_URL + "chiiki" }, { t: "誠実のデザインで見る", href: CO_URL + "seijitsu" }, { t: "ポップのデザインで見る", href: CO_URL + "pop" }, { t: "このページで4つを見比べる", jump: "works", say: "4つのデザインを並べたところに移動しますね。画面を押すと、実際のサイトが開きます。" }, { t: "LINEで相談する", href: LINE, c: "ln" }, back]); }); return; }
         bot("ありがとうございます！\n会社名と地域を教えていただければ、御社用のホームページの見本を無料でお作りします。\n作ったあとに、無理に契約をおすすめすることはありません。", function () { opts(talk.concat([{ t: "先に見本サイトを見てみる", jump: "works" }, back])); }); },
-      price: function () { bot("ホームページの制作費は0円です。毎月の運用プラン（月19,800円〜・税別・最低3か月）で、作ったあとの更新や報告まで行います。サーバー代と独自ドメイン代も含みます。\nGoogleマップの運用は月9,800円からです。お知り合いの会社さまをご紹介いただき契約が決まったら、ご紹介くださった方に月額1か月分をお礼としてお渡しします。", function () { opts([{ t: "料金の詳しい説明を見る", jump: "charge" }, { t: "料金表（PDF）を開く", href: "price.pdf" }].concat([back])); }); },
+      price: function () { bot("ホームページの制作費は0円です。毎月の運用プラン（月9,800円〜・税別）で、作ったあとの更新まで行います。サーバー代と独自ドメイン代も含みます。\nGoogleマップの運用は月9,800円からです。お知り合いの会社さまをご紹介いただき契約が決まったら、ご紹介くださった方に月額1か月分をお礼としてお渡しします。", function () { opts([{ t: "料金の詳しい説明を見る", jump: "charge" }, { t: "料金表（PDF）を開く", href: "price.pdf" }].concat([back])); }); },
       what: function () { bot("ホームページづくりに加えて、作ったあとのHP運用（事例・記事・検索で上に出やすくする対策）、SNS・LINEの運用、Googleマップの対策、事務作業を短くするAI支援やシステム開発まで、まとめて引き受けます。今のホームページの運用だけでもOKです。\n写真はLINEで送っていただくだけで大丈夫です。", function () { opts([{ t: "できることを見る", jump: "reason" }, { t: "見本サイトを見る", jump: "works" }, back]); }); },
-      run: function () { bot("運用は大きく2つです。\n・保守運用：サーバーやドメインの管理、不具合の対応、文章や写真の小さな修正\n・HP運用：事例やお役立ち記事の追加、トップページの改修、検索で上に出やすくする対策\n写真はLINEで送っていただくだけで、更新はこちらで行います。月19,800円からで、おすすめは月29,800円のプランです。", function () { opts([{ t: "運用プランの料金を見る", jump: "charge", say: "運用プランの料金に移動しますね。3つのプランと、それぞれの中身を並べています。" }].concat(talk, [back])); }); },
+      run: function () { bot("運用は大きく2つです。\n・保守運用：サーバーやドメインの管理、不具合の対応、文章や写真の小さな修正\n・HP運用：事例やお客様の声の追加、検索とAIで見つけてもらう対策\n写真はLINEで送っていただくだけで、更新はこちらで行います。月9,800円からで、おすすめは月29,800円のプランです。", function () { opts([{ t: "運用プランの料金を見る", jump: "charge", say: "運用プランの料金に移動しますね。4つのプランと、それぞれの中身を並べています。" }].concat(talk, [back])); }); },
       fix: function () { bot("はい、できます。ほかの会社で作ったホームページでも、改修や毎月の運用だけをお引き受けします。\nまずは今のサイトを拝見して、直したほうがいい所をお伝えします（無料）。作り直したほうがいい場合は、理由と費用をご説明します。", function () { opts(talk.concat([back])); }); },
-      small: function () { bot("はい、文章1行・写真1枚の差し替えからお受けします。\n直したい所をLINEで送っていただくだけでOKです。\n運用プラン（月19,800円〜）なら月2回までの修正が含まれます。プランなしの場合は、その都度お見積もりします。", function () { opts(talk.concat([back])); }); },
+      small: function () { bot("はい、文章1行・写真1枚の差し替えからお受けします。\n直したい所をLINEで送っていただくだけでOKです。\n運用プランなら、ベーシック（月9,800円）で月1回、ライト（月19,800円）から月2回までの修正が含まれます。プランなしの場合は、その都度お見積もりします。", function () { opts(talk.concat([back])); }); },
       ai: function () { bot("はい、お教えします。たとえば、\n・見積書や報告書の下書きを作る\n・LINEの問い合わせや口コミへの返信文を作る\n・写真から、事例紹介の文章を作る\nなど、仕事のあとの事務作業を短くする使い方を、隣で一緒に設定します。パソコンが苦手でも大丈夫です。", function () { opts(talk.concat([back])); }); },
       sys: function () { bot("はい、必要な機能だけに絞って小さく作るので、大きなシステム会社に頼むより費用をおさえられます。\nたとえば、問い合わせへの自動返信、見積もりの自動計算、お客様や案件の管理などです。\n「こんなことに困っている」を伺ってから、お見積もりします。", function () { opts(talk.concat([back])); }); },
       meet: function () { bot("打ち合わせは、電話・LINE・ビデオ通話で進めます。滋賀県内なら、事務所や現場にも伺います。\nご都合のいい日時を、お気軽にお知らせください。", function () { opts(talk.concat([back])); }); },
@@ -1580,7 +1612,7 @@
 #cbBtn.cb-btn:hover{transform:translateY(-2px)!important}
 @media (max-width:900px){#cbBtn.cb-btn{right:10px!important;bottom:76px!important;padding:5px 16px 5px 5px!important;gap:7px!important}#cbBtn .cbx-t small{display:none!important}#cbBtn .cbx-t{line-height:1.2}}
 
-  /* 2026-11-12 FV：料金を一番に（HP制作・運用は毎月19,800円以外かかりません） */
+  /* 2026-11-12 FV：料金を一番に（2026-11-14 ベーシック9,800円にした） */
   .fv2 { position: relative; overflow: hidden; background: #fafaf8; color: #262b33; }
   .fv2-in { position: relative; max-width: 1360px; margin: 0 auto; min-height: clamp(520px, calc(100svh - 120px), 720px); display: flex; align-items: center; padding: 0 48px; }
   .fv2-txt { position: relative; z-index: 1; padding: 60px 0; width: 56%; }
