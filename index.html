@@ -688,6 +688,25 @@
   .medias h3 .msub::before { content: "# "; font-family: var(--code); }
   /* 括弧や句読点を前後の字と離さない。ほかの span の装飾は受けない */
   span.kj { all: unset !important; white-space: nowrap !important; }
+
+  /* 2026-11-16 実際に聞いた声（voices2） */
+  .voices2 { background: var(--bg); }
+  .voices2 .vlead { margin: -30px auto 34px; max-width: 640px; text-align: center; color: var(--mu, #5c6b7d); font-size: 15px; line-height: 1.8; }
+  .vlist { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin: 0; padding: 0; list-style: none; }
+  .vc { display: flex; flex-direction: column; gap: 12px; }
+  .vc p { margin: 0; line-height: 1.8; }
+  .vq { position: relative; padding: 18px 20px; border-radius: 14px; background: #fff; border: 1px solid #dde4ec; color: var(--nv); font-size: 17px; font-weight: 700; }
+  .vq::after { content: ""; position: absolute; left: 34px; bottom: -9px; width: 16px; height: 16px; background: #fff; border-right: 1px solid #dde4ec; border-bottom: 1px solid #dde4ec; transform: rotate(45deg); }
+  .va { margin-left: 22px !important; padding: 16px 20px; border-radius: 14px; background: var(--nv); color: #fff; font-size: 14.5px; }
+  .vk { display: block; margin-bottom: 4px; font-size: 11.5px; font-weight: 700; letter-spacing: .08em; }
+  .vq .vk { color: #8a97a8; }
+  .va .vk { color: var(--cy); }
+  @media (max-width: 900px) {
+    .voices2 .vlead { margin: -16px auto 24px; font-size: 14px; }
+    .vlist { grid-template-columns: 1fr; gap: 18px; }
+    .vq { font-size: 16px; padding: 16px 18px; }
+    .va { margin-left: 14px !important; padding: 14px 16px; font-size: 14px; }
+  }
 </style>
 <script src="https://bunkai-stats.shiga-web.workers.dev/t.js" async></script>
 <style id="lg-full">.logo img.lg-full{width:auto!important;height:30px!important;margin:0!important}@media (max-width:767px){.logo img.lg-full{height:26px!important}}</style>
@@ -698,7 +717,7 @@
 <header>
   <div class="wrap">
     <a class="logo" href="#top" aria-label="BUNKAI(ブンカイ)"><img class="lg-full" src="img/logo-bunkai.png" alt="BUNKAI(ブンカイ)" width="123" height="30"></a>
-    <nav class="gn"><a href="#concern">お悩み</a><a href="#works">見本サイト</a><a href="#reason">できる<wbr>こと</a><a href="#staff">プロフィール</a><a href="#media">運営メディア</a><a href="#charge">料金</a><a href="#flow">流れ</a><a href="#faq">FAQ</a></nav>
+    <nav class="gn"><a href="#voices2">実際の声</a><a href="#works">見本サイト</a><a href="#reason">できる<wbr>こと</a><a href="#staff">プロフィール</a><a href="#media">運営メディア</a><a href="#charge">料金</a><a href="#flow">流れ</a><a href="#faq">FAQ</a></nav>
     <div class="hb">
       <a class="rnd tel" href="tel:08057148516" aria-label="電話する"><svg class="ico" viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/></svg></a>
       <a class="rnd line" href="https://lin.ee/uWffMn8" target="_blank" rel="noopener" aria-label="LINEで相談"><img src="img/line-bubble-w.png" alt="" width="24" height="23"></a>
@@ -736,26 +755,15 @@
 <div class="side" id="side"><span id="sideTxt">お悩み</span><i></i></div>
 <a class="float-ct hide" id="floatCt" href="#contact">お問い合わせ<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></a>
 
-<section class="concern" id="concern" data-side="お悩み">
+
+<section class="voices2" id="voices2" data-side="実際の声">
   <div class="wrap">
-    <div class="ttl rv"><h2>こんな<wbr>お悩<span class="kj">み、</span><wbr>ありません<span class="kj">か？</span></h2></div>
-    <div class="cc rv">
-      <ul class="l">
-        <li><i>!</i>広告や<wbr>紹介サイトの<wbr>手数料が<wbr>重い。<br>値段の<wbr>勝負に<wbr>なりが<wbr>ち</li>
-        <li><i>!</i>「地域名＋業種」で<wbr>調べると、<br>Googleマップに<wbr>他社ばかり出る</li>
-        <li><i>!</i>仕事が<wbr>紹介頼みで、<br>月に<wbr>よって<wbr>波が<wbr>ある</li>
-      </ul>
-      <div class="mid"><img src="img/sp-shokunin.jpg" alt="" width="560" height="1212"></div>
-      <ul>
-        <li><i>!</i>ホームページを<wbr>作ったが、<br>何年も<wbr>更新していない</li>
-        <li><i>!</i>前の<wbr>制作会社は、<br>作って<wbr>終わりだった</li>
-        <li><i>!</i>パソコンや<wbr>ネットは<br>よく<wbr>わからない</li>
-      </ul>
-    </div>
-    <div class="answer rv"><span class="band">BUNKAIが、<wbr>まとめて<wbr>引き受けます</span><p><span class="nw">ホームページを<em>作って<wbr>終わりに<wbr>せず</em>、</span><span class="nw">問い合わせに<wbr>つなげま<span class="kj">す。</span><wbr></span></p></div>
+    <div class="ttl rv"><h2>地元の<wbr>会社さんから<wbr>実際に<wbr>聞いた<wbr>声</h2></div>
+    <p class="vlead rv">会社さんとお話しする<wbr>中<span class="kj">で、</span><wbr>よく<wbr>聞く<wbr>声<span class="kj">と、</span><wbr>BUNKAIの<wbr>答えで<span class="kj">す。</span><span class="kj"></span><span class="kj"></span></p>
+    <ul class="vlist"><li class="vc rv"><p class="vq"><span class="vk">本音</span><span class="kj">「う</span>ちは<wbr>紹介ばかり<span class="kj">で、</span><wbr>ホームページを<wbr>見て<wbr>来る<wbr>人は<wbr>少な<span class="kj">い」</span></p><p class="va"><span class="vk">BUNKAI</span>紹介の<wbr>お客さんや<wbr>ご家族<span class="kj">も、</span><wbr>電話の<wbr>前に<wbr>スマホで<wbr>名前を<wbr>調べる<wbr>ことがありま<span class="kj">す。</span><wbr>その<wbr>とき止まった<wbr>ホームページだ<span class="kj">と、</span><wbr>せっかくの<wbr>紹介が<wbr>そこで<wbr>止まってしまいま<span class="kj">す。</span></p></li><li class="vc rv"><p class="vq"><span class="vk">本音</span><span class="kj">「月</span>々の<wbr>ことを<wbr>考えるの<span class="kj">は、</span><wbr>正直めんど<span class="kj">う」</span></p><p class="va"><span class="vk">BUNKAI</span>今の<wbr>やり方は<wbr>変えなくて<wbr>大丈夫で<span class="kj">す。</span><wbr>打ち合わせの<wbr>ない<wbr>プランも<wbr>ありま<span class="kj">す。</span><wbr>仕事の<wbr>写真<span class="kj">と、</span><wbr>ひと言の<wbr>メモを<wbr>LINEで<wbr>送っていただくだけで<span class="kj">す。</span><span class="kj"></span></p></li><li class="vc rv"><p class="vq"><span class="vk">本音</span><span class="kj">「作</span>って<wbr>もらった<wbr>ホームページ<span class="kj">が、</span><wbr>そのまま<wbr>止まってい<span class="kj">る」</span></p><p class="va"><span class="vk">BUNKAI</span>更新は<wbr>こちらで<wbr>行いま<span class="kj">す。</span><wbr>事例とお客様の<wbr>声<span class="kj">が、</span><wbr>毎月<wbr>増えていく<wbr>ホームページにしま<span class="kj">す。</span><span class="kj"></span></p></li><li class="vc rv"><p class="vq"><span class="vk">本音</span><span class="kj">「仕</span>事<span class="kj">は、</span><wbr>助成金の<wbr>ときの<wbr>声かけが<wbr>多<span class="kj">い」</span></p><p class="va"><span class="vk">BUNKAI</span>補助金・助成金の<wbr>ページを<wbr>お作りしま<span class="kj">す。</span><wbr>年度ごとの<wbr>確認と<wbr>更新<span class="kj">は、</span><wbr>ライトプランから<wbr>行いま<span class="kj">す。</span></p></li></ul>
+    <div class="answer rv" style="margin-top:44px"><span class="band">BUNKAIが、<wbr>まとめて<wbr>引き受けます</span><p><span class="nw">ホームページを<em>作って<wbr>終わりに<wbr>せず</em>、</span><span class="nw">問い合わせに<wbr>つなげま<span class="kj">す。</span><wbr></span></p></div>
   </div>
 </section>
-
 <section class="works" id="works" data-side="見本サイト">
   <div class="wrap">
     <div class="ttl rv"><h2 class="pm-h">御社のホームページを<br><span style="display:inline-block">先に作って</span><span style="display:inline-block">お見せします</span></h2></div>
