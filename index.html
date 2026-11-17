@@ -710,6 +710,71 @@
 </style>
 <script src="https://bunkai-stats.shiga-web.workers.dev/t.js" async></script>
 <style id="lg-full">.logo img.lg-full{width:auto!important;height:30px!important;margin:0!important}@media (max-width:767px){.logo img.lg-full{height:26px!important}}</style>
+<style id="splan-css">
+  /* 2026-11-17 サイト構成の提案（HPを持っている会社だけ）。秀栄の Service と同じく、下へ動かすとパネルが重なる */
+  .splan { background: #fff; }
+  .splan .sp-lead { margin: -26px auto 40px; max-width: 700px; text-align: center; color: var(--mu); font-size: 15px; line-height: 1.9; }
+  .sp-wrap { max-width: 1080px; margin: 0 auto; }
+  .sp-item { position: relative; background: #fff; border-top: 2px solid var(--nv); padding-bottom: 56px; }
+  .sp-item h3 { display: flex; align-items: baseline; gap: 12px; margin: 0; padding: 12px 0 13px; font-size: 16px; font-weight: 700; color: var(--nv); letter-spacing: .06em; line-height: 1.5; }
+  .sp-item h3 .num { font-family: var(--num); font-size: 15px; color: var(--cy-d); letter-spacing: .02em; }
+  .sp-item h3 em { margin-left: auto; padding: 3px 12px; border-radius: 999px; background: var(--sky); color: var(--cy-d); font-style: normal; font-size: 12.5px; letter-spacing: .04em; white-space: nowrap; }
+  .sp-grid { display: grid; grid-template-columns: 300px 1fr; gap: 56px; align-items: start; padding-top: 18px; }
+  .sp-ph { margin: 0; width: 300px; height: 440px; border: 7px solid var(--nv); border-radius: 30px; overflow: hidden; background: #fff; box-shadow: 0 18px 40px rgba(18,41,74,.12); }
+  .sp-ph img { width: 100%; height: 100%; object-fit: cover; object-position: top; }
+  .sp-grid h4 { margin: 8px 0 18px; font-size: 22px; font-weight: 700; color: var(--nv); line-height: 1.5; letter-spacing: .04em; }
+  .sp-grid p { margin: 0; font-size: 15px; line-height: 2; color: var(--ink); }
+  .sp-ls { margin: 22px 0 0; padding: 0; list-style: none; }
+  .sp-ls li { position: relative; padding: 9px 0 9px 26px; border-bottom: 1px solid var(--line); font-size: 14.5px; line-height: 1.6; }
+  .sp-ls li::before { content: ""; position: absolute; left: 2px; top: 15px; width: 12px; height: 7px; border-left: 2px solid var(--cy-d); border-bottom: 2px solid var(--cy-d); transform: rotate(-45deg); }
+  .sp-stat { display: flex; gap: 18px; align-items: center; margin-top: 22px; padding: 16px 20px; border-radius: 14px; background: var(--nv); color: #fff; }
+  .sp-stat b { flex: none; font-family: var(--num); font-size: 44px; line-height: 1; color: #fff; }
+  .sp-stat b small { font-size: 20px; margin-left: 2px; }
+  .sp-stat p { color: #fff; font-size: 14px; line-height: 1.75; }
+  .sp-src { display: block; margin-top: 8px; font-size: 11.5px; color: var(--mu); line-height: 1.6; }
+  .sp-end { margin: 18px auto 0; max-width: 1080px; text-align: center; font-size: 13px; color: var(--mu); }
+  .sp-end a { color: var(--cy-d); font-weight: 700; }
+  @media (min-width: 901px) and (min-height: 800px) {
+    .sp-item { position: sticky; min-height: 540px; }
+    .sp-item.s1 { top: 76px; z-index: 2; }
+    .sp-item.s2 { top: 120px; z-index: 3; }
+    .sp-item.s3 { top: 164px; z-index: 4; }
+    .sp-item.s4 { top: 208px; z-index: 5; min-height: 500px; }
+  }
+  @media (max-width: 900px) {
+    .splan .sp-lead { margin: -14px auto 26px; font-size: 14px; text-align: left; }
+    .sp-item { padding-bottom: 30px; }
+    .sp-item h3 { font-size: 15px; gap: 8px; flex-wrap: wrap; }
+    .sp-item h3 em { margin-left: 0; font-size: 11.5px; padding: 2px 10px; }
+    .sp-grid { grid-template-columns: 96px 1fr; gap: 0 14px; padding-top: 6px; }
+    .sp-grid .inner { display: contents; }
+    .sp-grid .sp-ph { grid-row: 1 / span 2; }
+    .sp-grid h4, .sp-grid > .inner > p { grid-column: 2; }
+    .sp-grid .sp-ls, .sp-grid .sp-stat, .sp-grid .sp-src { grid-column: 1 / -1; }
+    .sp-ph { width: 96px; height: 153px; border-width: 4px; border-radius: 14px; box-shadow: 0 8px 20px rgba(18,41,74,.12); }
+    .sp-grid h4 { margin: 0 0 8px; font-size: 16px; line-height: 1.55; }
+    .sp-grid p { font-size: 13px; line-height: 1.75; }
+    .sp-ls { margin-top: 10px; }
+    .sp-ls li { font-size: 13px; padding: 6px 0 6px 24px; }
+    .sp-ls li::before { top: 12px; }
+    .sp-stat { gap: 14px; padding: 11px 15px; margin-top: 10px; }
+    .sp-stat b { font-size: 34px; }
+    .sp-stat p { font-size: 13px; }
+    .sp-item.s3 .sp-ls li { padding: 4px 0 4px 24px; }
+    .sp-item.s3 .sp-ls li::before { top: 10px; }
+    .sp-item.s3 .sp-stat { padding: 9px 13px; margin-top: 8px; }
+    .sp-item.s3 .sp-stat b { font-size: 30px; }
+    .sp-item.s3 .sp-stat p { font-size: 12.5px; line-height: 1.65; }
+    .sp-src { margin-top: 6px; font-size: 11px; }
+  }
+  @media (max-width: 900px) and (min-height: 740px) {
+    .sp-item { position: sticky; }
+    .sp-item.s1 { top: 60px; z-index: 2; }
+    .sp-item.s2 { top: 104px; z-index: 3; }
+    .sp-item.s3 { top: 148px; z-index: 4; }
+    .sp-item.s4 { top: 192px; z-index: 5; }
+  }
+</style>
 </head>
 <body>
 
@@ -717,7 +782,7 @@
 <header>
   <div class="wrap">
     <a class="logo" href="#top" aria-label="BUNKAI(ブンカイ)"><img class="lg-full" src="img/logo-bunkai.png" alt="BUNKAI(ブンカイ)" width="123" height="30"></a>
-    <nav class="gn"><a href="#voices2">実際の声</a><a href="#works">見本サイト</a><a href="#reason">できる<wbr>こと</a><a href="#staff">プロフィール</a><a href="#media">運営メディア</a><a href="#charge">料金</a><a href="#flow">流れ</a><a href="#faq">FAQ</a></nav>
+    <nav class="gn"><a href="#voices2">実際の声</a><a href="#siteplan">サイト構成</a><a href="#works">見本サイト</a><a href="#reason">できる<wbr>こと</a><a href="#staff">プロフィール</a><a href="#media">運営メディア</a><a href="#charge">料金</a><a href="#flow">流れ</a><a href="#faq">FAQ</a></nav>
     <div class="hb">
       <a class="rnd tel" href="tel:08057148516" aria-label="電話する"><svg class="ico" viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/></svg></a>
       <a class="rnd line" href="https://lin.ee/uWffMn8" target="_blank" rel="noopener" aria-label="LINEで相談"><img src="img/line-bubble-w.png" alt="" width="24" height="23"></a>
@@ -762,6 +827,61 @@
     <p class="vlead rv">会社さんとお話しする<wbr>中<span class="kj">で、</span><wbr>よく<wbr>聞く<wbr>声<span class="kj">と、</span><wbr>BUNKAIの<wbr>答えで<span class="kj">す。</span><span class="kj"></span><span class="kj"></span></p>
     <ul class="vlist"><li class="vc rv"><p class="vq"><span class="vk">本音</span><span class="kj">「う</span>ちは<wbr>紹介ばかり<span class="kj">で、</span><wbr>ホームページを<wbr>見て<wbr>来る<wbr>人は<wbr>少な<span class="kj">い」</span></p><p class="va"><span class="vk">BUNKAI</span>紹介の<wbr>お客さんや<wbr>ご家族<span class="kj">も、</span><wbr>電話の<wbr>前に<wbr>スマホで<wbr>名前を<wbr>調べる<wbr>ことがありま<span class="kj">す。</span><wbr>その<wbr>とき止まった<wbr>ホームページだ<span class="kj">と、</span><wbr>せっかくの<wbr>紹介が<wbr>そこで<wbr>止まってしまいま<span class="kj">す。</span></p></li><li class="vc rv"><p class="vq"><span class="vk">本音</span><span class="kj">「月</span>々の<wbr>ことを<wbr>考えるの<span class="kj">は、</span><wbr>正直めんど<span class="kj">う」</span></p><p class="va"><span class="vk">BUNKAI</span>今の<wbr>やり方は<wbr>変えなくて<wbr>大丈夫で<span class="kj">す。</span><wbr>打ち合わせの<wbr>ない<wbr>プランも<wbr>ありま<span class="kj">す。</span><wbr>仕事の<wbr>写真<span class="kj">と、</span><wbr>ひと言の<wbr>メモを<wbr>LINEで<wbr>送っていただくだけで<span class="kj">す。</span><span class="kj"></span></p></li><li class="vc rv"><p class="vq"><span class="vk">本音</span><span class="kj">「作</span>って<wbr>もらった<wbr>ホームページ<span class="kj">が、</span><wbr>そのまま<wbr>止まってい<span class="kj">る」</span></p><p class="va"><span class="vk">BUNKAI</span>更新は<wbr>こちらで<wbr>行いま<span class="kj">す。</span><wbr>事例とお客様の<wbr>声<span class="kj">が、</span><wbr>毎月<wbr>増えていく<wbr>ホームページにしま<span class="kj">す。</span><span class="kj"></span></p></li><li class="vc rv"><p class="vq"><span class="vk">本音</span><span class="kj">「仕</span>事<span class="kj">は、</span><wbr>助成金の<wbr>ときの<wbr>声かけが<wbr>多<span class="kj">い」</span></p><p class="va"><span class="vk">BUNKAI</span>補助金・助成金の<wbr>ページを<wbr>お作りしま<span class="kj">す。</span><wbr>年度ごとの<wbr>確認と<wbr>更新<span class="kj">は、</span><wbr>ライトプランから<wbr>行いま<span class="kj">す。</span></p></li></ul>
     <div class="answer rv" style="margin-top:44px"><span class="band">BUNKAIが、<wbr>まとめて<wbr>引き受けます</span><p><span class="nw">ホームページを<em>作って<wbr>終わりに<wbr>せず</em>、</span><span class="nw">問い合わせに<wbr>つなげま<span class="kj">す。</span><wbr></span></p></div>
+  </div>
+</section>
+<section class="splan" id="siteplan" data-side="サイト構成">
+  <div class="wrap">
+    <div class="ttl rv"><h2>SEO対策・AI対策<wbr>できていますか？</h2></div>
+    <p class="sp-lead rv">ホームページ<span class="kj">を、</span><wbr>検索と<wbr>AIに<wbr>見つけて<wbr>もらえる<wbr>形に<wbr>整えま<span class="kj">す。</span><wbr>今の<wbr>ホームページを<wbr>生かすことも<wbr>できま<span class="kj">す。</span><wbr>次の<wbr>4つが<wbr>そろっているか<span class="kj">で、</span><wbr>問い合わせの<wbr>数が<wbr>変わりま<span class="kj">す。</span></p>
+    <div class="sp-wrap">
+      <article class="sp-item s1">
+        <h3><span class="num">01</span>お客様の声・実績<em>問い合わせ率を上げる</em></h3>
+        <div class="sp-grid">
+          <figure class="sp-ph"><img src="img/plan-voice.jpg" alt="見本のお客様の声のページ" loading="lazy"></figure>
+          <div class="inner">
+            <h4>「この<wbr>会社なら<wbr>任せられる」と<wbr>思って<wbr>もらう</h4>
+            <p>お客さま<span class="kj">は、</span><wbr>問い合わせの<wbr>前に<wbr><span class="kj">「ど</span>んな<wbr>仕事を<wbr>してきた<span class="kj">か」</span><wbr><span class="kj">「頼</span>んだ<wbr>人が<wbr>どう<wbr>感じた<span class="kj">か」</span>を<wbr>見て<wbr>決めま<span class="kj">す。</span><wbr>地域・内容・費用・期間まで<wbr>載せた<wbr>実績<span class="kj">と、</span><wbr>お客様の<wbr>声が<wbr>そろう<span class="kj">と、</span><wbr>問い合わせに<wbr>つながりやすくなりま<span class="kj">す。</span></p>
+            <ul class="sp-ls"><li>実績を<wbr>地域と<wbr>内容で<wbr>探せる</li><li>費用と<wbr>期間の<wbr>目安を<wbr>のせる</li><li>お客様の<wbr>声と<wbr>Googleの<wbr>口コミを<wbr>つなぐ</li></ul>
+          </div>
+        </div>
+      </article>
+      <article class="sp-item s2">
+        <h3><span class="num">02</span>対応エリア<em>エリア検索対策</em></h3>
+        <div class="sp-grid">
+          <figure class="sp-ph"><img src="img/plan-area.jpg" alt="見本の市ごとの対応エリア" loading="lazy"></figure>
+          <div class="inner">
+            <h4><span class="kj">「市</span>の<wbr>名前＋業<span class="kj">種」</span>で<wbr>探す人に<wbr>見つけて<wbr>もらう</h4>
+            <p><span class="kj">「〇</span>〇市 外壁塗<span class="kj">装」</span>のよう<span class="kj">に、</span><wbr>市の<wbr>名前と<wbr>業種で<wbr>検索する<wbr>方が<wbr>多いの<span class="kj">で、</span><wbr>対応エリアは<wbr>市の<wbr>名前を<wbr>並べるだけでは<wbr>足りませ<span class="kj">ん。</span><wbr>見本で<span class="kj">は、</span><wbr>市ごとに<wbr>見出しと<wbr>中身を<wbr>分け<span class="kj">て、</span><wbr>その市の<wbr>実績と<wbr>補助金の<wbr>案内をのせていま<span class="kj">す。</span></p>
+            <ul class="sp-ls"><li>市ごとの<wbr>見出しと<wbr>説明</li><li>その市の<wbr>実績と<wbr>補助金などの<wbr>案内</li><li>ご契約後<span class="kj">は、</span><wbr>市ごとの<wbr>ページを<wbr>作る</li></ul>
+          </div>
+        </div>
+      </article>
+      <article class="sp-item s3">
+        <h3><span class="num">03</span>会社概要<em>AI対策</em></h3>
+        <div class="sp-grid">
+          <figure class="sp-ph"><img src="img/plan-company.jpg" alt="見本の会社概要とよくある質問" loading="lazy"></figure>
+          <div class="inner">
+            <h4>表が<wbr>あるだけでは、<wbr>AIは<wbr>名前を<wbr>出してくれない</h4>
+            <p>会社名や<wbr>住所の<wbr>表<span class="kj">は、</span><wbr>多くの<wbr>ホームページに<wbr>ありま<span class="kj">す。</span><wbr>ChatGPTなどの<wbr>AIが<wbr><span class="kj">「〇</span>〇市で<wbr>頼める<wbr>会社<span class="kj">は？」</span>と<wbr>聞かれた<wbr>ときに<wbr>名前が<wbr>出やすいの<span class="kj">は、</span><wbr>どんな<wbr>会社かが<wbr>文章で<wbr>分か<span class="kj">り、</span><wbr>情報が<wbr>決まった<wbr>形で<wbr>書かれている<wbr>会社で<span class="kj">す。</span></p>
+            <ul class="sp-ls"><li>設立からの<wbr>年数・スタッフ・資格や<wbr>許可<span class="kj">を、</span><wbr>数字と<wbr>文章で</li><li>よく<wbr>ある<wbr>質問<span class="kj">に、</span><wbr>文章で<wbr>答える</li><li>AIや<wbr>検索が<wbr>読み取れる<wbr>決まった<wbr>形<wbr><span class="kj">（構</span>造化デー<span class="kj">タ）</span>でも<wbr>書く</li></ul>
+            <div class="sp-stat"><b>37.0<small>%</small></b><p>ふだんの<wbr>検索に<wbr>生成AIを<wbr>使う<wbr>人の<wbr>割合で<span class="kj">す。<wbr></span>9か月で<wbr><span class="nw">21.3%から</span><wbr><span class="nw">約1.7倍に</span><wbr>増えました。</p></div>
+            <small class="sp-src">出典：サイバーエージェント GEOラボ<wbr>「生成AIの<wbr>ユーザー利用<wbr>実態調査」<wbr>（<span class="nw">2026年2月</span>・全国の<wbr><span class="nw">10〜60代</span> <span class="nw">9,278人</span>）</small>
+          </div>
+        </div>
+      </article>
+      <article class="sp-item s4">
+        <h3><span class="num">04</span>サービス料金<em>比べる人に選ばれる</em></h3>
+        <div class="sp-grid">
+          <figure class="sp-ph"><img src="img/plan-price.jpg" alt="見本のプランと費用の目安のページ" loading="lazy"></figure>
+          <div class="inner">
+            <h4>料金の<wbr>目安で<wbr>問い合わせの<wbr>不安を<wbr>なくす</h4>
+            <p><span class="kj">「い</span>くらかかるか<wbr>分からな<span class="kj">い」</span><span class="kj">と、</span><wbr>問い合わせを<wbr>ためらう方は<wbr>少なく<wbr>ありませ<span class="kj">ん。</span><wbr>料金の<wbr>目安<span class="kj">と、</span><wbr>何が<wbr>含まれるかを<wbr>載せておく<span class="kj">と、</span><wbr>比べている<wbr>方が<wbr>安心して<wbr>相談できま<span class="kj">す。</span></p>
+            <ul class="sp-ls"><li>よく<wbr>ある<wbr>内容ごとの<wbr>目安</li><li>含まれる<wbr>もの<wbr>・保証</li><li>見積もり無料・追加費用の<wbr>考え方</li></ul>
+          </div>
+        </div>
+      </article>
+    </div>
+    <p class="sp-end">画面<span class="kj">は、</span><wbr>塗装店の<wbr>見本の<wbr>一部です<wbr><span class="kj">（写</span>真は<wbr>仮の<wbr>もので<span class="kj">す）。</span><a href="#works">見本サイトで<wbr>確かめる</a></p>
   </div>
 </section>
 <section class="works" id="works" data-side="見本サイト">
