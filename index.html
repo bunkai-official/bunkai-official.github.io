@@ -821,6 +821,8 @@
 .fv2-h .fv2-band2 b{font-size:clamp(52px,5.8vw,84px)}
 .fv2-h .fv2-band2 .u{font-size:clamp(20px,1.9vw,28px);font-weight:900;margin-left:.08em}
 .fv2-h .fv2-band2 .sep{display:inline-block;width:1px;height:.6em;background:rgba(255,255,255,.4);margin:0 .45em;align-self:center;font-size:clamp(52px,5.8vw,84px)}
+/* 2026-11-18 ユーザー「修正」：広い画面で帯の左が画面の端まで伸び、文字の前に紺の空きが大きく出ていた → 画面の端までは伸ばさない */
+@media(min-width:1101px){.fv2-h .fv2-band2::before{display:none}}
 @media(max-width:900px){.fv2-h .fv2-band2{padding-right:.7em}.fv2-h .fv2-band2 .lb{font-size:min(4.2vw,18px)}.fv2-h .fv2-band2 b{font-size:min(11.6vw,52px)}.fv2-h .fv2-band2 .u{font-size:min(4.6vw,20px)}.fv2-h .fv2-band2 .sep{font-size:min(11.6vw,52px);margin:0 .28em}}
 </style>
 <style id="gk-stage-base">
