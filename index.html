@@ -749,6 +749,35 @@
 @keyframes bkScroll{0%,10%{transform:translateY(0)}45%,55%{transform:translateY(-67%)}90%,100%{transform:translateY(0)}}
 @media(prefers-reduced-motion:reduce){#works .sample .ph img{animation:none}}
 </style>
+<style id="ad-acc">
+.ad-acc{margin:14px 0;border:1px solid #dfe6ee;border-radius:16px;background:#fff;overflow:hidden}
+.ad-acc summary{display:flex;align-items:center;gap:12px;padding:16px 16px;cursor:pointer;list-style:none}
+.ad-acc summary::-webkit-details-marker{display:none}
+.ad-acc .ad-ic{flex:none}
+.aa-t{flex:1;min-width:0}
+.aa-t>b{display:block;font-size:16px;font-weight:900;color:#14284b;line-height:1.4}
+.aa-t small{display:block;margin-top:2px;font-size:12.5px;color:#5b6676;line-height:1.5}
+.aa-p{display:block;margin-top:4px;font-size:12px;font-weight:700;color:#c2410c;white-space:nowrap}
+.aa-p b{display:inline;font-family:Barlow,sans-serif;font-size:19px;font-weight:700;margin:0 1px}
+.aa-ar{flex:none;width:9px;height:9px;border-right:2px solid #14284b;border-bottom:2px solid #14284b;transform:rotate(45deg) translateY(-3px);transition:transform .2s}
+.ad-acc[open] .aa-ar{transform:rotate(-135deg) translateY(-2px)}
+.aa-b{padding:0 16px 16px}
+.ap{padding:14px 0;border-top:1px solid #e8edf3}
+.ap.rec{margin:0 -16px;padding:14px 16px;background:#fff7ef}
+.ap-h{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.ap-h b{font-size:15px;font-weight:900;color:#14284b}
+.ap-h .rb{font-style:normal;display:inline-block;padding:2px 9px;border-radius:999px;background:#f08a3c;color:#fff;font-size:11.5px;font-weight:800;line-height:1.5}
+.ap-p{margin-left:auto;font-family:Barlow,sans-serif;font-size:21px;font-weight:700;color:#c2410c}
+.ap-p small{font-family:inherit;font-size:12px;margin-left:1px;color:#c2410c}
+.ap-f{margin:2px 0 8px;font-size:12.5px;color:#5b6676}
+.ap ul{margin:0;padding:0;list-style:none}
+.ap li{position:relative;padding:0 0 0 18px;font-size:13.5px;line-height:1.75;color:#2b3442}
+.ap li::before{content:"";position:absolute;left:2px;top:.55em;width:8px;height:5px;border-left:2px solid #1aa3b8;border-bottom:2px solid #1aa3b8;transform:rotate(-45deg)}
+.ap li.ap-plus{padding-left:0;font-size:12.5px;font-weight:700;color:#c2410c}
+.ap li.ap-plus::before{display:none}
+.aa-n{margin:6px 0 0;font-size:12px;line-height:1.7;color:#5b6676}
+@media(min-width:700px){.ad-acc summary{padding:18px 22px}.aa-b{padding:0 22px 20px}.ap.rec{margin:0 -22px;padding:14px 22px}.aa-t>b{font-size:17px}}
+</style>
 <style id="splan-css">
   /* 2026-11-17 サイト構成の提案（HPを持っている会社だけ）。秀栄の Service と同じく、下へ動かすとパネルが重なる */
   .splan { background: #fff; }
@@ -1233,31 +1262,8 @@
     <div class="adds rv">
       <h3><span class="nw">あとから</span><span class="nw">足せる<wbr>もの</span><small class="blk"><span class="kj">（月</span>額・税別・必要な<wbr>ものだ<span class="kj">け）</span><wbr></small></h3>
       <p class="adds-lead">ホームページの<wbr>プラン<span class="kj">に、</span><wbr>必要な<wbr>ものだけ足せま<span class="kj">す。</span><wbr>写真や<wbr>動画は<wbr>LINEで<wbr>送っていただくだけ<span class="kj">で、</span><wbr><span class="nw">文章づくりから<wbr>投稿まで</span><span class="nw">こちらで<wbr>行いま<span class="kj">す。</span><wbr></span></p>
-      <div class="ad-g adt-g g-sns">
-        <div class="ad-hd"><span class="ad-ic sns" aria-hidden="true"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="M10 9.5v5l4.5-2.5z" fill="#fff"/></svg></span><h4>Instagram・TikTokの<wbr>運用</h4></div>
-        <p class="ad-l">事例や<wbr>仕事の<wbr>様子を<wbr>代わりに<wbr>投稿<span class="kj">し、</span><span class="kj"></span><wbr>SNSから<wbr>集客に<wbr>つながるように<wbr>運用しま<span class="kj">す。</span><wbr>新しい人に<wbr>届くのは<wbr>短い動画で<span class="kj">す。</span><wbr>見た人が<wbr>LINEや<wbr>ホームページに<wbr>進めるよう<span class="kj">に、</span><wbr>入口まで<wbr>整えま<span class="kj">す。</span></p>
-        <table class="adt">
-          <thead><tr><th>プラン</th><th>中身</th><th class="p">月額</th></tr></thead>
-          <tbody>
-          <tr><th><span class="nm">InstagramかTikTokで<wbr>見せる</span><small class="fr">事例を<wbr>見て<wbr>もらいたい</small></th><td class="ls"><ul class="ck"><li>Instagramか<wbr>TikTo<span class="kj">k、</span><wbr>どちらか<wbr>1つを<wbr>選べます</li><li>プロフィールの<wbr>作り込み<span class="kj">（地</span>域・仕事の<wbr>内容・LINEと<wbr>ホームページへの<wbr>入<span class="kj">口）</span><span class="kj"></span></li><li>ハイライトや<wbr>固定の<wbr>投稿<wbr><span class="kj">（事</span>例・料金・お客様の<wbr><span class="kj">声）</span><span class="kj"></span></li><li>事例の<wbr>投稿 月8本<wbr><span class="kj">（ビ</span>フォーアフター・仕事の<wbr>流<span class="kj">れ）</span><span class="kj"></span></li><li>地域の<wbr>ハッシュタグ</li><li>月1回の<wbr>報告<span class="kj">（見</span>られた数・<wbr>LINEや<wbr>ホームページに<wbr>進んだ<span class="kj">数）</span></li></ul></td><td class="p"><b><span class="kj">19,800</span></b><small>円</small></td></tr>
-          <tr class="rec"><th><span class="nm">動画で<wbr>広げる</span><em class="rb">おすすめ</em><small class="fr">新しいお客さんに<wbr>届けたい</small></th><td class="ls"><ul class="ck"><li class="inh"><span class="kj">「I</span>nstagramか<wbr>TikTokで<wbr>見せ<span class="kj">る」</span>の<wbr>内容すべて</li><li>Instagramと<wbr>TikTokの<wbr>両方を<wbr>運用</li><li>短い動画 月8本<span class="kj">（リ</span>ールと<wbr>TikTokの<wbr>両方に<wbr>出<span class="kj">す）</span></li><li>字幕・<wbr>音楽の<wbr>編集</li><li>毎月の<wbr>撮り方メモ<span class="kj">（「こ</span>の場面を<wbr>撮ってくださ<span class="kj">い」</span>を<wbr>LINE<span class="kj">で）</span></li></ul></td><td class="p"><b><span class="kj">39,800</span></b><small>円</small></td></tr>
-          <tr><th><span class="nm">撮影から<wbr>お任せ</span><small class="fr">撮る時間も<wbr>ない</small></th><td class="ls"><ul class="ck"><li class="inh"><span class="kj">「動</span>画で広げ<span class="kj">る」</span>の<wbr>内容すべて</li><li>月1<span class="kj">回、</span><wbr>御社に<wbr>伺って<wbr>撮影<wbr><span class="kj">（滋</span>賀県<span class="kj">内）</span><span class="kj"></span></li><li>短い動画 月12本</li><li>求人や<wbr>スタッフ紹介の<wbr>動画</li></ul></td><td class="p"><b><span class="kj">59,800</span></b><small>円</small></td></tr>
-          </tbody>
-        </table>
-      </div>
-      <div class="ad-g adt-g g-line">
-        <div class="ad-hd"><span class="ad-ic line" aria-hidden="true"><img src="img/line-bubble-w.png" alt="" width="22" height="21"></span><h4>LINEの<wbr>運用</h4></div>
-        <p class="ad-l">一度<wbr>来てくれた<wbr>お客さまと<wbr>LINEで<wbr>つながっておく<span class="kj">と、</span><wbr>次に<wbr>必要に<wbr>なった<wbr>ときに<wbr>思い出して<wbr>もらえま<span class="kj">す。</span><wbr>まずは<wbr>友だちを<wbr>増や<span class="kj">し、</span><wbr>ご利用の<wbr>あとの<wbr>案内を<wbr>自動に<wbr>しま<span class="kj">す。</span><span class="kj"></span></p>
-        <table class="adt">
-          <thead><tr><th>プラン</th><th>中身</th><th class="p">月額</th></tr></thead>
-          <tbody>
-          <tr><th><span class="nm">友だちを<wbr>増やす</span><small class="fr">まずは<wbr>つながりを<wbr>つくりたい</small></th><td class="ls"><ul class="ck"><li>友だちを<wbr>増やす仕組み<span class="kj">（見</span>積もりや<wbr>ご利用の<wbr>ときに<wbr>渡すQRカー<span class="kj">ド、</span><span class="kj"></span><wbr>ホームページ・<wbr>チラシ・<wbr>Googleマップからの<wbr>入<span class="kj">口、</span><wbr>友だち追加の<wbr>特典の<span class="kj">案）</span></li><li>あいさつ文・<wbr>メニュー画面</li><li>配信 月2回<span class="kj">（文</span>章・<wbr>画像の<wbr>作成つ<span class="kj">き）</span></li><li>月1回の<wbr>報告<span class="kj">（友</span>だち数・<wbr>ブロック数・<wbr>相談<span class="kj">数）</span></li></ul></td><td class="p"><b><span class="kj">9,800</span></b><small>円</small></td></tr>
-          <tr class="rec"><th><span class="nm">相談を<wbr>ふやす</span><em class="rb">おすすめ</em><small class="fr">LINEから<wbr>相談を<wbr>増やしたい</small></th><td class="ls"><ul class="ck"><li class="inh"><span class="kj">「友</span>だちを増や<span class="kj">す」</span>の<wbr>内容すべて</li><li><span class="kj">「写</span>真で相<span class="kj">談」</span><wbr><span class="kj">「見</span>積もりの予<span class="kj">約」</span><span class="kj">の入口</span></li><li>よくある<wbr>質問への<wbr>自動返信</li><li>ご利用の<wbr>あとの<wbr>自動の<wbr>案内<wbr><span class="kj">（お</span>礼・口コミの<wbr>お願い<wbr>・次の<wbr>ご案<span class="kj">内）</span><span class="kj"></span></li></ul></td><td class="p"><b><span class="kj">19,800</span></b><small>円</small></td></tr>
-          <tr><th><span class="nm">ぜんぶ<wbr>お任せ</span><small class="fr">ご利用の<wbr>あとまで<wbr>任せたい</small></th><td class="ls"><ul class="ck"><li class="inh"><span class="kj">「相</span>談をふや<span class="kj">す」</span>の<wbr>内容すべて</li><li>お客さまを<wbr>分けて<wbr>配信<span class="kj">（ご</span>利用いただいた<wbr>方<wbr>／見積もり中の<wbr><span class="kj">方）</span><span class="kj"></span></li><li>季節の<wbr>案内<span class="kj">（年</span>末・新年度な<span class="kj">ど、</span><wbr>業種に<wbr>合わせ<span class="kj">て）</span><span class="kj"></span></li></ul></td><td class="p"><b><span class="kj">29,800</span></b><small>円</small></td></tr>
-          </tbody>
-        </table>
-        <p class="ad-nt">※ LINE公式アカウントの<wbr>料金<span class="kj">は、</span><wbr>配信が<wbr>月200通までなら<wbr>無料で<span class="kj">す。</span><wbr>超えると<wbr>LINE社に<wbr>月<span class="kj">5,000</span>円<span class="kj">（5,000</span>通ま<span class="kj">で）</span>が<wbr>かか<span class="kj">り、</span><wbr>御社の<wbr>ご負担に<wbr>なりま<span class="kj">す。</span></p>
-      </div>
+      <details class="ad-acc g-sns"><summary><span class="ad-ic sns" aria-hidden="true"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="M10 9.5v5l4.5-2.5z" fill="#fff"/></svg></span><span class="aa-t"><b>Instagram・TikTokの運用</b><small>事例を<wbr>投稿し<span class="kj">て、</span><wbr>新しい<wbr>お客さんに<wbr>届ける</small><span class="aa-p">月<b>19,800</b>円から</span></span><i class="aa-ar" aria-hidden="true"></i></summary><div class="aa-b"><div class="ap"><div class="ap-h"><b>InstagramかTikTokで見せる</b><span class="ap-p">19,800<small>円</small></span></div><p class="ap-f">事例を<wbr>見て<wbr>もらいたい</p><ul><li>InstagramかTikTokのどちらか1つ</li><li>事例の投稿 月8本</li><li>プロフィールの作り込み</li></ul></div><div class="ap rec"><div class="ap-h"><b>動画で広げる</b><em class="rb">おすすめ</em><span class="ap-p">39,800<small>円</small></span></div><p class="ap-f">新しい<wbr>お客さんに<wbr>届けたい</p><ul><li class="ap-plus">上の<wbr>プランに<wbr>加えて</li><li>InstagramとTikTokの両方</li><li>短い動画 月8本（字幕・音楽つき）</li><li>撮り方のメモを毎月LINEで</li></ul></div><div class="ap"><div class="ap-h"><b>撮影からお任せ</b><span class="ap-p">59,800<small>円</small></span></div><p class="ap-f">撮る<wbr>時間も<wbr>ない</p><ul><li class="ap-plus">上の<wbr>プランに<wbr>加えて</li><li>月1回伺って撮影（滋賀県内）</li><li>短い動画 月12本</li><li>求人やスタッフ紹介の動画</li></ul></div><p class="aa-n">どの<wbr>プラン<span class="kj">も、</span><wbr>毎月の<wbr>報告<wbr><span class="kj">（見</span>られた<wbr>数・LINEや<wbr>ホームページに<wbr>進んだ<wbr><span class="kj">数）</span><wbr>つきで<span class="kj">す。</span></p></div></details>
+      <details class="ad-acc g-line"><summary><span class="ad-ic line" aria-hidden="true"><img src="img/line-bubble-w.png" alt="" width="22" height="21"></span><span class="aa-t"><b>LINEの運用</b><small>一度<wbr>来た<wbr>お客さま<span class="kj">に、</span><wbr>次も<wbr>思い出して<wbr>もらう</small><span class="aa-p">月<b>9,800</b>円から</span></span><i class="aa-ar" aria-hidden="true"></i></summary><div class="aa-b"><div class="ap"><div class="ap-h"><b>友だちを増やす</b><span class="ap-p">9,800<small>円</small></span></div><p class="ap-f">まずは<wbr>つながりを<wbr>つくりたい</p><ul><li>QRカード・チラシ・ホームページからの入口</li><li>あいさつ文とメニュー画面</li><li>配信 月2回（文章と画像つき）</li></ul></div><div class="ap rec"><div class="ap-h"><b>相談をふやす</b><em class="rb">おすすめ</em><span class="ap-p">19,800<small>円</small></span></div><p class="ap-f">LINEから<wbr>相談を<wbr>増や<wbr>したい</p><ul><li class="ap-plus">上の<wbr>プランに<wbr>加えて</li><li>「写真で相談」「見積もりの予約」の入口</li><li>よくある質問に自動で返信</li><li>工事のあとのお礼・口コミのお願いを自動で</li></ul></div><div class="ap"><div class="ap-h"><b>ぜんぶお任せ</b><span class="ap-p">29,800<small>円</small></span></div><p class="ap-f">工事の<wbr>あとまで<wbr>任せたい</p><ul><li class="ap-plus">上の<wbr>プランに<wbr>加えて</li><li>お客さまを分けて配信</li><li>季節の案内（年末・新年度など、<wbr>業種に<wbr>合わせて）</li></ul></div><p class="aa-n">どの<wbr>プランも<wbr>毎月の<wbr>報告つ<span class="kj">き。</span><wbr>LINE公式アカウントの<wbr>配信は<wbr>月200通まで<wbr>無料<span class="kj">で、</span><wbr>超えると<wbr>LINE社に<wbr>月<span class="kj">5,000</span>円かかります<wbr><span class="kj">（御</span>社の<wbr>ご負<span class="kj">担）。</span></p></div></details>
       <div class="ad-g adt-g g-etc">
         <div class="ad-hd"><span class="ad-ic etc" aria-hidden="true"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span><h4>その<wbr>ほか</h4></div>
         <table class="adt">
@@ -1274,7 +1280,7 @@
       <p>お知り合いの<wbr>会社さまを<wbr>ご紹介いただ<span class="kj">き、</span><wbr>ご契約が<wbr>決まった<span class="kj">ら、</span><wbr>ご紹介くださった方に<wbr>月額1か<wbr>月分を<wbr>お礼と<wbr>してお渡ししま<span class="kj">す。</span> <a href="partner/" style="color:inherit;font-weight:700;text-decoration:underline">紹介制度の<wbr>くわしい<wbr>説明</a></p>
     </div>
     <div class="more rv">
-      <a class="btn btn-cy" href="price.pdf" target="_blank" rel="noopener">詳しい<wbr>料金表<wbr>（PDF）を<wbr>見る</a>
+      <a class="btn btn-cy" href="price.pdf" target="_blank" rel="noopener">SNS運用・<wbr>LINE運用の<wbr>詳細を<wbr>見る</a>
       <p style="margin:0;font-size:13px;color:var(--mu)">やめると<wbr>ホームページは<wbr>止まりま<span class="kj">す。</span><wbr>ドメイン<wbr><span class="kj">（ア</span>ドレ<span class="kj">ス）</span><wbr>は<wbr>御社の<wbr>ものと<wbr>して<wbr>残りま<span class="kj">す。</span><wbr>続けて<wbr>使いたい<wbr>場合<span class="kj">は、</span><wbr><span class="kj">200,000円</span>で<wbr>買い取りも<wbr>できま<span class="kj">す。</span><wbr></p>
     </div>
   </div>
