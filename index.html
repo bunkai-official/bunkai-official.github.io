@@ -710,6 +710,31 @@
 </style>
 <script src="https://bunkai-stats.shiga-web.workers.dev/t.js" async></script>
 <style id="lg-full">.logo img.lg-full{width:auto!important;height:30px!important;margin:0!important}@media (max-width:767px){.logo img.lg-full{height:26px!important}}</style>
+<style id="bk-vs-css">
+.bk-vs{background:#fff;padding:52px 0 56px}
+.bk-vs-h{margin:0 0 12px;text-align:center;font-size:24px;font-weight:900;color:#14284b;line-height:1.45}
+.bk-vs-l{margin:0 auto 22px;max-width:640px;text-align:center;font-size:14px;color:#3d4a5c;line-height:1.85}
+.bk-vs-t{width:100%;max-width:760px;margin:0 auto;border-collapse:collapse;font-size:13.5px;line-height:1.6}
+.bk-vs-t th,.bk-vs-t td{padding:13px 8px;border-bottom:1px solid #e3e8ef;vertical-align:top;text-align:left}
+.bk-vs-t thead th{font-size:12.5px;font-weight:800;color:#5b6676;border-bottom:2px solid #14284b;vertical-align:bottom}
+.bk-vs-t thead th:last-child{color:#c2410c}
+.bk-vs-t tbody th{width:4.6em;font-size:12px;font-weight:800;color:#14284b;white-space:nowrap}
+.bk-vs-t td:nth-child(2){color:#7a8494}
+.bk-vs-t td:nth-child(3){color:#14284b;font-weight:700}
+.bk-vs-e{margin:26px 0 0;text-align:center;font-size:15.5px;color:#14284b;line-height:1.8}
+.bk-vs-e b{font-size:19px;background:linear-gradient(transparent 62%,#fde0c8 62%)}
+@media(max-width:699px){.bk-vs-t thead tr,.bk-vs-t tbody tr{display:grid;grid-template-columns:1fr 1fr;column-gap:14px}.bk-vs-t thead th:first-child{display:none}.bk-vs-t tbody th{grid-column:1/-1;width:auto;padding:14px 0 2px;border-bottom:0}.bk-vs-t td{padding:4px 0 14px}.bk-vs-t thead th{padding:0 0 8px}.bk-vs-t tbody tr{border-bottom:1px solid #e3e8ef}.bk-vs-t td{border-bottom:0}}
+@media(min-width:700px){.bk-vs-h{font-size:30px}.bk-vs-t{font-size:15px}.bk-vs-t th,.bk-vs-t td{padding:16px 14px}.bk-vs-t tbody th{font-size:13.5px}}
+</style>
+<style id="works-scroll">
+#works .sample .ph{aspect-ratio:560/1212}
+#works .sample .ph img{display:block;width:100%;height:auto;animation:bkScroll 24s ease-in-out infinite;will-change:transform}
+#works .sample:nth-child(2) .ph img{animation-delay:-6s}
+#works .sample:nth-child(3) .ph img{animation-delay:-12s}
+#works .sample:nth-child(4) .ph img{animation-delay:-18s}
+@keyframes bkScroll{0%,10%{transform:translateY(0)}45%,55%{transform:translateY(-67%)}90%,100%{transform:translateY(0)}}
+@media(prefers-reduced-motion:reduce){#works .sample .ph img{animation:none}}
+</style>
 <style id="splan-css">
   /* 2026-11-17 サイト構成の提案（HPを持っている会社だけ）。秀栄の Service と同じく、下へ動かすとパネルが重なる */
   .splan { background: #fff; }
@@ -734,7 +759,7 @@
   .sp-src { display: block; margin-top: 8px; font-size: 11.5px; color: var(--mu); line-height: 1.6; }
   .sp-end { margin: 18px auto 0; max-width: 1080px; text-align: center; font-size: 13px; color: var(--mu); }
   .sp-end a { color: var(--cy-d); font-weight: 700; }
-  @media (min-width: 901px) and (min-height: 800px) {
+  @media (min-width: 901px) and (min-height: 600px) {
     .sp-item { position: sticky; min-height: 540px; }
     .sp-item.s1 { top: 76px; z-index: 2; }
     .sp-item.s2 { top: 120px; z-index: 3; }
@@ -767,7 +792,7 @@
     .sp-item.s3 .sp-stat p { font-size: 12.5px; line-height: 1.65; }
     .sp-src { margin-top: 6px; font-size: 11px; }
   }
-  @media (max-width: 900px) and (min-height: 740px) {
+  @media (max-width: 900px) and (min-height: 500px) {
     .sp-item { position: sticky; }
     .sp-item.s1 { top: 60px; z-index: 2; }
     .sp-item.s2 { top: 104px; z-index: 3; }
@@ -795,9 +820,9 @@
 <div class="fv2" id="top">
   <div class="fv2-in">
     <div class="fv2-txt">
-      <p class="fv2-h"><span class="l1">HP制作・運用は</span><span class="fv2-band"><span class="m">毎月</span><b>9,800</b><span class="y">円</span></span><span class="l3">以外かかりません。</span></p>
+      <p class="fv2-h"><span class="l1">100万円規模のHPを</span><span class="fv2-band"><span class="m">毎月</span><b>9,800</b><span class="y">円</span></span><span class="l3">で作ります。</span></p>
       <i class="fv2-rule" aria-hidden="true"></i>
-      <p class="fv2-note">※ベーシックプランの場合（税別）</p>
+      <p class="fv2-note">※ベーシックプランの場合（税別）<br><span class="nw">※100万円規模は<span class="kj">、</span></span><wbr><span class="nw">作り込んだ例と同じ中身を</span><wbr><span class="nw">制作会社に頼んだときの</span><wbr><span class="nw">目安で<span class="kj">す。</span></span></p>
       <div class="fv2-for"><h1><span class="nw">御社専用の</span><span class="nw">ホームページを、</span><span class="nw"><b>先に作って<wbr>お見せしま<span class="kj">す。</span></b></span><span id="typing" hidden></span></h1><p class="fv2-for-s">ご契約の<wbr>前<span class="kj">に、</span><wbr>無料で<wbr>お作りしま<span class="kj">す。</span><wbr>実際に<wbr>動く<wbr>ページ<span class="kj">で、</span><wbr>そのまま<wbr>ご覧いただけま<span class="kj">す。</span><span class="kj"></span></p></div>
     </div>
     <div class="fv2-demo">
@@ -810,6 +835,7 @@
   </div>
 </div>
 
+<section class="bk-vs" id="bk-vs"><div class="wrap"><h2 class="bk-vs-h">5,000円のホームページと<br>どこがちがうのか</h2><p class="bk-vs-l">広告でよく見る安いホームページは<span class="kj">、</span><wbr>AIで作った型に<wbr>文字を入れただけのものが<wbr>多くありま<span class="kj">す。</span><br>それでは<span class="kj">、</span><wbr>御社が選ばれる理由が<wbr>お客様に伝わりませ<span class="kj">ん。</span></p><table class="bk-vs-t"><thead><tr><th></th><th>よくある<br>安いホームページ</th><th>BUNKAIの<br>ホームページ</th></tr></thead><tbody><tr><th>作り方</th><td>型に<wbr>AIで<wbr>文字を<wbr>入れて<wbr>終わり</td><td>誰に<wbr>何を<wbr>見て<wbr>ほしいかを<wbr>決めてから<wbr>設計</td></tr><tr><th>中身</th><td>どの<wbr>会社にも<wbr>言える<wbr>ことば</td><td>御社の<wbr>特徴と<wbr>強みを<wbr>聞いて<wbr>書く</td></tr><tr><th>ページ</th><td>1〜数ページ</td><td>工事・市・<wbr>事例ごとに<wbr>作り込む<wbr><span class="kj">（下</span>の<wbr>例では<wbr>53ペー<span class="kj">ジ）</span></td></tr><tr><th>見つけてもらう</th><td>対策なし</td><td><span class="kj">「市</span>の<wbr>名前＋業<span class="kj">種」</span>で<wbr>探す人と<wbr>AIの<wbr>検索に<wbr>向けて<wbr>作る</td></tr><tr><th>公開のあと</th><td>作って<wbr>終わり</td><td>毎月の<wbr>事例と<wbr>声を<wbr>足して<wbr>直し続ける</td></tr></tbody></table><p class="bk-vs-e">制作会社に頼めば<wbr>100万円ほどかかる作りを<span class="kj">、</span><br><b>月9,800円から</b><wbr>お引き受けしま<span class="kj">す。</span></p></div></section>
 <div class="progress" id="progress"></div>
 <div class="stick" id="stick"><div class="wrap">
   <p>御社用の<wbr>ホームページの<wbr>見本<span class="kj">を、</span><wbr>無料で<wbr>お作りします<small>全国対応・電話や<wbr>LINEで<wbr>進めます</small></p>
@@ -891,10 +917,10 @@
     <!-- 会社ごとの紹介ページだけで表示<wbr>（紹介ページ生成.py が社名とURLを入れて hidden を外す） -->
     <ol class="pm-flow rv"><li>見本を<wbr>見る</li><li>直したい所を<wbr>伝える</li><li>完成品を<wbr>確認する</li><li>問題なければ<wbr>契約して<wbr>公開</li></ol>
     <div class="samples rv">
-      <a class="sample" href="https://konan-paint.shiga-web.workers.dev/craft.html" target="_blank" rel="noopener"><div class="ph"><img src="img/sp-craft.jpg" alt="職人の技術を見せるデザイン" loading="lazy" width="560" height="1212"></div><b>職人の<wbr>技術</b><span>技術力 × 下地の<wbr>こだわり × 職人の<wbr>顔</span><div class="s-more"><h4>どんな<wbr>ページ</h4><p>屋根を<wbr>塗る<wbr>職人の<wbr>写真と<wbr>大きな<wbr>見出しから<wbr>始ま<span class="kj">り、</span><wbr>地域の<wbr>地図で<wbr>対応エリアを<wbr>見せたあ<span class="kj">と、</span><wbr>診断・洗浄・シーリング・3回塗りの<wbr>工程ごと<span class="kj">に、</span><wbr>職人の<wbr>こだわりを<wbr>写真で<wbr>見せる<wbr>ページで<span class="kj">す。</span><wbr>下請け任せが<wbr>不安な方<span class="kj">に、</span><wbr>技術で<wbr>選んで<wbr>もらう<wbr>作りで<span class="kj">す。</span><wbr></p></div></a>
-      <a class="sample" href="https://konan-paint.shiga-web.workers.dev/chiiki" target="_blank" rel="noopener"><div class="ph"><img src="img/sp-chiiki.jpg" alt="地域密着のデザイン" loading="lazy" width="560" height="1212"></div><b>地域密着</b><span>近くの職人 × 代表の手紙 × 工事のあとも</span><div class="s-more"><h4>どんな<wbr>ページ</h4><p>紺と<wbr>水色<span class="kj">に、</span><wbr>うすい<wbr>紙の<wbr>質<span class="kj">感。</span><wbr>家の<wbr>写真が<wbr>切りかわる<wbr>最初の<wbr>画面か<span class="kj">ら、</span><wbr>縦書きの<wbr>見出<span class="kj">し、</span><wbr>代表からの<wbr>手<span class="kj">紙、</span><wbr>地図で<wbr>対応エリア<span class="kj">、</span><wbr>工事の<wbr>あとの<wbr>点検までを<wbr>順に<wbr>伝える<wbr>ページで<span class="kj">す。</span><wbr>近くに<wbr>い<span class="kj">て、</span><wbr>ずっと<wbr>相談できる<wbr>塗装店だと<wbr>伝わる<wbr>作りで<span class="kj">す。</span></p></div></a>
-      <a class="sample" href="https://konan-paint.shiga-web.workers.dev/seijitsu" target="_blank" rel="noopener"><div class="ph"><img src="img/sp-shokunin.jpg" alt="誠実のデザイン" loading="lazy" width="560" height="1212"></div><b>誠実</b><span>信頼 × 地域の<wbr>家 × 写真で<wbr>伝える</span><div class="s-more"><h4>どんな<wbr>ページ</h4><p>町と<wbr>家の<wbr>写真から<wbr>始ま<span class="kj">る、</span><wbr>白・黒・グレーの<wbr>落ち着いた<wbr>ページで<span class="kj">す。</span><wbr>施工事例を<wbr>画面いっぱいの<wbr>写真で<wbr>1件ずつ見<span class="kj">せ、</span><wbr>症状ごとの<wbr>急ぎ度も<wbr>写真で<wbr>分かりま<span class="kj">す。</span><wbr></p></div></a>
-      <a class="sample" href="https://konan-paint.shiga-web.workers.dev/pop" target="_blank" rel="noopener"><div class="ph"><img src="img/sp-pop.jpg" alt="ポップのデザイン" loading="lazy" width="560" height="1212"></div><b>ポップ</b><span>親しみやすさ × 幅<wbr>広い<wbr>工事 × すぐ<wbr>来る</span><div class="s-more"><h4>どんな<wbr>ページ</h4><p>クリームの<wbr>紙に<wbr>手書きの<wbr>英字<span class="kj">と、</span><wbr>水玉や<wbr>チェックの<wbr><span class="kj">柄。</span><wbr>ななめの<wbr>写真と<wbr>イラスト<span class="kj">で、</span><wbr>やわらかく<wbr>親しみやすく<wbr>見せる<wbr>ページで<span class="kj">す。</span><wbr>気軽に<wbr>相談して<wbr>もらいま<span class="kj">す。</span><wbr></p></div></a>
+      <a class="sample" href="https://konan-paint.shiga-web.workers.dev/craft.html" target="_blank" rel="noopener"><div class="ph"><img src="img/long-craft.jpg" alt="職人の技術を見せるデザイン" loading="lazy" width="400" height="2667"></div><b>職人の<wbr>技術</b><span>技術力 × 下地の<wbr>こだわり × 職人の<wbr>顔</span><div class="s-more"><h4>どんな<wbr>ページ</h4><p>屋根を<wbr>塗る<wbr>職人の<wbr>写真と<wbr>大きな<wbr>見出しから<wbr>始ま<span class="kj">り、</span><wbr>地域の<wbr>地図で<wbr>対応エリアを<wbr>見せたあ<span class="kj">と、</span><wbr>診断・洗浄・シーリング・3回塗りの<wbr>工程ごと<span class="kj">に、</span><wbr>職人の<wbr>こだわりを<wbr>写真で<wbr>見せる<wbr>ページで<span class="kj">す。</span><wbr>下請け任せが<wbr>不安な方<span class="kj">に、</span><wbr>技術で<wbr>選んで<wbr>もらう<wbr>作りで<span class="kj">す。</span><wbr></p></div></a>
+      <a class="sample" href="https://konan-paint.shiga-web.workers.dev/chiiki" target="_blank" rel="noopener"><div class="ph"><img src="img/long-chiiki.jpg" alt="地域密着のデザイン" loading="lazy" width="400" height="2667"></div><b>地域密着</b><span>近くの職人 × 代表の手紙 × 工事のあとも</span><div class="s-more"><h4>どんな<wbr>ページ</h4><p>紺と<wbr>水色<span class="kj">に、</span><wbr>うすい<wbr>紙の<wbr>質<span class="kj">感。</span><wbr>家の<wbr>写真が<wbr>切りかわる<wbr>最初の<wbr>画面か<span class="kj">ら、</span><wbr>縦書きの<wbr>見出<span class="kj">し、</span><wbr>代表からの<wbr>手<span class="kj">紙、</span><wbr>地図で<wbr>対応エリア<span class="kj">、</span><wbr>工事の<wbr>あとの<wbr>点検までを<wbr>順に<wbr>伝える<wbr>ページで<span class="kj">す。</span><wbr>近くに<wbr>い<span class="kj">て、</span><wbr>ずっと<wbr>相談できる<wbr>塗装店だと<wbr>伝わる<wbr>作りで<span class="kj">す。</span></p></div></a>
+      <a class="sample" href="https://konan-paint.shiga-web.workers.dev/seijitsu" target="_blank" rel="noopener"><div class="ph"><img src="img/long-seijitsu.jpg" alt="誠実のデザイン" loading="lazy" width="400" height="2667"></div><b>誠実</b><span>信頼 × 地域の<wbr>家 × 写真で<wbr>伝える</span><div class="s-more"><h4>どんな<wbr>ページ</h4><p>町と<wbr>家の<wbr>写真から<wbr>始ま<span class="kj">る、</span><wbr>白・黒・グレーの<wbr>落ち着いた<wbr>ページで<span class="kj">す。</span><wbr>施工事例を<wbr>画面いっぱいの<wbr>写真で<wbr>1件ずつ見<span class="kj">せ、</span><wbr>症状ごとの<wbr>急ぎ度も<wbr>写真で<wbr>分かりま<span class="kj">す。</span><wbr></p></div></a>
+      <a class="sample" href="https://konan-paint.shiga-web.workers.dev/pop" target="_blank" rel="noopener"><div class="ph"><img src="img/long-pop.jpg" alt="ポップのデザイン" loading="lazy" width="400" height="2667"></div><b>ポップ</b><span>親しみやすさ × 幅<wbr>広い<wbr>工事 × すぐ<wbr>来る</span><div class="s-more"><h4>どんな<wbr>ページ</h4><p>クリームの<wbr>紙に<wbr>手書きの<wbr>英字<span class="kj">と、</span><wbr>水玉や<wbr>チェックの<wbr><span class="kj">柄。</span><wbr>ななめの<wbr>写真と<wbr>イラスト<span class="kj">で、</span><wbr>やわらかく<wbr>親しみやすく<wbr>見せる<wbr>ページで<span class="kj">す。</span><wbr>気軽に<wbr>相談して<wbr>もらいま<span class="kj">す。</span><wbr></p></div></a>
     </div>
     <p class="note">※ 見本は<wbr>提案用の<wbr>サンプルです<wbr><span class="kj">（料</span>金・施工事例などは<wbr>参考<span class="kj">例）。</span><wbr></p>
     <style>
