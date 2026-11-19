@@ -711,11 +711,20 @@
 <script src="https://bunkai-stats.shiga-web.workers.dev/t.js" async></script>
 <style id="lg-full">.logo img.lg-full{width:auto!important;height:30px!important;margin:0!important}@media (max-width:767px){.logo img.lg-full{height:26px!important}}</style>
 <style id="splan-s5">
+/* 2026-11-19 重なる見出しの高さを固定して、重なる間（見出し＋上の線2px）とぴったり合わせる */
 @media (max-width:900px) and (min-height:500px){
   .sp-item{position:sticky}
-  .sp-item.s1{top:60px;z-index:2}.sp-item.s2{top:112px;z-index:3}.sp-item.s3{top:164px;z-index:4}.sp-item.s4{top:216px;z-index:5}.sp-item.s5{top:268px;z-index:6}
+  .sp-item h3{box-sizing:border-box;height:48px;padding:0;align-items:center;flex-wrap:nowrap;white-space:nowrap;overflow:hidden}
+  .sp-item h3 em{flex:0 1 auto;min-width:0;overflow:hidden;text-overflow:ellipsis}
+  .sp-item.s1{top:60px;z-index:2}.sp-item.s2{top:110px;z-index:3}.sp-item.s3{top:160px;z-index:4}.sp-item.s4{top:210px;z-index:5}.sp-item.s5{top:260px;z-index:6}
+  /* 中身の長い3つ目が、5つ目が止まったときに枠の下に押し上げられて前の見出しに重なっていた → 枠の下に余白を足す */
+  .sp-wrap::after{content:"";display:block;height:200px}
 }
-@media (max-width:374px){.sp-item{position:relative!important;top:auto!important}}
+@media (min-width:901px) and (min-height:600px){
+  .sp-item h3{box-sizing:border-box;height:42px;padding:0;align-items:center;white-space:nowrap;overflow:hidden}
+  .sp-item.s1{top:76px}.sp-item.s2{top:120px}.sp-item.s3{top:164px}.sp-item.s4{top:208px}
+}
+@media (max-width:374px){.sp-item{position:relative!important;top:auto!important}.sp-item h3{height:auto!important;padding:12px 0 13px!important;flex-wrap:wrap!important;white-space:normal!important}}
 @media (min-width:901px) and (min-height:600px){.sp-item.s5{position:sticky;top:252px;z-index:6;min-height:500px}}
 </style>
 <style id="bk-vs-css">
@@ -848,11 +857,20 @@
   }
 </style>
 <style id="splan-s5">
+/* 2026-11-19 重なる見出しの高さを固定して、重なる間（見出し＋上の線2px）とぴったり合わせる */
 @media (max-width:900px) and (min-height:500px){
   .sp-item{position:sticky}
-  .sp-item.s1{top:60px;z-index:2}.sp-item.s2{top:112px;z-index:3}.sp-item.s3{top:164px;z-index:4}.sp-item.s4{top:216px;z-index:5}.sp-item.s5{top:268px;z-index:6}
+  .sp-item h3{box-sizing:border-box;height:48px;padding:0;align-items:center;flex-wrap:nowrap;white-space:nowrap;overflow:hidden}
+  .sp-item h3 em{flex:0 1 auto;min-width:0;overflow:hidden;text-overflow:ellipsis}
+  .sp-item.s1{top:60px;z-index:2}.sp-item.s2{top:110px;z-index:3}.sp-item.s3{top:160px;z-index:4}.sp-item.s4{top:210px;z-index:5}.sp-item.s5{top:260px;z-index:6}
+  /* 中身の長い3つ目が、5つ目が止まったときに枠の下に押し上げられて前の見出しに重なっていた → 枠の下に余白を足す */
+  .sp-wrap::after{content:"";display:block;height:200px}
 }
-@media (max-width:374px){.sp-item{position:relative!important;top:auto!important}}
+@media (min-width:901px) and (min-height:600px){
+  .sp-item h3{box-sizing:border-box;height:42px;padding:0;align-items:center;white-space:nowrap;overflow:hidden}
+  .sp-item.s1{top:76px}.sp-item.s2{top:120px}.sp-item.s3{top:164px}.sp-item.s4{top:208px}
+}
+@media (max-width:374px){.sp-item{position:relative!important;top:auto!important}.sp-item h3{height:auto!important;padding:12px 0 13px!important;flex-wrap:wrap!important;white-space:normal!important}}
 @media (min-width:901px) and (min-height:600px){.sp-item.s5{position:sticky;top:252px;z-index:6;min-height:500px}}
 </style>
 <style id="fv-band2">
