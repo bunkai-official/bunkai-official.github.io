@@ -16,16 +16,17 @@
 <!-- ▼ アクセス解析：下の3か所に番号を入れるだけで動きます<wbr>（空のままなら何もしません） -->
 <meta name="google-site-verification" content="">
 <script>
-  var GA_ID = "G-6P83L0SP8P";       // GA4 の「測定ID」 例）G-ABC123XYZ
+  window.__bkNoTrack=(function(){try{if(navigator.webdriver)return true;if(/[?&]bunkai=me\b/.test(location.search))localStorage.setItem("bk_me","1");return !!localStorage.getItem("bk_me")}catch(e){return !!navigator.webdriver}})();
+    var GA_ID = "G-6P83L0SP8P";       // GA4 の「測定ID」 例）G-ABC123XYZ
   var CLARITY_ID = "z4u37wrti3";  // Clarity の「プロジェクトID」 例）abcd1234ef
   window.track = function () {};
-  if (GA_ID) {
+  if (GA_ID && !window.__bkNoTrack) {
     var g = document.createElement("script"); g.async = true; g.src = "https://www.googletagmanager.com/gtag/js?id=" + GA_ID; document.head.appendChild(g);
     window.dataLayer = window.dataLayer || []; window.gtag = function () { dataLayer.push(arguments); };
     gtag("js", new Date()); gtag("config", GA_ID);
     window.track = function (name, where) { gtag("event", name, { place: where || "" }); };
   }
-  if (CLARITY_ID) {
+  if (CLARITY_ID && !window.__bkNoTrack) {
     (function (c, l, a, r, i, t, y) { c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments); }; t = l.createElement(r); t.async = 1; t.src = "https://www.clarity.ms/tag/" + i; y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y); })(window, document, "clarity", "script", CLARITY_ID);
   }
 </script>
