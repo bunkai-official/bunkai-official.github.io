@@ -791,7 +791,10 @@
 </style>
 <style id="ad-acc">
 .ad-acc{margin:14px 0;border:1px solid #dfe6ee;border-radius:16px;background:#fff;overflow:hidden}
-.ad-acc summary{display:flex;align-items:center;gap:12px;padding:16px 16px;cursor:pointer;list-style:none}
+.ad-acc summary,.ad-acc .aa-sum{display:flex;align-items:center;gap:12px;padding:16px 16px;cursor:pointer;list-style:none}
+.ad-acc .aa-sum{cursor:auto;align-items:flex-start}
+.aa-cta{margin:4px 0 0;text-align:center}.aa-pl[hidden]{display:none}.aa-cta .btn{display:inline-flex}
+.more.uy-go{margin-top:18px;text-align:center}
 .ad-acc summary::-webkit-details-marker{display:none}
 .ad-acc .ad-ic{flex:none}
 .aa-t{flex:1;min-width:0}
@@ -816,7 +819,7 @@
 .ap li.ap-plus{padding-left:0;font-size:12.5px;font-weight:700;color:#c2410c}
 .ap li.ap-plus::before{display:none}
 .aa-n{margin:6px 0 0;font-size:12px;line-height:1.7;color:#5b6676}
-@media(min-width:700px){.ad-acc summary{padding:18px 22px}.aa-b{padding:0 22px 20px}.ap.rec{margin:0 -22px;padding:14px 22px}.aa-t>b{font-size:17px}}
+@media(min-width:700px){.ad-acc summary,.ad-acc .aa-sum{padding:18px 22px}.aa-b{padding:0 22px 20px}.ap.rec{margin:0 -22px;padding:14px 22px}.aa-t>b{font-size:17px}}
 </style>
 <style id="splan-css">
   /* 2026-11-17 サイト構成の提案（HPを持っている会社だけ）。秀栄の Service と同じく、下へ動かすとパネルが重なる */
@@ -953,7 +956,6 @@
 .fv2-for h1 .gk-pre{display:block;margin:0;font-size:inherit;font-weight:900;color:inherit;letter-spacing:inherit}
 @media(min-width:900px){.gk-three b{font-size:13px}.gk-three .gk-c b{font-size:15px}}
 </style>
-<style id="fv-note-small">.fv2-txt p.fv2-note.fv2-note.fv2-note{font-size:clamp(10px,.78vw,11.5px);font-weight:500;line-height:1.65;color:#6b7585;letter-spacing:.02em}</style>
 </head>
 <body>
 
@@ -977,7 +979,7 @@
       <p class="fv2-h"><span class="l1">100万円規模のHPを</span><span class="fv2-band fv2-band2"><span class="it"><span class="lb">制作費</span><b>0</b><span class="u">円</span></span><i class="sep" aria-hidden="true"></i><span class="it"><span class="lb">運用</span><b>9,800</b><span class="u">円/月</span></span></span><span class="l3">で作ります</span></p>
       <i class="fv2-rule" aria-hidden="true"></i>
       <p class="fv2-note">※ライトプランの場合（税別）<br><span class="nw">※100万円規模は<span class="kj">、</span></span><wbr><span class="nw">作り込んだ外構の見本と同じ中身を</span><wbr><span class="nw">制作会社に頼んだときの</span><wbr><span class="nw">目安で<span class="kj">す。</span></span></p>
-      <div class="fv2-for"><h1><span class="nw">御社専用のホームページを</span><span class="nw"><b>先に作って<wbr>お見せしま<span class="kj">す。</span></b></span><span id="typing" hidden></span></h1><p class="fv2-for-s">ご契約の<wbr>前<span class="kj">に、</span><wbr>無料で<wbr>お作りしま<span class="kj">す。</span><wbr>実際に<wbr>動く<wbr>ページ<span class="kj">で、</span><wbr>そのまま<wbr>ご覧いただけま<span class="kj">す。</span><span class="kj"></span></p></div>
+      <div class="fv2-for"><h1><span class="gk-pre">しかも</span><span class="nw">御社専用のホームページを</span><span class="nw"><b>先に作って<wbr>お見せしま<span class="kj">す。</span></b></span><span id="typing" hidden></span></h1><p class="fv2-for-s">ご契約の<wbr>前<span class="kj">に、</span><wbr>無料で<wbr>お作りしま<span class="kj">す。</span><wbr>実際に<wbr>動く<wbr>ページ<span class="kj">で、</span><wbr>そのまま<wbr>ご覧いただけま<span class="kj">す。</span><span class="kj"></span></p></div>
     </div>
     <div class="fv2-demo">
       <div class="gk-stage"><div class="gk-three"><a class="gk-l" href="https://bunkai-toso.shiga-web.workers.dev/craft/" target="_blank" rel="noopener"><span class="gk-fr"><img src="img/tp-long-craft.jpg?v=1119b" alt="職人の見本" width="400" height="2667" loading="eager"></span><b>職人</b></a><a class="gk-c" href="https://bunkai-toso.shiga-web.workers.dev/seijitsu/" target="_blank" rel="noopener"><span class="gk-fr"><img src="img/tp-long-seijitsu.jpg?v=1119b" alt="誠実の見本" width="400" height="2667" loading="eager"></span><b>誠実</b></a><a class="gk-r" href="https://bunkai-toso.shiga-web.workers.dev/pop/" target="_blank" rel="noopener"><span class="gk-fr"><img src="img/tp-long-pop.jpg?v=1119b" alt="ポップの見本" width="400" height="2667" loading="eager"></span><b>ポップ</b></a></div><p class="gk-tap">画面を押すと<wbr>動く見本が開きます</p></div>
@@ -1221,54 +1223,55 @@
         <div class="plan">
           <b class="pt">ライト</b>
           <div class="pp">9,800<small>円</small></div>
-          <p class="for">事例・口コミを<br>増やして更新したい</p>
+          <p class="for">事例・口コミを<br>増やして<wbr>更新したい</p>
           <ul>
-            <li>サイトの管理と不具合の対応</li>
-            <li>セキュリティ対策とバックアップ</li>
-            <li>スマホ・電話・フォームの動作確認</li>
-            <li>事例の追加 <b class="v">月2件</b></li>
-            <li>口コミの追加 <b class="v">月2件</b></li>
-            <li>文章・写真の修正 <b class="v">月1回</b></li>
-            <li>毎月の報告（見られた数・電話の数）</li>
+            <li>サイトの<wbr>管理と<wbr>不具合の<wbr>対応</li>
+            <li>セキュリティ対策と<wbr>バックアップ</li>
+            <li>スマホ・電話・フォームの<wbr>動作確認</li>
+            <li>事例の<wbr>追加 <b class="v">月2件</b></li>
+            <li>口コミの<wbr>追加 <b class="v">月2件</b></li>
+            <li>文章・写真の<wbr>修正 <b class="v">月1回</b></li>
+            <li>毎月の<wbr>報告<wbr>（見られた<wbr>数・電話の<wbr>数）</li>
           </ul>
         </div>
         <div class="plan rec">
           <span class="badge-rec">おすすめ</span>
           <b class="pt">ベーシック</b>
           <div class="pp">19,800<small>円</small></div>
-          <p class="for">毎月直しながら<br>問い合わせを増やしたい</p>
+          <p class="for">毎月<wbr>直しながら<br>問い合わせを<wbr>増や<wbr>したい</p>
           <ul>
-            <li class="inh">ライトの内容すべて</li>
-            <li class="hl">サイトの改修（デザイン・構成・ページの作り直し） <b class="v">月1回</b><small class="lid">どこが押され、どこまで読まれたかを毎月見て、構成と中身を直します。</small></li>
-            <li class="hl">SEO対策 <b class="v">月1回</b><small class="lid">地域で調べたときの順位と探された言葉を毎月見て、地域のページ・事例を足して直します。</small></li>
-            <li>事例の追加 <b class="v">何件でも</b></li>
-            <li>口コミの追加 <b class="v">何件でも</b></li>
-            <li>文章・写真の修正 <b class="v">月4回</b></li>
-            <li>お知らせの更新 <b class="v">何回でも</b></li>
-            <li>コラム記事の作成 <b class="v">月4本</b></li>
-            <li>補助金・助成金のページ<span class="nw">（毎月確かめて更新）</span></li>
+            <li class="inh">ライトの<wbr>内容すべて</li>
+            <li class="hl">サイトの<wbr>改修<wbr>（デザイン・構成・ページの<wbr>作り直し）<wbr> <b class="v">月1回</b><small class="lid">どこが<wbr>押され、<wbr>どこまで<wbr>読まれたかを<wbr>毎月<wbr>見て、<wbr>構成と<wbr>中身を<wbr>直します。</small></li>
+            <li class="hl">SEO対策 <b class="v">月1回</b><small class="lid">地域で<wbr>調べた<wbr>ときの<wbr>順位と<wbr>探された<wbr>言葉を<wbr>毎月<wbr>見て、<wbr>地域の<wbr>ページ・事例を<wbr>足して<wbr>直します。</small></li>
+            <li>事例の<wbr>追加 <b class="v">何件でも</b></li>
+            <li>口コミの<wbr>追加 <b class="v">何件でも</b></li>
+            <li>文章・写真の<wbr>修正 <b class="v">月4回</b></li>
+            <li>お知らせの<wbr>更新 <b class="v">何回でも</b></li>
+            <li>コラム記事の<wbr>作成 <b class="v">月4本</b></li>
+            <li>補助金・助成金の<wbr>ページ<span class="nw">（毎月<wbr>確かめて<wbr>更新）</span></li>
           </ul>
         </div>
         <div class="plan">
           <b class="pt">スタンダード</b>
           <div class="pp">29,800<small>円</small></div>
-          <p class="for">地域で1番に<br>選ばれたい</p>
+          <p class="for">地域で<wbr>1番に<br>選ばれたい</p>
           <ul>
-            <li class="inh">ベーシックの内容すべて</li>
-            <li class="hl">AI対策 <b class="v">月1回</b><small class="lid">AIに聞かれたときの答えを毎月確かめて、足りない会社の情報やよくある質問を足します。</small></li>
-            <li class="hl">Googleマップの初期設定 <b class="v">込み</b><small class="lid">お店の登録とGoogleの確認・業種と工事のメニュー・紹介文・最初の写真まで整えます。</small></li>
-            <li>コラム記事の作成 <b class="v">月8本</b></li>
-            <li>文章・写真の修正 <b class="v">何回でも</b></li>
+            <li class="inh">ベーシックの<wbr>内容すべて</li>
+            <li class="hl">AI対策 <b class="v">月1回</b><small class="lid">AIに<wbr>聞かれた<wbr>ときの<wbr>答えを<wbr>毎月<wbr>確かめて、<wbr>足りない<wbr>会社の<wbr>情報や<wbr>よく<wbr>ある<wbr>質問を<wbr>足します。</small></li>
+            <li class="hl">Googleマップの<wbr>初期設定 <b class="v">込み</b><small class="lid">お店の<wbr>登録と<wbr>Googleの<wbr>確認・業種と<wbr>工事の<wbr>メニュー・紹介文・最初の<wbr>写真まで<wbr>整えます。</small></li>
+            <li>コラム記事の<wbr>作成 <b class="v">月8本</b></li>
+            <li>文章・写真の<wbr>修正 <b class="v">何回でも</b></li>
           </ul>
         </div>
       </div>
       <div class="seoai">
-        <div class="kz"><b>サイトの改修<small>ベーシックから</small></b><p>毎月の数字（どこが押されたか・どこまで読まれたか・電話とLINEが押された数）を見て、デザイン・構成・ページを作り直します。月に1回直して、翌月の数字で確かめます。作って終わりにしないための運用です。</p><p class="eg">例：よく押される所を上に出す／読まれない所を下げる／料金の目安や工事の流れを足す／ページを作り直す</p></div>
-        <div><b>SEO対策（ベーシックから）</b><p>「地域名＋業種」で調べた人に見つけてもらう対策です。毎月の順位と探された言葉を見て直します。</p><p class="eg">例：市町ごとのページを足す／事例に地域の情報を足す／よく調べられている言葉に合わせてページを直す</p></div>
-        <div><b>AI対策（スタンダード）</b><p>ChatGPTやGoogleのAIに「地域名でおすすめの会社は？」と聞かれたときに、御社の名前が出るようにする対策です。</p><p class="eg">例：AIの答えに名前が出るか確かめる／AIの答えに足りない会社の情報を足す／よくある質問を足す</p></div>
-        <p class="seoai-n">※ ベーシックはSEO対策を、スタンダードはSEO対策とAI対策（AIO）を毎月行います。検索とAIの基本の設定は、どのプランでも作るときに済ませておきます。</p>
+        <div class="kz"><b>サイトの<wbr>改修<small>ベーシックから</small></b><p>毎月の<wbr>数字<wbr>（どこが<wbr>押されたか・どこまで<wbr>読まれたか・電話と<wbr>LINEが<wbr>押された<wbr>数）を<wbr>見て、<wbr>デザイン・構成・ページを<wbr>作り直します。<wbr>月に<wbr>1回直して、<wbr>翌月の<wbr>数字で<wbr>確かめます。<wbr>作って<wbr>終わりに<wbr>しないための<wbr>運用です。</p><p class="eg">例：よく<wbr>押される<wbr>所を<wbr>上に<wbr>出す／読まれない<wbr>所を<wbr>下げる<wbr>／料金の<wbr>目安や<wbr>工事の<wbr>流れを<wbr>足す／ページを<wbr>作り直す</p></div>
+        <div><b>SEO対策<wbr>（ベーシックから）</b><p>「地域名＋業種」で<wbr>調べた<wbr>人に<wbr>見つけて<wbr>もらう<wbr>対策です。<wbr>毎月の<wbr>順位と<wbr>探された<wbr>言葉を<wbr>見て<wbr>直します。</p><p class="eg">例：市町ごとの<wbr>ページを<wbr>足す／事例に<wbr>地域の<wbr>情報を<wbr>足す／よく<wbr>調べられている<wbr>言葉に<wbr>合わせて<wbr>ページを<wbr>直す</p></div>
+        <div><b>AI対策<wbr>（スタンダード）</b><p>ChatGPTや<wbr>Googleの<wbr>AIに<wbr>「地域名で<wbr>おすすめの<wbr>会社は？」と<wbr>聞かれた<wbr>ときに、<wbr>御社の<wbr>名前が<wbr>出るように<wbr>する<wbr>対策です。</p><p class="eg">例：AIの<wbr>答えに<wbr>名前が<wbr>出るか<wbr>確かめる<wbr>／AIの<wbr>答えに<wbr>足りない<wbr>会社の<wbr>情報を<wbr>足す／よく<wbr>ある<wbr>質問を<wbr>足す</p></div>
+        <p class="seoai-n">※ ベーシックは<wbr>SEO対策を、<wbr>スタンダードは<wbr>SEO対策と<wbr>AI対策<wbr>（AIO）を<wbr>毎月<wbr>行います。<wbr>検索と<wbr>AIの<wbr>基本の<wbr>設定は、<wbr>どの<wbr>プランでも<wbr>作る<wbr>ときに<wbr>済ませて<wbr>おきます。</p>
       </div>
     </div>
+    <div class="more uy-go rv"><a class="btn btn-cy" href="https://bunkai.shiga-web.workers.dev/unyou/hp/">ホームページ運用の<wbr>中身を見る</a></div>
     <div class="more more-pdf rv">
       <a class="btn btn-cy" href="price.pdf" target="_blank" rel="noopener">詳しい<wbr>料金表<wbr>（PDF）を<wbr>見る</a>
     </div>
@@ -1306,7 +1309,7 @@
           <p class="mp-you"><b>御社がやること</b>ベーシックと<wbr>同じ</p>
         </div>
       </div>
-      <p class="map-n">※ 地図の<wbr>順位と<wbr>口コミの<wbr>件数<span class="kj">は、</span><wbr>お約束できませ<span class="kj">ん。</span><wbr>口コミ<span class="kj">は、</span><wbr>ご利用いただいた方の<wbr>全員に<wbr>お願いしま<span class="kj">す。</span><span class="kj"></span><wbr>お金と<wbr>引き換えの<wbr>口コミ<span class="kj">や、</span><wbr>会社名に<wbr>言葉を<wbr>足すこと<span class="kj">は、</span><wbr>Googleの<wbr>決まりに<wbr>反するので<wbr>行いませ<span class="kj">ん。</span></p>
+      <p class="map-n">※ 地図の<wbr>順位と<wbr>口コミの<wbr>件数<span class="kj">は、</span><wbr>お約束できませ<span class="kj">ん。</span><wbr>口コミ<span class="kj">は、</span><wbr>ご利用いただいた方の<wbr>全員に<wbr>お願いしま<span class="kj">す。</span><span class="kj"></span><wbr>お金と<wbr>引き換えの<wbr>口コミ<span class="kj">や、</span><wbr>会社名に<wbr>言葉を<wbr>足すこと<span class="kj">は、</span><wbr>Googleの<wbr>決まりに<wbr>反するので<wbr>行いませ<span class="kj">ん。</span></p><div class="more uy-go"><a class="btn btn-cy" href="https://bunkai.shiga-web.workers.dev/unyou/map/">Googleマップ運用の<wbr>中身を見る</a></div>
     </div>
     <div class="ex rv">
       <p class="ex-h">た<wbr>とえば</p>
@@ -1315,8 +1318,8 @@
     <div class="adds rv">
       <h3><span class="nw">あとから</span><span class="nw">足せる<wbr>もの</span><small class="blk"><span class="kj">（月</span>額・税別・必要な<wbr>ものだ<span class="kj">け）</span><wbr></small></h3>
       <p class="adds-lead">ホームページの<wbr>プラン<span class="kj">に、</span><wbr>必要な<wbr>ものだけ足せま<span class="kj">す。</span><wbr>写真や<wbr>動画は<wbr>LINEで<wbr>送っていただくだけ<span class="kj">で、</span><wbr><span class="nw">文章づくりから<wbr>投稿まで</span><span class="nw">こちらで<wbr>行いま<span class="kj">す。</span><wbr></span></p>
-      <details class="ad-acc g-sns"><summary><span class="ad-ic sns" aria-hidden="true"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="M10 9.5v5l4.5-2.5z" fill="#fff"/></svg></span><span class="aa-t"><b>Instagram・TikTokの運用</b><small>事例を<wbr>短い<wbr>動画で<wbr>投稿し<span class="kj">て</span><wbr>新しい<wbr>お客さんに<wbr>届ける</small><span class="aa-p">月<b>9,800</b>円から</span></span><i class="aa-ar" aria-hidden="true"></i></summary><div class="aa-b"><div class="ap"><div class="ap-h"><b>1つで始める</b><span class="ap-p">9,800<small>円</small></span></div><p class="ap-f">まずは<wbr>1つの<wbr>SNSで<wbr>続けたい</p><ul><li>InstagramかTikTokのどちらか1つ</li><li>最初の設計（プロフィール・ねらうお客さん・投稿の方針）</li><li>毎月の企画（ネタ出し・台本・撮り方の案内）</li><li>動画の編集と投稿 週1回・月4本</li><li>数字を見て次の施策を立てる（月1回）</li></ul></div><div class="ap rec"><div class="ap-h"><b>両方で見せる</b><em class="rb">おすすめ</em><span class="ap-p">19,800<small>円</small></span></div><p class="ap-f">両方で<wbr>地域の<wbr>人に<wbr>広く<wbr>見て<wbr>もらいたい</p><ul><li class="ap-plus">上の<wbr>プランに<wbr>加えて</li><li>InstagramとTikTokの両方に投稿</li><li>動画の編集と投稿 週2回・月8本</li><li>同じ地域・業種の人気の投稿を調べる</li><li>ストーリーズ・ハイライトの更新</li></ul></div><p class="aa-n">どの<wbr>プラン<span class="kj">も、</span><wbr>説明文・ハッシュタ<span class="kj">グ、</span><wbr>ホームページや<wbr>LINEへの<wbr>つなぎ<span class="kj">と、</span><wbr>毎月の<wbr>報告<wbr><span class="kj">（再</span>生数・フォロワー・問い合わ<span class="kj">せ）</span><wbr>つ<span class="kj">き。</span><wbr>再生数と<wbr>フォロワー数は<wbr>お約束できませ<span class="kj">ん。</span></p></div></details>
-      <details class="ad-acc g-line"><summary><span class="ad-ic line" aria-hidden="true"><img src="img/line-bubble-w.png" alt="" width="22" height="21"></span><span class="aa-t"><b>LINEの運用</b><small>一度<wbr>来た<wbr>お客さま<span class="kj">に</span><wbr>次も<wbr>思い出して<wbr>もらう</small><span class="aa-p">月<b>9,800</b>円から</span></span><i class="aa-ar" aria-hidden="true"></i></summary><div class="aa-b"><div class="ap"><div class="ap-h"><b>友だちを増やす</b><span class="ap-p">9,800<small>円</small></span></div><p class="ap-f">入口を<wbr>作る</p><ul><li>QRカード・チラシ・ホームページ・Googleマップからの入口</li><li>あいさつ文とメニュー画面（変更は月1回まで）</li><li>概算見積もりの自動の案内（写真2枚で）</li><li>配信 月2回（文章と画像つき）</li></ul></div><div class="ap rec"><div class="ap-h"><b>相談をふやす</b><em class="rb">おすすめ</em><span class="ap-p">19,800<small>円</small></span></div><p class="ap-f">決まるまでと<wbr>工事の<wbr>あとを<wbr>自動で<wbr>追い<wbr>かける</p><ul><li class="ap-plus">上の<wbr>プランに<wbr>加えて</li><li>見積もりのあとに自動で3通（施工実績・お客様の声・よくある不安）</li><li>現地調査の予約をLINEで受け付け</li><li>工事のあとのお礼・口コミのお願い・1年点検を自動で</li><li>よくある質問に自動で返信・メニューの変更は何回でも</li></ul></div><div class="ap"><div class="ap-h"><b>ぜんぶお任せ</b><span class="ap-p">29,800<small>円〜</small></span></div><p class="ap-f">一人<wbr>ひとりに<wbr>合わせて<wbr>予約や<wbr>管理まで<wbr>任せたい</p><ul><li class="ap-plus">上の<wbr>プランに<wbr>加えて</li><li>Lステップの導入と運用（導入はお見積もり）</li><li>入口ごとの数を測り、お客さまに印を付けて配信を分ける</li><li>予約の確定と前日のお知らせまで自動</li><li>季節の案内・平日のお問い合わせへの最初の返信</li></ul></div><p class="aa-n">どの<wbr>プランも<wbr>毎月の<wbr>報告つ<span class="kj">き。</span><wbr>LINE公式アカウントの<wbr>配信は<wbr>月200通まで<wbr>無料<span class="kj">で、</span><wbr>超えると<wbr>LINE社に<wbr>月<span class="kj">5,000</span>円かかりま<span class="kj">す。</span><wbr>Lステップの<wbr>月額も<wbr>御社の<wbr>ご負担で<span class="kj">す。</span></p></div></details>
+      <div class="ad-acc ad-open g-sns"><div class="aa-sum"><span class="ad-ic sns" aria-hidden="true"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="M10 9.5v5l4.5-2.5z" fill="#fff"/></svg></span><span class="aa-t"><b>Instagram・TikTokの運用</b><small>施工事例や<wbr>現場の<wbr>様子を<wbr>代わりに<wbr>投稿<span class="kj">し、</span><wbr>SNSから<wbr>集客に<wbr>つながるように<wbr>運用しま<span class="kj">す。</span><wbr>新しい<wbr>人に<wbr>届くのは<wbr>短い<wbr>動画で<span class="kj">す。</span><wbr>見た<wbr>人が<wbr>LINEや<wbr>ホームページに<wbr>進めるよう<span class="kj">に、</span><wbr>入口まで<wbr>整えま<span class="kj">す。</span></small><span class="aa-p">月<b>9,800</b>円から</span></span></div><div class="aa-b"><div class="aa-pl" hidden><div class="ap"><div class="ap-h"><b>1つで始める</b><span class="ap-p">9,800<small>円</small></span></div><p class="ap-f">まずは<wbr>1つの<wbr>SNSで<wbr>続けたい</p><ul><li>InstagramかTikTokのどちらか1つ</li><li>最初の設計（プロフィール・ねらうお客さん・投稿の方針）</li><li>毎月の企画（ネタ出し・台本・撮り方の案内）</li><li>動画の編集と投稿 週1回・月4本</li><li>数字を見て次の施策を立てる（月1回）</li><li>毎月の報告（再生数・フォロワー・問い合わせ＋伸びた理由と次の施策）</li></ul></div><div class="ap rec"><div class="ap-h"><b>両方で見せる</b><em class="rb">おすすめ</em><span class="ap-p">19,800<small>円</small></span></div><p class="ap-f">両方で<wbr>地域の<wbr>人に<wbr>広く<wbr>見て<wbr>もらいたい</p><ul><li class="ap-plus">上の<wbr>プランに<wbr>加えて</li><li>InstagramとTikTokの両方に投稿</li><li>動画の編集と投稿 週2回・月8本</li><li>同じ地域・業種の人気の投稿を調べる</li><li>ストーリーズ・ハイライトの更新</li><li>毎月の報告（再生数・フォロワー・問い合わせ＋伸びた理由と次の施策）</li></ul></div><p class="aa-n">どの<wbr>プラン<span class="kj">も、</span><wbr>説明文・ハッシュタグ<span class="kj">と、</span><wbr>ホームページや<wbr>LINEへの<wbr>つな<wbr>ぎつ<span class="kj">き。</span><wbr>再生数と<wbr>フォロワー数は<wbr>お約束できませ<span class="kj">ん。</span></p></div><p class="aa-cta"><a class="btn btn-cy" href="#contact">SNS運用を相談する</a></p></div></div>
+      <div class="ad-acc ad-open g-line"><div class="aa-sum"><span class="ad-ic line" aria-hidden="true"><img src="img/line-bubble-w.png" alt="" width="22" height="21"></span><span class="aa-t"><b>LINEの運用</b><small>一度<wbr>来た<wbr>お客さま<span class="kj">に、</span><wbr>次も<wbr>思い出して<wbr>もらう</small><span class="aa-p">月<b>9,800</b>円から</span></span></div><div class="aa-b"><div class="aa-pl" hidden><div class="ap"><div class="ap-h"><b>ライト</b><span class="ap-p">9,800<small>円</small></span></div><p class="ap-f">入口を<wbr>作る</p><ul><li>QRカード・チラシ・ホームページ・Googleマップからの入口</li><li>あいさつ文とメニュー画面（変更は月1回まで）</li><li>概算見積もりの自動の案内（写真2枚で）</li><li>配信 月2回（文章と画像つき）</li></ul></div><div class="ap rec"><div class="ap-h"><b>ベーシック</b><em class="rb">おすすめ</em><span class="ap-p">19,800<small>円</small></span></div><p class="ap-f">決まるまでと<wbr>工事の<wbr>あとを<wbr>自動で<wbr>追い<wbr>かける</p><ul><li class="ap-plus">上の<wbr>プランに<wbr>加えて</li><li>見積もりのあとに自動で3通（施工実績・お客様の声・よくある不安）</li><li>現地調査の予約をLINEで受け付け</li><li>工事のあとのお礼・口コミのお願い・1年点検を自動で</li><li>よくある質問に自動で返信・メニューの変更は何回でも</li></ul></div><div class="ap"><div class="ap-h"><b>スタンダード</b><span class="ap-p">29,800<small>円〜</small></span></div><p class="ap-f">一人<wbr>ひとりに<wbr>合わせて<wbr>予約や<wbr>管理まで<wbr>任せたい</p><ul><li class="ap-plus">上の<wbr>プランに<wbr>加えて</li><li>Lステップの導入と運用（導入はお見積もり）</li><li>入口ごとの数を測り、お客さまに印を付けて配信を分ける</li><li>予約の確定と前日のお知らせまで自動</li><li>季節の案内・平日のお問い合わせへの最初の返信</li></ul></div><p class="aa-n">どの<wbr>プランも<wbr>毎月の<wbr>報告つ<span class="kj">き。</span><wbr>LINE公式アカウントの<wbr>配信は<wbr>月200通まで<wbr>無料<span class="kj">で、</span><wbr>超えると<wbr>LINE社に<wbr>月<span class="kj">5,000</span>円かかりま<span class="kj">す。</span><wbr>Lステップの<wbr>月額も<wbr>御社の<wbr>ご負担で<span class="kj">す。</span></p></div><p class="aa-cta"><a class="btn btn-cy" href="https://bunkai.shiga-web.workers.dev/unyou/line/">LINE運用の中身を見る</a></p></div></div>
       <div class="ad-g adt-g g-etc">
         <div class="ad-hd"><span class="ad-ic etc" aria-hidden="true"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span><h4>その<wbr>ほか</h4></div>
         <table class="adt">
@@ -1328,7 +1331,7 @@
           </tbody>
         </table>
       </div>
-      <p class="adds-n">Instagram・TikTokとLINEは、最初の設計と設定が無料です。</p>
+      <p class="adds-n">Instagram・TikTokと<wbr>LINE<span class="kj">は、</span><wbr>最初の<wbr>設定<wbr><span class="kj">（通</span>常<span class="kj">50,000</span><span class="kj">円）</span><wbr>が<span class="js-camp-end">2026年11月30日</span>までの<wbr>お申し込みで0円で<span class="kj">す。</span><wbr></p>
     </div>
     <div class="ref-fee rv">
       <div class="h"><span class="lb">ご紹介の<wbr>お礼</span><div class="yen">1<small>か<wbr>月分</small></div></div>
